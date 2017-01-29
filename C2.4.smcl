@@ -1,0 +1,550 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\data sets\C2.4.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Jan 2017, 19:31:33
+
+{com}. mean wage
+{res}
+{txt}Mean estimation{col 37}Number of obs{col 54}= {res}    935
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. Err.{col 38}     [95% Con{col 51}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 8}wage {c |}{col 14}{res}{space 2} 957.9455{col 26}{space 2} 13.22401{col 37}{space 5} 931.9932{col 51}{space 3} 983.8977
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean IQ
+{res}
+{txt}Mean estimation{col 37}Number of obs{col 54}= {res}    935
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. Err.{col 38}     [95% Con{col 51}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 10}IQ {c |}{col 14}{res}{space 2} 101.2824{col 26}{space 2} .4922738{col 37}{space 5} 100.3163{col 51}{space 3} 102.2484
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. reg wage IQ
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     935
+{txt}{hline 13}{char +}{hline 30}           F(  1,   933) ={res}   98.55
+    {txt}   Model {char |} {res} 14589782.6     1  14589782.6           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  138126386   933  148045.429           {txt}R-squared     = {res} 0.0955
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0946
+    {txt}   Total {char |} {res}  152716168   934  163507.675           {txt}Root MSE      = {res} 384.77
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}IQ {c |}{col 14}{res}{space 2} 8.303064{col 26}{space 2} .8363951{col 37}{space 1}    9.93{col 46}{space 3}0.000{col 54}{space 4} 6.661631{col 67}{space 3} 9.944498
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 116.9916{col 26}{space 2} 85.64153{col 37}{space 1}    1.37{col 46}{space 3}0.172{col 54}{space 4}-51.08078{col 67}{space 3} 285.0639
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. tabulate wage
+
+    {txt}monthly {c |}
+   earnings {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+        115 {c |}{res}          1        0.11        0.11
+{txt}        200 {c |}{res}          1        0.11        0.21
+{txt}        233 {c |}{res}          1        0.11        0.32
+{txt}        260 {c |}{res}          1        0.11        0.43
+{txt}        265 {c |}{res}          1        0.11        0.53
+{txt}        289 {c |}{res}          1        0.11        0.64
+{txt}        300 {c |}{res}          1        0.11        0.75
+{txt}        310 {c |}{res}          1        0.11        0.86
+{txt}        318 {c |}{res}          1        0.11        0.96
+{txt}        325 {c |}{res}          2        0.21        1.18
+{txt}        340 {c |}{res}          1        0.11        1.28
+{txt}        345 {c |}{res}          1        0.11        1.39
+{txt}        346 {c |}{res}          1        0.11        1.50
+{txt}        350 {c |}{res}          4        0.43        1.93
+{txt}        357 {c |}{res}          2        0.21        2.14
+{txt}        360 {c |}{res}          1        0.11        2.25
+{txt}        369 {c |}{res}          1        0.11        2.35
+{txt}        370 {c |}{res}          1        0.11        2.46
+{txt}        375 {c |}{res}          3        0.32        2.78
+{txt}        377 {c |}{res}          1        0.11        2.89
+{txt}        380 {c |}{res}          1        0.11        2.99
+{txt}        390 {c |}{res}          2        0.21        3.21
+{txt}        393 {c |}{res}          1        0.11        3.32
+{txt}        400 {c |}{res}          6        0.64        3.96
+{txt}        402 {c |}{res}          1        0.11        4.06
+{txt}        403 {c |}{res}          1        0.11        4.17
+{txt}        409 {c |}{res}          1        0.11        4.28
+{txt}        417 {c |}{res}          2        0.21        4.49
+{txt}        418 {c |}{res}          1        0.11        4.60
+{txt}        425 {c |}{res}          2        0.21        4.81
+{txt}        433 {c |}{res}          2        0.21        5.03
+{txt}        440 {c |}{res}          1        0.11        5.13
+{txt}        441 {c |}{res}          1        0.11        5.24
+{txt}        442 {c |}{res}          1        0.11        5.35
+{txt}        445 {c |}{res}          3        0.32        5.67
+{txt}        449 {c |}{res}          1        0.11        5.78
+{txt}        450 {c |}{res}          5        0.53        6.31
+{txt}        453 {c |}{res}          1        0.11        6.42
+{txt}        460 {c |}{res}          1        0.11        6.52
+{txt}        462 {c |}{res}          2        0.21        6.74
+{txt}        465 {c |}{res}          1        0.11        6.84
+{txt}        471 {c |}{res}          1        0.11        6.95
+{txt}        472 {c |}{res}          1        0.11        7.06
+{txt}        475 {c |}{res}          1        0.11        7.17
+{txt}        477 {c |}{res}          2        0.21        7.38
+{txt}        478 {c |}{res}          1        0.11        7.49
+{txt}        479 {c |}{res}          1        0.11        7.59
+{txt}        480 {c |}{res}          3        0.32        7.91
+{txt}        481 {c |}{res}          2        0.21        8.13
+{txt}        485 {c |}{res}          2        0.21        8.34
+{txt}        488 {c |}{res}          1        0.11        8.45
+{txt}        489 {c |}{res}          1        0.11        8.56
+{txt}        490 {c |}{res}          1        0.11        8.66
+{txt}        492 {c |}{res}          1        0.11        8.77
+{txt}        494 {c |}{res}          1        0.11        8.88
+{txt}        495 {c |}{res}          1        0.11        8.98
+{txt}        500 {c |}{res}         13        1.39       10.37
+{txt}        503 {c |}{res}          1        0.11       10.48
+{txt}        507 {c |}{res}          1        0.11       10.59
+{txt}        508 {c |}{res}          3        0.32       10.91
+{txt}        510 {c |}{res}          1        0.11       11.02
+{txt}        511 {c |}{res}          1        0.11       11.12
+{txt}        513 {c |}{res}          2        0.21       11.34
+{txt}        515 {c |}{res}          1        0.11       11.44
+{txt}        520 {c |}{res}          4        0.43       11.87
+{txt}        523 {c |}{res}          1        0.11       11.98
+{txt}        525 {c |}{res}          3        0.32       12.30
+{txt}        528 {c |}{res}          1        0.11       12.41
+{txt}        529 {c |}{res}          1        0.11       12.51
+{txt}        533 {c |}{res}          2        0.21       12.73
+{txt}        537 {c |}{res}          1        0.11       12.83
+{txt}        538 {c |}{res}          2        0.21       13.05
+{txt}        540 {c |}{res}          2        0.21       13.26
+{txt}        543 {c |}{res}          1        0.11       13.37
+{txt}        547 {c |}{res}          1        0.11       13.48
+{txt}        548 {c |}{res}          1        0.11       13.58
+{txt}        549 {c |}{res}          1        0.11       13.69
+{txt}        550 {c |}{res}          6        0.64       14.33
+{txt}        553 {c |}{res}          1        0.11       14.44
+{txt}        556 {c |}{res}          2        0.21       14.65
+{txt}        560 {c |}{res}          2        0.21       14.87
+{txt}        562 {c |}{res}          4        0.43       15.29
+{txt}        565 {c |}{res}          1        0.11       15.40
+{txt}        566 {c |}{res}          1        0.11       15.51
+{txt}        570 {c |}{res}          1        0.11       15.61
+{txt}        571 {c |}{res}          2        0.21       15.83
+{txt}        575 {c |}{res}          4        0.43       16.26
+{txt}        577 {c |}{res}          6        0.64       16.90
+{txt}        578 {c |}{res}          1        0.11       17.01
+{txt}        579 {c |}{res}          1        0.11       17.11
+{txt}        583 {c |}{res}          3        0.32       17.43
+{txt}        586 {c |}{res}          2        0.21       17.65
+{txt}        587 {c |}{res}          1        0.11       17.75
+{txt}        590 {c |}{res}          1        0.11       17.86
+{txt}        596 {c |}{res}          2        0.21       18.07
+{txt}        600 {c |}{res}         11        1.18       19.25
+{txt}        601 {c |}{res}          1        0.11       19.36
+{txt}        606 {c |}{res}          2        0.21       19.57
+{txt}        610 {c |}{res}          1        0.11       19.68
+{txt}        615 {c |}{res}          2        0.21       19.89
+{txt}        616 {c |}{res}          1        0.11       20.00
+{txt}        618 {c |}{res}          2        0.21       20.21
+{txt}        619 {c |}{res}          1        0.11       20.32
+{txt}        620 {c |}{res}          1        0.11       20.43
+{txt}        621 {c |}{res}          1        0.11       20.53
+{txt}        622 {c |}{res}          1        0.11       20.64
+{txt}        623 {c |}{res}          1        0.11       20.75
+{txt}        624 {c |}{res}          1        0.11       20.86
+{txt}        625 {c |}{res}          7        0.75       21.60
+{txt}        629 {c |}{res}          1        0.11       21.71
+{txt}        630 {c |}{res}          1        0.11       21.82
+{txt}        635 {c |}{res}          3        0.32       22.14
+{txt}        640 {c |}{res}          1        0.11       22.25
+{txt}        641 {c |}{res}          1        0.11       22.35
+{txt}        642 {c |}{res}          2        0.21       22.57
+{txt}        644 {c |}{res}          1        0.11       22.67
+{txt}        645 {c |}{res}          1        0.11       22.78
+{txt}        650 {c |}{res}          5        0.53       23.32
+{txt}        651 {c |}{res}          1        0.11       23.42
+{txt}        652 {c |}{res}          1        0.11       23.53
+{txt}        654 {c |}{res}          3        0.32       23.85
+{txt}        658 {c |}{res}          1        0.11       23.96
+{txt}        660 {c |}{res}          1        0.11       24.06
+{txt}        661 {c |}{res}          1        0.11       24.17
+{txt}        662 {c |}{res}          1        0.11       24.28
+{txt}        664 {c |}{res}          2        0.21       24.49
+{txt}        666 {c |}{res}          4        0.43       24.92
+{txt}        668 {c |}{res}          1        0.11       25.03
+{txt}        670 {c |}{res}          4        0.43       25.45
+{txt}        672 {c |}{res}          1        0.11       25.56
+{txt}        673 {c |}{res}          3        0.32       25.88
+{txt}        675 {c |}{res}          3        0.32       26.20
+{txt}        680 {c |}{res}          1        0.11       26.31
+{txt}        681 {c |}{res}          1        0.11       26.42
+{txt}        684 {c |}{res}          2        0.21       26.63
+{txt}        685 {c |}{res}          1        0.11       26.74
+{txt}        686 {c |}{res}          1        0.11       26.84
+{txt}        690 {c |}{res}          1        0.11       26.95
+{txt}        692 {c |}{res}          4        0.43       27.38
+{txt}        693 {c |}{res}          3        0.32       27.70
+{txt}        698 {c |}{res}          1        0.11       27.81
+{txt}        700 {c |}{res}          9        0.96       28.77
+{txt}        705 {c |}{res}          3        0.32       29.09
+{txt}        711 {c |}{res}          2        0.21       29.30
+{txt}        713 {c |}{res}          1        0.11       29.41
+{txt}        714 {c |}{res}          3        0.32       29.73
+{txt}        720 {c |}{res}          1        0.11       29.84
+{txt}        721 {c |}{res}          3        0.32       30.16
+{txt}        722 {c |}{res}          1        0.11       30.27
+{txt}        723 {c |}{res}          2        0.21       30.48
+{txt}        726 {c |}{res}          1        0.11       30.59
+{txt}        727 {c |}{res}          2        0.21       30.80
+{txt}        729 {c |}{res}          2        0.21       31.02
+{txt}        732 {c |}{res}          2        0.21       31.23
+{txt}        737 {c |}{res}          1        0.11       31.34
+{txt}        740 {c |}{res}          1        0.11       31.44
+{txt}        745 {c |}{res}          1        0.11       31.55
+{txt}        750 {c |}{res}         11        1.18       32.73
+{txt}        751 {c |}{res}          3        0.32       33.05
+{txt}        753 {c |}{res}          1        0.11       33.16
+{txt}        754 {c |}{res}          3        0.32       33.48
+{txt}        756 {c |}{res}          1        0.11       33.58
+{txt}        757 {c |}{res}          1        0.11       33.69
+{txt}        758 {c |}{res}          1        0.11       33.80
+{txt}        760 {c |}{res}          1        0.11       33.90
+{txt}        761 {c |}{res}          1        0.11       34.01
+{txt}        762 {c |}{res}          1        0.11       34.12
+{txt}        765 {c |}{res}          1        0.11       34.22
+{txt}        766 {c |}{res}          1        0.11       34.33
+{txt}        769 {c |}{res}          6        0.64       34.97
+{txt}        770 {c |}{res}          3        0.32       35.29
+{txt}        774 {c |}{res}          1        0.11       35.40
+{txt}        779 {c |}{res}          2        0.21       35.61
+{txt}        781 {c |}{res}          2        0.21       35.83
+{txt}        782 {c |}{res}          1        0.11       35.94
+{txt}        788 {c |}{res}          3        0.32       36.26
+{txt}        790 {c |}{res}          1        0.11       36.36
+{txt}        793 {c |}{res}          1        0.11       36.47
+{txt}        794 {c |}{res}          1        0.11       36.58
+{txt}        795 {c |}{res}          2        0.21       36.79
+{txt}        796 {c |}{res}          1        0.11       36.90
+{txt}        797 {c |}{res}          2        0.21       37.11
+{txt}        800 {c |}{res}         15        1.60       38.72
+{txt}        801 {c |}{res}          1        0.11       38.82
+{txt}        802 {c |}{res}          1        0.11       38.93
+{txt}        803 {c |}{res}          1        0.11       39.04
+{txt}        808 {c |}{res}          9        0.96       40.00
+{txt}        809 {c |}{res}          1        0.11       40.11
+{txt}        812 {c |}{res}          4        0.43       40.53
+{txt}        815 {c |}{res}          1        0.11       40.64
+{txt}        817 {c |}{res}          3        0.32       40.96
+{txt}        818 {c |}{res}          1        0.11       41.07
+{txt}        821 {c |}{res}          1        0.11       41.18
+{txt}        824 {c |}{res}          1        0.11       41.28
+{txt}        825 {c |}{res}          1        0.11       41.39
+{txt}        826 {c |}{res}          1        0.11       41.50
+{txt}        827 {c |}{res}          1        0.11       41.60
+{txt}        829 {c |}{res}          1        0.11       41.71
+{txt}        830 {c |}{res}          1        0.11       41.82
+{txt}        832 {c |}{res}          1        0.11       41.93
+{txt}        833 {c |}{res}          2        0.21       42.14
+{txt}        840 {c |}{res}          2        0.21       42.35
+{txt}        841 {c |}{res}          4        0.43       42.78
+{txt}        843 {c |}{res}          1        0.11       42.89
+{txt}        850 {c |}{res}          7        0.75       43.64
+{txt}        852 {c |}{res}          1        0.11       43.74
+{txt}        854 {c |}{res}          1        0.11       43.85
+{txt}        855 {c |}{res}          5        0.53       44.39
+{txt}        857 {c |}{res}          2        0.21       44.60
+{txt}        864 {c |}{res}          1        0.11       44.71
+{txt}        865 {c |}{res}          7        0.75       45.45
+{txt}        866 {c |}{res}          4        0.43       45.88
+{txt}        872 {c |}{res}          1        0.11       45.99
+{txt}        873 {c |}{res}          2        0.21       46.20
+{txt}        874 {c |}{res}          1        0.11       46.31
+{txt}        875 {c |}{res}          3        0.32       46.63
+{txt}        876 {c |}{res}          1        0.11       46.74
+{txt}        879 {c |}{res}          2        0.21       46.95
+{txt}        881 {c |}{res}          1        0.11       47.06
+{txt}        882 {c |}{res}          1        0.11       47.17
+{txt}        884 {c |}{res}          3        0.32       47.49
+{txt}        888 {c |}{res}          1        0.11       47.59
+{txt}        889 {c |}{res}          1        0.11       47.70
+{txt}        890 {c |}{res}          3        0.32       48.02
+{txt}        891 {c |}{res}          1        0.11       48.13
+{txt}        894 {c |}{res}          1        0.11       48.24
+{txt}        895 {c |}{res}          1        0.11       48.34
+{txt}        898 {c |}{res}          1        0.11       48.45
+{txt}        900 {c |}{res}         11        1.18       49.63
+{txt}        903 {c |}{res}          1        0.11       49.73
+{txt}        904 {c |}{res}          1        0.11       49.84
+{txt}        905 {c |}{res}          2        0.21       50.05
+{txt}        906 {c |}{res}          1        0.11       50.16
+{txt}        909 {c |}{res}          3        0.32       50.48
+{txt}        910 {c |}{res}          2        0.21       50.70
+{txt}        912 {c |}{res}          1        0.11       50.80
+{txt}        913 {c |}{res}          2        0.21       51.02
+{txt}        915 {c |}{res}          1        0.11       51.12
+{txt}        921 {c |}{res}          1        0.11       51.23
+{txt}        923 {c |}{res}          6        0.64       51.87
+{txt}        925 {c |}{res}          1        0.11       51.98
+{txt}        926 {c |}{res}          1        0.11       52.09
+{txt}        929 {c |}{res}          1        0.11       52.19
+{txt}        930 {c |}{res}          2        0.21       52.41
+{txt}        931 {c |}{res}          1        0.11       52.51
+{txt}        935 {c |}{res}          1        0.11       52.62
+{txt}        937 {c |}{res}          3        0.32       52.94
+{txt}        938 {c |}{res}          2        0.21       53.16
+{txt}        940 {c |}{res}          5        0.53       53.69
+{txt}        942 {c |}{res}          1        0.11       53.80
+{txt}        945 {c |}{res}          1        0.11       53.90
+{txt}        947 {c |}{res}          1        0.11       54.01
+{txt}        950 {c |}{res}          7        0.75       54.76
+{txt}        951 {c |}{res}          2        0.21       54.97
+{txt}        952 {c |}{res}          1        0.11       55.08
+{txt}        958 {c |}{res}          2        0.21       55.29
+{txt}        960 {c |}{res}          2        0.21       55.51
+{txt}        961 {c |}{res}          1        0.11       55.61
+{txt}        962 {c |}{res}         13        1.39       57.01
+{txt}        963 {c |}{res}          2        0.21       57.22
+{txt}        971 {c |}{res}          1        0.11       57.33
+{txt}        973 {c |}{res}          1        0.11       57.43
+{txt}        975 {c |}{res}          3        0.32       57.75
+{txt}        978 {c |}{res}          2        0.21       57.97
+{txt}        980 {c |}{res}          1        0.11       58.07
+{txt}        981 {c |}{res}          1        0.11       58.18
+{txt}        984 {c |}{res}          1        0.11       58.29
+{txt}        987 {c |}{res}          2        0.21       58.50
+{txt}        988 {c |}{res}          1        0.11       58.61
+{txt}        990 {c |}{res}          2        0.21       58.82
+{txt}        995 {c |}{res}          1        0.11       58.93
+{txt}        996 {c |}{res}          1        0.11       59.04
+{txt}       1000 {c |}{res}         31        3.32       62.35
+{txt}       1001 {c |}{res}          3        0.32       62.67
+{txt}       1004 {c |}{res}          1        0.11       62.78
+{txt}       1009 {c |}{res}          1        0.11       62.89
+{txt}       1010 {c |}{res}          2        0.21       63.10
+{txt}       1011 {c |}{res}          1        0.11       63.21
+{txt}       1014 {c |}{res}          1        0.11       63.32
+{txt}       1015 {c |}{res}          1        0.11       63.42
+{txt}       1016 {c |}{res}          1        0.11       63.53
+{txt}       1025 {c |}{res}          4        0.43       63.96
+{txt}       1026 {c |}{res}          4        0.43       64.39
+{txt}       1027 {c |}{res}          2        0.21       64.60
+{txt}       1028 {c |}{res}          1        0.11       64.71
+{txt}       1031 {c |}{res}          2        0.21       64.92
+{txt}       1034 {c |}{res}          1        0.11       65.03
+{txt}       1035 {c |}{res}          1        0.11       65.13
+{txt}       1038 {c |}{res}          2        0.21       65.35
+{txt}       1039 {c |}{res}          2        0.21       65.56
+{txt}       1040 {c |}{res}          3        0.32       65.88
+{txt}       1049 {c |}{res}          3        0.32       66.20
+{txt}       1050 {c |}{res}          2        0.21       66.42
+{txt}       1053 {c |}{res}          2        0.21       66.63
+{txt}       1058 {c |}{res}          6        0.64       67.27
+{txt}       1063 {c |}{res}          1        0.11       67.38
+{txt}       1065 {c |}{res}          2        0.21       67.59
+{txt}       1070 {c |}{res}          2        0.21       67.81
+{txt}       1072 {c |}{res}          1        0.11       67.91
+{txt}       1075 {c |}{res}          2        0.21       68.13
+{txt}       1076 {c |}{res}          2        0.21       68.34
+{txt}       1079 {c |}{res}          1        0.11       68.45
+{txt}       1081 {c |}{res}          3        0.32       68.77
+{txt}       1082 {c |}{res}          2        0.21       68.98
+{txt}       1084 {c |}{res}          1        0.11       69.09
+{txt}       1091 {c |}{res}          1        0.11       69.20
+{txt}       1092 {c |}{res}          1        0.11       69.30
+{txt}       1097 {c |}{res}          1        0.11       69.41
+{txt}       1098 {c |}{res}          1        0.11       69.52
+{txt}       1100 {c |}{res}          7        0.75       70.27
+{txt}       1104 {c |}{res}          1        0.11       70.37
+{txt}       1105 {c |}{res}          4        0.43       70.80
+{txt}       1107 {c |}{res}          1        0.11       70.91
+{txt}       1110 {c |}{res}          1        0.11       71.02
+{txt}       1111 {c |}{res}          4        0.43       71.44
+{txt}       1115 {c |}{res}          1        0.11       71.55
+{txt}       1122 {c |}{res}          3        0.32       71.87
+{txt}       1126 {c |}{res}          3        0.32       72.19
+{txt}       1127 {c |}{res}          1        0.11       72.30
+{txt}       1130 {c |}{res}          2        0.21       72.51
+{txt}       1133 {c |}{res}          1        0.11       72.62
+{txt}       1136 {c |}{res}          1        0.11       72.73
+{txt}       1140 {c |}{res}          1        0.11       72.83
+{txt}       1143 {c |}{res}          1        0.11       72.94
+{txt}       1151 {c |}{res}          3        0.32       73.26
+{txt}       1154 {c |}{res}          9        0.96       74.22
+{txt}       1155 {c |}{res}          5        0.53       74.76
+{txt}       1160 {c |}{res}          3        0.32       75.08
+{txt}       1161 {c |}{res}          2        0.21       75.29
+{txt}       1162 {c |}{res}          2        0.21       75.51
+{txt}       1170 {c |}{res}          1        0.11       75.61
+{txt}       1175 {c |}{res}          1        0.11       75.72
+{txt}       1186 {c |}{res}          1        0.11       75.83
+{txt}       1188 {c |}{res}          2        0.21       76.04
+{txt}       1190 {c |}{res}          1        0.11       76.15
+{txt}       1193 {c |}{res}          1        0.11       76.26
+{txt}       1196 {c |}{res}          1        0.11       76.36
+{txt}       1198 {c |}{res}          1        0.11       76.47
+{txt}       1199 {c |}{res}          1        0.11       76.58
+{txt}       1200 {c |}{res}         10        1.07       77.65
+{txt}       1201 {c |}{res}          1        0.11       77.75
+{txt}       1202 {c |}{res}          8        0.86       78.61
+{txt}       1205 {c |}{res}          1        0.11       78.72
+{txt}       1206 {c |}{res}          1        0.11       78.82
+{txt}       1211 {c |}{res}          1        0.11       78.93
+{txt}       1212 {c |}{res}          3        0.32       79.25
+{txt}       1223 {c |}{res}          1        0.11       79.36
+{txt}       1225 {c |}{res}          1        0.11       79.47
+{txt}       1230 {c |}{res}          1        0.11       79.57
+{txt}       1235 {c |}{res}          1        0.11       79.68
+{txt}       1239 {c |}{res}          1        0.11       79.79
+{txt}       1241 {c |}{res}          1        0.11       79.89
+{txt}       1250 {c |}{res}         17        1.82       81.71
+{txt}       1260 {c |}{res}          2        0.21       81.93
+{txt}       1261 {c |}{res}          1        0.11       82.03
+{txt}       1270 {c |}{res}          3        0.32       82.35
+{txt}       1272 {c |}{res}          1        0.11       82.46
+{txt}       1273 {c |}{res}          2        0.21       82.67
+{txt}       1274 {c |}{res}          1        0.11       82.78
+{txt}       1275 {c |}{res}          1        0.11       82.89
+{txt}       1282 {c |}{res}          4        0.43       83.32
+{txt}       1299 {c |}{res}          1        0.11       83.42
+{txt}       1300 {c |}{res}          2        0.21       83.64
+{txt}       1304 {c |}{res}          1        0.11       83.74
+{txt}       1312 {c |}{res}          1        0.11       83.85
+{txt}       1313 {c |}{res}          1        0.11       83.96
+{txt}       1318 {c |}{res}          3        0.32       84.28
+{txt}       1322 {c |}{res}          1        0.11       84.39
+{txt}       1325 {c |}{res}          1        0.11       84.49
+{txt}       1329 {c |}{res}          1        0.11       84.60
+{txt}       1333 {c |}{res}          3        0.32       84.92
+{txt}       1339 {c |}{res}          1        0.11       85.03
+{txt}       1346 {c |}{res}          8        0.86       85.88
+{txt}       1350 {c |}{res}          1        0.11       85.99
+{txt}       1354 {c |}{res}          1        0.11       86.10
+{txt}       1360 {c |}{res}          1        0.11       86.20
+{txt}       1366 {c |}{res}          2        0.21       86.42
+{txt}       1368 {c |}{res}          1        0.11       86.52
+{txt}       1371 {c |}{res}          1        0.11       86.63
+{txt}       1375 {c |}{res}          2        0.21       86.84
+{txt}       1377 {c |}{res}          1        0.11       86.95
+{txt}       1384 {c |}{res}          2        0.21       87.17
+{txt}       1386 {c |}{res}          2        0.21       87.38
+{txt}       1391 {c |}{res}          1        0.11       87.49
+{txt}       1394 {c |}{res}          1        0.11       87.59
+{txt}       1400 {c |}{res}          3        0.32       87.91
+{txt}       1411 {c |}{res}          2        0.21       88.13
+{txt}       1417 {c |}{res}          2        0.21       88.34
+{txt}       1418 {c |}{res}          1        0.11       88.45
+{txt}       1424 {c |}{res}          2        0.21       88.66
+{txt}       1442 {c |}{res}         12        1.28       89.95
+{txt}       1444 {c |}{res}          2        0.21       90.16
+{txt}       1452 {c |}{res}          2        0.21       90.37
+{txt}       1455 {c |}{res}          1        0.11       90.48
+{txt}       1463 {c |}{res}          1        0.11       90.59
+{txt}       1473 {c |}{res}          1        0.11       90.70
+{txt}       1495 {c |}{res}          2        0.21       90.91
+{txt}       1500 {c |}{res}          5        0.53       91.44
+{txt}       1522 {c |}{res}          1        0.11       91.55
+{txt}       1539 {c |}{res}          4        0.43       91.98
+{txt}       1541 {c |}{res}          1        0.11       92.09
+{txt}       1550 {c |}{res}          1        0.11       92.19
+{txt}       1559 {c |}{res}          1        0.11       92.30
+{txt}       1562 {c |}{res}          1        0.11       92.41
+{txt}       1566 {c |}{res}          1        0.11       92.51
+{txt}       1572 {c |}{res}          1        0.11       92.62
+{txt}       1573 {c |}{res}          2        0.21       92.83
+{txt}       1575 {c |}{res}          1        0.11       92.94
+{txt}       1586 {c |}{res}          2        0.21       93.16
+{txt}       1600 {c |}{res}          1        0.11       93.26
+{txt}       1602 {c |}{res}          5        0.53       93.80
+{txt}       1607 {c |}{res}          1        0.11       93.90
+{txt}       1615 {c |}{res}          1        0.11       94.01
+{txt}       1620 {c |}{res}          1        0.11       94.12
+{txt}       1634 {c |}{res}          2        0.21       94.33
+{txt}       1643 {c |}{res}          1        0.11       94.44
+{txt}       1679 {c |}{res}          1        0.11       94.55
+{txt}       1682 {c |}{res}          3        0.32       94.87
+{txt}       1694 {c |}{res}          1        0.11       94.97
+{txt}       1699 {c |}{res}          2        0.21       95.19
+{txt}       1710 {c |}{res}          2        0.21       95.40
+{txt}       1730 {c |}{res}          1        0.11       95.51
+{txt}       1744 {c |}{res}          1        0.11       95.61
+{txt}       1746 {c |}{res}          1        0.11       95.72
+{txt}       1748 {c |}{res}          2        0.21       95.94
+{txt}       1749 {c |}{res}          2        0.21       96.15
+{txt}       1778 {c |}{res}          1        0.11       96.26
+{txt}       1779 {c |}{res}          1        0.11       96.36
+{txt}       1792 {c |}{res}          1        0.11       96.47
+{txt}       1832 {c |}{res}          1        0.11       96.58
+{txt}       1843 {c |}{res}          1        0.11       96.68
+{txt}       1850 {c |}{res}          1        0.11       96.79
+{txt}       1874 {c |}{res}          1        0.11       96.90
+{txt}       1899 {c |}{res}          1        0.11       97.01
+{txt}       1903 {c |}{res}          1        0.11       97.11
+{txt}       1920 {c |}{res}          1        0.11       97.22
+{txt}       1924 {c |}{res}          6        0.64       97.86
+{txt}       2004 {c |}{res}          1        0.11       97.97
+{txt}       2067 {c |}{res}          1        0.11       98.07
+{txt}       2099 {c |}{res}          1        0.11       98.18
+{txt}       2137 {c |}{res}          4        0.43       98.61
+{txt}       2162 {c |}{res}          3        0.32       98.93
+{txt}       2308 {c |}{res}          1        0.11       99.04
+{txt}       2310 {c |}{res}          1        0.11       99.14
+{txt}       2404 {c |}{res}          2        0.21       99.36
+{txt}       2500 {c |}{res}          2        0.21       99.57
+{txt}       2668 {c |}{res}          1        0.11       99.68
+{txt}       2771 {c |}{res}          1        0.11       99.79
+{txt}       3078 {c |}{res}          2        0.21      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        935      100.00
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. summarize wage
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 8}wage {c |}{res}       935    957.9455    404.3608        115       3078
+
+{com}. histogram wage
+{txt}(bin={res}29{txt}, start={res}115{txt}, width={res}102.17241{txt})
+{res}
+{com}. generate logwage = log(wage)
+
+. reg logwage IQ
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     935
+{txt}{hline 13}{char +}{hline 30}           F(  1,   933) ={res}  102.62
+    {txt}   Model {char |} {res} 16.4150939     1  16.4150939           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 149.241189   933  .159958402           {txt}R-squared     = {res} 0.0991
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0981
+    {txt}   Total {char |} {res} 165.656283   934  .177362188           {txt}Root MSE      = {res} .39995
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}IQ {c |}{col 14}{res}{space 2} .0088072{col 26}{space 2} .0008694{col 37}{space 1}   10.13{col 46}{space 3}0.000{col 54}{space 4}  .007101{col 67}{space 3} .0105134
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.886994{col 26}{space 2} .0890206{col 37}{space 1}   66.13{col 46}{space 3}0.000{col 54}{space 4} 5.712291{col 67}{space 3} 6.061698
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\data sets\C2.4.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res}28 Jan 2017, 21:52:01
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

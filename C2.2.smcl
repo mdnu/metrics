@@ -1,0 +1,100 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\data sets\C2.2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Jan 2017, 19:09:18
+
+{com}. use "C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\data sets\CEOSAL2.DTA", clear
+
+. mean salary
+{res}
+{txt}Mean estimation{col 37}Number of obs{col 54}= {res}    177
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. Err.{col 38}     [95% Con{col 51}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 6}salary {c |}{col 14}{res}{space 2} 865.8644{col 26}{space 2} 44.16591{col 37}{space 5} 778.7015{col 51}{space 3} 953.0274
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean ceoten
+{res}
+{txt}Mean estimation{col 37}Number of obs{col 54}= {res}    177
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. Err.{col 38}     [95% Con{col 51}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 6}ceoten {c |}{col 14}{res}{space 2} 7.954802{col 26}{space 2}  .537489{col 37}{space 5} 6.894049{col 51}{space 3} 9.015555
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. tabulate ceoten
+
+   {txt}years as {c |}
+   ceo with {c |}
+    company {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        2.82        2.82
+{txt}          1 {c |}{res}         19       10.73       13.56
+{txt}          2 {c |}{res}         10        5.65       19.21
+{txt}          3 {c |}{res}         21       11.86       31.07
+{txt}          4 {c |}{res}         21       11.86       42.94
+{txt}          5 {c |}{res}         10        5.65       48.59
+{txt}          6 {c |}{res}         11        6.21       54.80
+{txt}          7 {c |}{res}          6        3.39       58.19
+{txt}          8 {c |}{res}         11        6.21       64.41
+{txt}          9 {c |}{res}          8        4.52       68.93
+{txt}         10 {c |}{res}          8        4.52       73.45
+{txt}         11 {c |}{res}          4        2.26       75.71
+{txt}         12 {c |}{res}          7        3.95       79.66
+{txt}         13 {c |}{res}          7        3.95       83.62
+{txt}         14 {c |}{res}          5        2.82       86.44
+{txt}         15 {c |}{res}          2        1.13       87.57
+{txt}         16 {c |}{res}          2        1.13       88.70
+{txt}         17 {c |}{res}          2        1.13       89.83
+{txt}         18 {c |}{res}          1        0.56       90.40
+{txt}         19 {c |}{res}          2        1.13       91.53
+{txt}         20 {c |}{res}          4        2.26       93.79
+{txt}         21 {c |}{res}          1        0.56       94.35
+{txt}         22 {c |}{res}          1        0.56       94.92
+{txt}         24 {c |}{res}          3        1.69       96.61
+{txt}         26 {c |}{res}          2        1.13       97.74
+{txt}         28 {c |}{res}          1        0.56       98.31
+{txt}         34 {c |}{res}          1        0.56       98.87
+{txt}         37 {c |}{res}          2        1.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        177      100.00
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. generate logsalary = log(salary)
+
+. reg logsalary ceoten
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     177
+{txt}{hline 13}{char +}{hline 30}           F(  1,   175) ={res}    2.33
+    {txt}   Model {char |} {res} .850907024     1  .850907024           {txt}Prob > F      = {res} 0.1284
+    {txt}Residual {char |} {res}  63.795306   175  .364544606           {txt}R-squared     = {res} 0.0132
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0075
+    {txt}   Total {char |} {res} 64.6462131   176  .367308029           {txt}Root MSE      = {res} .60378
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}   logsalary{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}ceoten {c |}{col 14}{res}{space 2} .0097236{col 26}{space 2} .0063645{col 37}{space 1}    1.53{col 46}{space 3}0.128{col 54}{space 4}-.0028374{col 67}{space 3} .0222846
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 6.505498{col 26}{space 2} .0679911{col 37}{space 1}   95.68{col 46}{space 3}0.000{col 54}{space 4}  6.37131{col 67}{space 3} 6.639686
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\data sets\C2.2.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res}28 Jan 2017, 19:29:53
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
