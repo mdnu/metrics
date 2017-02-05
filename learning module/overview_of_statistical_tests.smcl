@@ -1,0 +1,237 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\overview_of_statistical_tests.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Feb 2017, 20:34:37
+
+{com}. sysuse auto
+{err}no; data in memory would be lost
+{txt}{search r(4):r(4);}
+
+{com}. close
+{err}unrecognized command:  close
+{txt}{search r(199):r(199);}
+
+{com}. sysuse auto
+{err}no; data in memory would be lost
+{txt}{search r(4):r(4);}
+
+{com}. use "C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\WAGE2.DTA", clear
+
+. sysuse auto
+{txt}(1978 Automobile Data)
+
+{com}. ttest mpg, by(foreign)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Domestic {c |}{res}{col 12}     52{col 22} 19.82692{col 34}  .657777{col 46} 4.743297{col 58} 18.50638{col 70} 21.14747
+ {txt}Foreign {c |}{res}{col 12}     22{col 22} 24.77273{col 34}  1.40951{col 46} 6.611187{col 58} 21.84149{col 70} 27.70396
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}     74{col 22}  21.2973{col 34} .6725511{col 46} 5.785503{col 58}  19.9569{col 70} 22.63769
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-4.945804{col 34} 1.362162{col 58}-7.661225{col 70}-2.230384
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Domestic{txt}) - mean({res}Foreign{txt})                         t = {res} -3.6308
+{txt}Ho: diff = 0                                     degrees of freedom = {res}      72
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0003         {txt}Pr(|T| > |t|) = {res}0.0005          {txt}Pr(T > t) = {res}0.9997
+
+{com}. tabulate rep78 foreign, chi2
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}         2 {c |}{res}         8          0 {txt}{c |}{res}         8 
+{txt}         3 {c |}{res}        27          3 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         21 {txt}{c |}{res}        69 
+
+{txt}          Pearson chi2({res}4{txt}) = {res} 27.2640  {txt} Pr = {res}0.000
+
+{com}. tabulate rep78 foreign, chi2 exact
+
+{text}Enumerating sample-space combinations:
+{text}stage 5:{col 11}enumerations = 1
+{text}stage 4:{col 11}enumerations = 3
+{text}stage 3:{col 11}enumerations = 24
+{text}stage 2:{col 11}enumerations = 203
+{text}stage 1:{col 11}enumerations = 0
+
+    Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}         2 {c |}{res}         8          0 {txt}{c |}{res}         8 
+{txt}         3 {c |}{res}        27          3 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         21 {txt}{c |}{res}        69 
+
+{txt}          Pearson chi2({res}4{txt}) = {res} 27.2640  {txt} Pr = {res}0.000
+{txt}           Fisher's exact =                 {res}0.000
+
+{com}. correlate price mpg weight rep78
+{txt}(obs=69)
+
+             {c |}    price      mpg   weight    rep78
+{hline 13}{c +}{hline 36}
+       price {c |}{res}   1.0000
+         {txt}mpg {c |}{res}  -0.4559   1.0000
+      {txt}weight {c |}{res}   0.5478  -0.8055   1.0000
+       {txt}rep78 {c |}{res}   0.0066   0.4023  -0.4003   1.0000
+
+
+{com}. pwcorr price mpg weight rep78, obs
+
+             {txt}{c |}    price      mpg   weight    rep78
+{hline 13}{c +}{hline 36}
+       price {c |} {res}  1.0000 
+             {txt}{c |}{res}       74
+             {txt}{c |}
+         mpg {c |} {res} -0.4686   1.0000 
+             {txt}{c |}{res}       74       74
+             {txt}{c |}
+      weight {c |} {res}  0.5386  -0.8072   1.0000 
+             {txt}{c |}{res}       74       74       74
+             {txt}{c |}
+       rep78 {c |} {res}  0.0066   0.4023  -0.4003   1.0000 
+             {txt}{c |}{res}       69       69       69       69
+             {txt}{c |}
+
+{com}. drop if (rep78 <= 2) | (rep78 == .)
+{txt}(15 observations deleted)
+
+{com}. regress mpg price weight
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      59
+{txt}{hline 13}{char +}{hline 30}           F(  2,    56) ={res}   47.87
+    {txt}   Model {char |} {res} 1375.62097     2  687.810483           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 804.616322    56  14.3681486           {txt}R-squared     = {res} 0.6310
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.6178
+    {txt}   Total {char |} {res} 2180.23729    58  37.5902981           {txt}Root MSE      = {res} 3.7905
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         mpg{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}price {c |}{col 14}{res}{space 2}-.0000139{col 26}{space 2} .0002108{col 37}{space 1}   -0.07{col 46}{space 3}0.948{col 54}{space 4}-.0004362{col 67}{space 3} .0004084
+{txt}{space 6}weight {c |}{col 14}{res}{space 2} -.005828{col 26}{space 2} .0007301{col 37}{space 1}   -7.98{col 46}{space 3}0.000{col 54}{space 4}-.0072906{col 67}{space 3}-.0043654
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 39.08279{col 26}{space 2} 1.855011{col 37}{space 1}   21.07{col 46}{space 3}0.000{col 54}{space 4} 35.36676{col 67}{space 3} 42.79882
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. tabulate rep78, gen(rep)
+
+     {txt}Repair {c |}
+Record 1978 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          3 {c |}{res}         30       50.85       50.85
+{txt}          4 {c |}{res}         18       30.51       81.36
+{txt}          5 {c |}{res}         11       18.64      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         59      100.00
+
+{com}. tabulate rep78 rep1
+
+    {txt}Repair {c |}
+    Record {c |}  rep78==     3.0000
+      1978 {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         3 {c |}{res}         0         30 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}        18          0 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}        11          0 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        29         30 {txt}{c |}{res}        59 
+
+
+{com}. tabulate rep78 rep2
+
+    {txt}Repair {c |}
+    Record {c |}  rep78==     4.0000
+      1978 {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         3 {c |}{res}        30          0 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}         0         18 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}        11          0 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        41         18 {txt}{c |}{res}        59 
+
+
+{com}. tabulate rep78 rep3
+
+    {txt}Repair {c |}
+    Record {c |}  rep78==     5.0000
+      1978 {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         3 {c |}{res}        30          0 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}        18          0 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         0         11 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         11 {txt}{c |}{res}        59 
+
+
+{com}. regress mpg price weight rep1 rep2
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      59
+{txt}{hline 13}{char +}{hline 30}           F(  4,    54) ={res}   26.04
+    {txt}   Model {char |} {res} 1435.91975     4  358.979938           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 744.317536    54  13.7836581           {txt}R-squared     = {res} 0.6586
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.6333
+    {txt}   Total {char |} {res} 2180.23729    58  37.5902981           {txt}Root MSE      = {res} 3.7126
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         mpg{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}price {c |}{col 14}{res}{space 2}-.0001126{col 26}{space 2} .0002133{col 37}{space 1}   -0.53{col 46}{space 3}0.600{col 54}{space 4}-.0005403{col 67}{space 3} .0003151
+{txt}{space 6}weight {c |}{col 14}{res}{space 2} -.005107{col 26}{space 2} .0008236{col 37}{space 1}   -6.20{col 46}{space 3}0.000{col 54}{space 4}-.0067584{col 67}{space 3}-.0034557
+{txt}{space 8}rep1 {c |}{col 14}{res}{space 2}-2.886288{col 26}{space 2} 1.504639{col 37}{space 1}   -1.92{col 46}{space 3}0.060{col 54}{space 4}-5.902908{col 67}{space 3} .1303314
+{txt}{space 8}rep2 {c |}{col 14}{res}{space 2} -2.88417{col 26}{space 2} 1.484817{col 37}{space 1}   -1.94{col 46}{space 3}0.057{col 54}{space 4}-5.861048{col 67}{space 3} .0927086
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 39.89189{col 26}{space 2} 1.892188{col 37}{space 1}   21.08{col 46}{space 3}0.000{col 54}{space 4} 36.09828{col 67}{space 3}  43.6855
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. oneway mpg rep78
+
+                        {txt}Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+{hline 72}
+Between groups     {res} 506.325167      2   253.162583      8.47     0.0006
+{txt} Within groups     {res} 1673.91212     56   29.8912879
+{txt}{hline 72}
+    Total          {res} 2180.23729     58   37.5902981
+
+{txt}Bartlett's test for equal variances:  chi2({res}2{txt}) = {res}  9.9384{txt}  Prob>chi2 = {res}0.007
+
+{com}. anova mpg rep78 c.price c.weight
+
+                           {txt}Number of obs ={res}      59     {txt}R-squared     ={res}  0.6586
+                           {txt}Root MSE      ={res} 3.71263     {txt}Adj R-squared ={res}  0.6333
+
+                  {txt}Source {c |}  Partial SS    df       MS           F     Prob > F
+              {hline 11}{c +}{hline 52}
+                   Model {c |} {res} 1435.91975     4  358.979938      26.04     0.0000
+                         {txt}{c |}
+                   rep78 {c |} {res} 60.2987853     2  30.1493926       2.19     0.1221
+{txt}                   price {c |} {res}  3.8421233     1   3.8421233       0.28     0.5997
+{txt}                  weight {c |} {res} 529.932889     1  529.932889      38.45     0.0000
+                         {txt}{c |}
+                Residual {c |} {res} 744.317536    54  13.7836581   
+              {txt}{hline 11}{c +}{hline 52}
+                   Total {c |} {res} 2180.23729    58  37.5902981   
+
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\overview_of_statistical_tests.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 4 Feb 2017, 21:08:44
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

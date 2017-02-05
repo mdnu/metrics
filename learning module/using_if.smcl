@@ -1,0 +1,232 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\using_if.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Feb 2017, 20:28:35
+
+{com}. sysuse auto
+{txt}(1978 Automobile Data)
+
+{com}. keep make rep78 foreign mpg price
+
+. tabulate rep78 foreign if rep78 >= 4
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        11         18 {txt}{c |}{res}        29 
+
+
+{com}. tabulate rep78 foreign if rep78 >= 4, column nofreq
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         4 {c |}{res}     81.82      50.00 {txt}{c |}{res}     62.07 
+{txt}         5 {c |}{res}     18.18      50.00 {txt}{c |}{res}     37.93 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+
+{com}. list if rep78 >= 4
+{txt}
+     {c TLC}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c TRC}
+     {c |} {res}make              price   mpg   rep78    foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+  3. {c |} {res}AMC Spirit        3,799    22       .   Domestic {txt}{c |}
+  5. {c |} {res}Buick Electra     7,827    15       4   Domestic {txt}{c |}
+  7. {c |} {res}Buick Opel        4,453    26       .   Domestic {txt}{c |}
+ 15. {c |} {res}Chev. Impala      5,705    16       4   Domestic {txt}{c |}
+ 20. {c |} {res}Dodge Colt        3,984    30       5   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 24. {c |} {res}Ford Fiesta       4,389    28       4   Domestic {txt}{c |}
+ 29. {c |} {res}Merc. Bobcat      3,829    22       4   Domestic {txt}{c |}
+ 30. {c |} {res}Merc. Cougar      5,379    14       4   Domestic {txt}{c |}
+ 33. {c |} {res}Merc. XR-7        6,303    14       4   Domestic {txt}{c |}
+ 35. {c |} {res}Olds 98           8,814    21       4   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 38. {c |} {res}Olds Delta 88     4,890    18       4   Domestic {txt}{c |}
+ 43. {c |} {res}Plym. Champ       4,425    34       5   Domestic {txt}{c |}
+ 45. {c |} {res}Plym. Sapporo     6,486    26       .   Domestic {txt}{c |}
+ 47. {c |} {res}Pont. Catalina    5,798    18       4   Domestic {txt}{c |}
+ 51. {c |} {res}Pont. Phoenix     4,424    19       .   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 53. {c |} {res}Audi 5000         9,690    17       5    Foreign {txt}{c |}
+ 55. {c |} {res}BMW 320i          9,735    25       4    Foreign {txt}{c |}
+ 56. {c |} {res}Datsun 200        6,229    23       4    Foreign {txt}{c |}
+ 57. {c |} {res}Datsun 210        4,589    35       5    Foreign {txt}{c |}
+ 58. {c |} {res}Datsun 510        5,079    24       4    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 59. {c |} {res}Datsun 810        8,129    21       4    Foreign {txt}{c |}
+ 61. {c |} {res}Honda Accord      5,799    25       5    Foreign {txt}{c |}
+ 62. {c |} {res}Honda Civic       4,499    28       4    Foreign {txt}{c |}
+ 63. {c |} {res}Mazda GLC         3,995    30       4    Foreign {txt}{c |}
+ 64. {c |} {res}Peugeot 604      12,990    14       .    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 66. {c |} {res}Subaru            3,798    35       5    Foreign {txt}{c |}
+ 67. {c |} {res}Toyota Celica     5,899    18       5    Foreign {txt}{c |}
+ 68. {c |} {res}Toyota Corolla    3,748    31       5    Foreign {txt}{c |}
+ 69. {c |} {res}Toyota Corona     5,719    18       5    Foreign {txt}{c |}
+ 70. {c |} {res}VW Dasher         7,140    23       4    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 71. {c |} {res}VW Diesel         5,397    41       5    Foreign {txt}{c |}
+ 72. {c |} {res}VW Rabbit         4,697    25       4    Foreign {txt}{c |}
+ 73. {c |} {res}VW Scirocco       6,850    25       4    Foreign {txt}{c |}
+ 74. {c |} {res}Volvo 260        11,995    17       5    Foreign {txt}{c |}
+     {c BLC}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c BRC}
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. list if rep78 >= 4 & !missing(rep78)
+{txt}
+     {c TLC}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c TRC}
+     {c |} {res}make              price   mpg   rep78    foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+  5. {c |} {res}Buick Electra     7,827    15       4   Domestic {txt}{c |}
+ 15. {c |} {res}Chev. Impala      5,705    16       4   Domestic {txt}{c |}
+ 20. {c |} {res}Dodge Colt        3,984    30       5   Domestic {txt}{c |}
+ 24. {c |} {res}Ford Fiesta       4,389    28       4   Domestic {txt}{c |}
+ 29. {c |} {res}Merc. Bobcat      3,829    22       4   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 30. {c |} {res}Merc. Cougar      5,379    14       4   Domestic {txt}{c |}
+ 33. {c |} {res}Merc. XR-7        6,303    14       4   Domestic {txt}{c |}
+ 35. {c |} {res}Olds 98           8,814    21       4   Domestic {txt}{c |}
+ 38. {c |} {res}Olds Delta 88     4,890    18       4   Domestic {txt}{c |}
+ 43. {c |} {res}Plym. Champ       4,425    34       5   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 47. {c |} {res}Pont. Catalina    5,798    18       4   Domestic {txt}{c |}
+ 53. {c |} {res}Audi 5000         9,690    17       5    Foreign {txt}{c |}
+ 55. {c |} {res}BMW 320i          9,735    25       4    Foreign {txt}{c |}
+ 56. {c |} {res}Datsun 200        6,229    23       4    Foreign {txt}{c |}
+ 57. {c |} {res}Datsun 210        4,589    35       5    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 58. {c |} {res}Datsun 510        5,079    24       4    Foreign {txt}{c |}
+ 59. {c |} {res}Datsun 810        8,129    21       4    Foreign {txt}{c |}
+ 61. {c |} {res}Honda Accord      5,799    25       5    Foreign {txt}{c |}
+ 62. {c |} {res}Honda Civic       4,499    28       4    Foreign {txt}{c |}
+ 63. {c |} {res}Mazda GLC         3,995    30       4    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 66. {c |} {res}Subaru            3,798    35       5    Foreign {txt}{c |}
+ 67. {c |} {res}Toyota Celica     5,899    18       5    Foreign {txt}{c |}
+ 68. {c |} {res}Toyota Corolla    3,748    31       5    Foreign {txt}{c |}
+ 69. {c |} {res}Toyota Corona     5,719    18       5    Foreign {txt}{c |}
+ 70. {c |} {res}VW Dasher         7,140    23       4    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 71. {c |} {res}VW Diesel         5,397    41       5    Foreign {txt}{c |}
+ 72. {c |} {res}VW Rabbit         4,697    25       4    Foreign {txt}{c |}
+ 73. {c |} {res}VW Scirocco       6,850    25       4    Foreign {txt}{c |}
+ 74. {c |} {res}Volvo 260        11,995    17       5    Foreign {txt}{c |}
+     {c BLC}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c BRC}
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. list if rep78 >= 4 & rep78 != *
+{err}invalid syntax
+{txt}{search r(198):r(198);}
+
+{com}. list if rep78 >= 4 & rep78 != .
+{txt}
+     {c TLC}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c TRC}
+     {c |} {res}make              price   mpg   rep78    foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+  5. {c |} {res}Buick Electra     7,827    15       4   Domestic {txt}{c |}
+ 15. {c |} {res}Chev. Impala      5,705    16       4   Domestic {txt}{c |}
+ 20. {c |} {res}Dodge Colt        3,984    30       5   Domestic {txt}{c |}
+ 24. {c |} {res}Ford Fiesta       4,389    28       4   Domestic {txt}{c |}
+ 29. {c |} {res}Merc. Bobcat      3,829    22       4   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 30. {c |} {res}Merc. Cougar      5,379    14       4   Domestic {txt}{c |}
+ 33. {c |} {res}Merc. XR-7        6,303    14       4   Domestic {txt}{c |}
+ 35. {c |} {res}Olds 98           8,814    21       4   Domestic {txt}{c |}
+ 38. {c |} {res}Olds Delta 88     4,890    18       4   Domestic {txt}{c |}
+ 43. {c |} {res}Plym. Champ       4,425    34       5   Domestic {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 47. {c |} {res}Pont. Catalina    5,798    18       4   Domestic {txt}{c |}
+ 53. {c |} {res}Audi 5000         9,690    17       5    Foreign {txt}{c |}
+ 55. {c |} {res}BMW 320i          9,735    25       4    Foreign {txt}{c |}
+ 56. {c |} {res}Datsun 200        6,229    23       4    Foreign {txt}{c |}
+ 57. {c |} {res}Datsun 210        4,589    35       5    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 58. {c |} {res}Datsun 510        5,079    24       4    Foreign {txt}{c |}
+ 59. {c |} {res}Datsun 810        8,129    21       4    Foreign {txt}{c |}
+ 61. {c |} {res}Honda Accord      5,799    25       5    Foreign {txt}{c |}
+ 62. {c |} {res}Honda Civic       4,499    28       4    Foreign {txt}{c |}
+ 63. {c |} {res}Mazda GLC         3,995    30       4    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 66. {c |} {res}Subaru            3,798    35       5    Foreign {txt}{c |}
+ 67. {c |} {res}Toyota Celica     5,899    18       5    Foreign {txt}{c |}
+ 68. {c |} {res}Toyota Corolla    3,748    31       5    Foreign {txt}{c |}
+ 69. {c |} {res}Toyota Corona     5,719    18       5    Foreign {txt}{c |}
+ 70. {c |} {res}VW Dasher         7,140    23       4    Foreign {txt}{c |}
+     {c LT}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+ 71. {c |} {res}VW Diesel         5,397    41       5    Foreign {txt}{c |}
+ 72. {c |} {res}VW Rabbit         4,697    25       4    Foreign {txt}{c |}
+ 73. {c |} {res}VW Scirocco       6,850    25       4    Foreign {txt}{c |}
+ 74. {c |} {res}Volvo 260        11,995    17       5    Foreign {txt}{c |}
+     {c BLC}{hline 16}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c BRC}
+
+{com}. summarize price if rep78 == 1 | rep78 == 2
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        10        5687    3216.375       3667      14500
+
+{com}. summarize price if rep78 <= 2
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        10        5687    3216.375       3667      14500
+
+{com}. summarize price if rep78 == 3 | rep78 == 4 | rep78 == 5
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        59    6223.847    2880.454       3291      15906
+
+{com}. summarize price if inrange(rep78,3,5)
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        59    6223.847    2880.454       3291      15906
+
+{com}. summarize price if rep78 >= 3
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        64    6239.984    2925.843       3291      15906
+
+{com}. summarize price if rep78 >= 3 & !missing(rep78)
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        59    6223.847    2880.454       3291      15906
+
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\using_if.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 4 Feb 2017, 20:33:50
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

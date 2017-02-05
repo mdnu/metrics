@@ -1,0 +1,1817 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\labour\log_feb_4_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Feb 2017, 21:16:55
+
+{com}. use "C:\Users\m\Sync\NOTES\fin\3.Labour II\LFS2015.dta", clear
+{txt}(Labour force survey, 2015, based to 2011 census population)
+
+{com}. tabulate noc01_47, gen(noc)
+
+ {txt}Occupation at main job {c |}
+   (NOC-S 2001)(1987- ) {c |}      Freq.     Percent        Cum.
+{hline 24}{c +}{hline 35}
+  Sr Mngmnt Occupations {c |}{res}      1,771        0.22        0.22
+{txt}    Specialist managers {c |}{res}     11,925        1.45        1.67
+{txt}   Mngrs in Retail/Food {c |}{res}     19,531        2.38        4.04
+{txt}  Other Managers N.E.C. {c |}{res}     24,637        3.00        7.04
+{txt}  Prof-Business/Finance {c |}{res}     21,431        2.61        9.65
+{txt}    Finance/Insur Admin {c |}{res}     12,367        1.50       11.15
+{txt}            Secretaries {c |}{res}      7,466        0.91       12.06
+{txt} Admin/Regulatory Occup {c |}{res}     18,420        2.24       14.30
+{txt}   Clerical Supervisors {c |}{res}      7,849        0.96       15.26
+{txt}   Clerical Occupations {c |}{res}     63,695        7.75       23.01
+{txt}  Prof-Natural/Appl Sci {c |}{res}     25,432        3.09       26.10
+{txt}  Tech Occ-Nat/Appl Sci {c |}{res}     26,094        3.17       29.28
+{txt}    Professional-Health {c |}{res}     10,591        1.29       30.57
+{txt}  Nurse Supervisors/RNs {c |}{res}     15,540        1.89       32.46
+{txt}   Techn/Related-Health {c |}{res}     13,917        1.69       34.15
+{txt}Support Health Services {c |}{res}     18,443        2.24       36.39
+{txt}   Judges/Lawyers/Psych {c |}{res}     19,601        2.38       38.78
+{txt}Teachers and professors {c |}{res}     33,629        4.09       42.87
+{txt} Paralegals/Soc Service {c |}{res}     21,660        2.64       45.51
+{txt}   Prof-Art and Culture {c |}{res}      9,472        1.15       46.66
+{txt} Tech Occup-Art/Culture {c |}{res}     14,353        1.75       48.40
+{txt}   Sales/Service Superv {c |}{res}     15,050        1.83       50.24
+{txt}   Wholesale/Tech/Insur {c |}{res}     21,321        2.59       52.83
+{txt}  Retail & Sales Clerks {c |}{res}     25,707        3.13       55.96
+{txt}               Cashiers {c |}{res}     18,996        2.31       58.27
+{txt}        Chefs and Cooks {c |}{res}     12,808        1.56       59.83
+{txt}  Food/Beverage Service {c |}{res}     13,300        1.62       61.45
+{txt}    Protective Services {c |}{res}     12,078        1.47       62.91
+{txt} Travel/Accom/Rec/Sport {c |}{res}      6,582        0.80       63.72
+{txt} Childcare/Home Support {c |}{res}     13,103        1.59       65.31
+{txt}    Sales/Service Occup {c |}{res}     70,387        8.56       73.87
+{txt}  Trades/Transportation {c |}{res}     15,311        1.86       75.74
+{txt}    Construction trades {c |}{res}     20,148        2.45       78.19
+{txt} Engineer/Power Station {c |}{res}     10,198        1.24       79.43
+{txt}  Machinists/Metal Form {c |}{res}     10,231        1.24       80.67
+{txt}              Mechanics {c |}{res}     18,952        2.31       82.98
+{txt}    Other Trades n.e.c. {c |}{res}      6,852        0.83       83.81
+{txt}  Heavy Equipment/Crane {c |}{res}      8,726        1.06       84.88
+{txt} Transp Equip/Operators {c |}{res}     26,783        3.26       88.13
+{txt}  Trades Help/Construct {c |}{res}     20,398        2.48       90.62
+{txt}  Agric, excl Labourers {c |}{res}     20,490        2.49       93.11
+{txt}  Forestry/Mine/Oil/Gas {c |}{res}     12,188        1.48       94.59
+{txt}  Prim Produc Labourers {c |}{res}      7,300        0.89       95.48
+{txt} Super in Manufacturing {c |}{res}      5,421        0.66       96.14
+{txt}   Machine Ops in Manuf {c |}{res}     16,223        1.97       98.11
+{txt} Assemblers in Manufact {c |}{res}      7,723        0.94       99.05
+{txt}   Labourers-Proc/Manuf {c |}{res}      7,779        0.95      100.00
+{txt}{hline 24}{c +}{hline 35}
+                  Total {c |}{res}    821,879      100.00
+
+{com}. tabulate sp_noc01
+
+     {txt}Occupation based on {c |}
+      NOC-S2001 (1987- ) {c |}      Freq.     Percent        Cum.
+{hline 25}{c +}{hline 35}
+       Senior Management {c |}{res}      1,392        0.28        0.28
+{txt}        Other Management {c |}{res}     41,971        8.57        8.86
+{txt}   Prof-Business/Finance {c |}{res}     15,210        3.11       11.96
+{txt}   Finan/Secret/Administ {c |}{res}     27,086        5.53       17.49
+{txt}    Clerical/Supervisors {c |}{res}     42,316        8.64       26.13
+{txt}   Natural/Appl Sciences {c |}{res}     34,684        7.08       33.22
+{txt}   Prof-Health/Nurse/RNs {c |}{res}     18,795        3.84       37.06
+{txt}   Tech/Assisting/Health {c |}{res}     19,881        4.06       41.12
+{txt}    S.Science/Govt/Relig {c |}{res}     26,421        5.40       46.51
+{txt}   Teachers & professors {c |}{res}     23,615        4.82       51.33
+{txt}   Art/Culture/Rec/Sport {c |}{res}     11,418        2.33       53.67
+{txt}    Wholesale/Tech/Insur {c |}{res}     15,126        3.09       56.75
+{txt}   Retail/Sales/Cashiers {c |}{res}     21,055        4.30       61.05
+{txt}    Chefs/Cooks/Food/Bev {c |}{res}     10,464        2.14       63.19
+{txt}     Protective Services {c |}{res}      7,951        1.62       64.81
+{txt}     Childcare/Home Supp {c |}{res}      7,648        1.56       66.38
+{txt}    Sales/Service/Travel {c |}{res}     34,515        7.05       73.43
+{txt}  Contractors/Supervisor {c |}{res}     11,888        2.43       75.85
+{txt}     Construction trades {c |}{res}     11,367        2.32       78.17
+{txt}Other trades occupations {c |}{res}     28,754        5.87       84.05
+{txt}     Transport/Equipment {c |}{res}     22,959        4.69       88.73
+{txt}   Trades Helpers/Constr {c |}{res}      8,524        1.74       90.48
+{txt}        Primary Industry {c |}{res}     24,440        4.99       95.47
+{txt}  Machine Ops/Assemblers {c |}{res}     18,385        3.75       99.22
+{txt}   Process/Manuf/Utility {c |}{res}      3,815        0.78      100.00
+{txt}{hline 25}{c +}{hline 35}
+                   Total {c |}{res}    489,680      100.00
+
+{com}. tabulate sp_noc01, gen(sp_noc)
+
+     {txt}Occupation based on {c |}
+      NOC-S2001 (1987- ) {c |}      Freq.     Percent        Cum.
+{hline 25}{c +}{hline 35}
+       Senior Management {c |}{res}      1,392        0.28        0.28
+{txt}        Other Management {c |}{res}     41,971        8.57        8.86
+{txt}   Prof-Business/Finance {c |}{res}     15,210        3.11       11.96
+{txt}   Finan/Secret/Administ {c |}{res}     27,086        5.53       17.49
+{txt}    Clerical/Supervisors {c |}{res}     42,316        8.64       26.13
+{txt}   Natural/Appl Sciences {c |}{res}     34,684        7.08       33.22
+{txt}   Prof-Health/Nurse/RNs {c |}{res}     18,795        3.84       37.06
+{txt}   Tech/Assisting/Health {c |}{res}     19,881        4.06       41.12
+{txt}    S.Science/Govt/Relig {c |}{res}     26,421        5.40       46.51
+{txt}   Teachers & professors {c |}{res}     23,615        4.82       51.33
+{txt}   Art/Culture/Rec/Sport {c |}{res}     11,418        2.33       53.67
+{txt}    Wholesale/Tech/Insur {c |}{res}     15,126        3.09       56.75
+{txt}   Retail/Sales/Cashiers {c |}{res}     21,055        4.30       61.05
+{txt}    Chefs/Cooks/Food/Bev {c |}{res}     10,464        2.14       63.19
+{txt}     Protective Services {c |}{res}      7,951        1.62       64.81
+{txt}     Childcare/Home Supp {c |}{res}      7,648        1.56       66.38
+{txt}    Sales/Service/Travel {c |}{res}     34,515        7.05       73.43
+{txt}  Contractors/Supervisor {c |}{res}     11,888        2.43       75.85
+{txt}     Construction trades {c |}{res}     11,367        2.32       78.17
+{txt}Other trades occupations {c |}{res}     28,754        5.87       84.05
+{txt}     Transport/Equipment {c |}{res}     22,959        4.69       88.73
+{txt}   Trades Helpers/Constr {c |}{res}      8,524        1.74       90.48
+{txt}        Primary Industry {c |}{res}     24,440        4.99       95.47
+{txt}  Machine Ops/Assemblers {c |}{res}     18,385        3.75       99.22
+{txt}   Process/Manuf/Utility {c |}{res}      3,815        0.78      100.00
+{txt}{hline 25}{c +}{hline 35}
+                   Total {c |}{res}    489,680      100.00
+
+{com}. tabulate permtemp
+
+{txt}Permanent or temporary {c |}
+                   job {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+             Permanent {c |}{res}    531,776       86.27       86.27
+{txt}Not permanent/seasonal {c |}{res}     21,361        3.47       89.73
+{txt}Not perm/temp/contract {c |}{res}     40,539        6.58       96.31
+{txt} Not perm/casual/other {c |}{res}     22,761        3.69      100.00
+{txt}                     8 {c |}{res}          1        0.00      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}    616,438      100.00
+
+{com}. tabulate lfsstat
+
+         {txt}Labour force status {c |}      Freq.     Percent        Cum.
+{hline 29}{c +}{hline 35}
+           Employed, at work {c |}{res}    664,295       54.55       54.55
+{txt}  Employed, absent from work {c |}{res}     62,678        5.15       59.70
+{txt}Unemployed, temporary layoff {c |}{res}      3,572        0.29       59.99
+{txt}    Unemployed, job searcher {c |}{res}     49,840        4.09       64.09
+{txt}    Unemployed, future start {c |}{res}      2,574        0.21       64.30
+{txt}         Not in labour force {c |}{res}    434,729       35.70      100.00
+{txt}{hline 29}{c +}{hline 35}
+                       Total {c |}{res}  1,217,688      100.00
+
+{com}. tabulate prov
+
+            {txt}Province {c |}      Freq.     Percent        Cum.
+{hline 21}{c +}{hline 35}
+        Newfoundland {c |}{res}     44,115        3.62        3.62
+{txt}Prince Edward Island {c |}{res}     31,998        2.63        6.25
+{txt}         Nova Scotia {c |}{res}     62,842        5.16       11.41
+{txt}       New Brunswick {c |}{res}     59,338        4.87       16.28
+{txt}              Quebec {c |}{res}    210,940       17.32       33.61
+{txt}             Ontario {c |}{res}    337,042       27.68       61.29
+{txt}            Manitoba {c |}{res}    113,195        9.30       70.58
+{txt}        Saskatchewan {c |}{res}     86,913        7.14       77.72
+{txt}             Alberta {c |}{res}    128,657       10.57       88.29
+{txt}    British Columbia {c |}{res}    142,646       11.71      100.00
+{txt}{hline 21}{c +}{hline 35}
+               Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate prov, gen(prov)
+
+            {txt}Province {c |}      Freq.     Percent        Cum.
+{hline 21}{c +}{hline 35}
+        Newfoundland {c |}{res}     44,115        3.62        3.62
+{txt}Prince Edward Island {c |}{res}     31,998        2.63        6.25
+{txt}         Nova Scotia {c |}{res}     62,842        5.16       11.41
+{txt}       New Brunswick {c |}{res}     59,338        4.87       16.28
+{txt}              Quebec {c |}{res}    210,940       17.32       33.61
+{txt}             Ontario {c |}{res}    337,042       27.68       61.29
+{txt}            Manitoba {c |}{res}    113,195        9.30       70.58
+{txt}        Saskatchewan {c |}{res}     86,913        7.14       77.72
+{txt}             Alberta {c |}{res}    128,657       10.57       88.29
+{txt}    British Columbia {c |}{res}    142,646       11.71      100.00
+{txt}{hline 21}{c +}{hline 35}
+               Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate age_12
+
+  {txt}Five-year {c |}
+  age group {c |}
+         of {c |}
+ respondent {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   15 to 19 {c |}{res}     87,833        7.21        7.21
+{txt}   20 to 24 {c |}{res}     87,136        7.16       14.37
+{txt}   25 to 29 {c |}{res}     86,264        7.08       21.45
+{txt}   30 to 34 {c |}{res}     92,052        7.56       29.01
+{txt}   35 to 39 {c |}{res}     91,079        7.48       36.49
+{txt}   40 to 44 {c |}{res}     92,260        7.58       44.07
+{txt}   45 to 49 {c |}{res}     98,478        8.09       52.16
+{txt}   50 to 54 {c |}{res}    117,822        9.68       61.83
+{txt}   55 to 59 {c |}{res}    113,976        9.36       71.19
+{txt}   60 to 64 {c |}{res}    101,324        8.32       79.51
+{txt}   65 to 69 {c |}{res}     86,613        7.11       86.63
+{txt}        70+ {c |}{res}    162,849       13.37      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate age_12, gen(age)
+
+  {txt}Five-year {c |}
+  age group {c |}
+         of {c |}
+ respondent {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   15 to 19 {c |}{res}     87,833        7.21        7.21
+{txt}   20 to 24 {c |}{res}     87,136        7.16       14.37
+{txt}   25 to 29 {c |}{res}     86,264        7.08       21.45
+{txt}   30 to 34 {c |}{res}     92,052        7.56       29.01
+{txt}   35 to 39 {c |}{res}     91,079        7.48       36.49
+{txt}   40 to 44 {c |}{res}     92,260        7.58       44.07
+{txt}   45 to 49 {c |}{res}     98,478        8.09       52.16
+{txt}   50 to 54 {c |}{res}    117,822        9.68       61.83
+{txt}   55 to 59 {c |}{res}    113,976        9.36       71.19
+{txt}   60 to 64 {c |}{res}    101,324        8.32       79.51
+{txt}   65 to 69 {c |}{res}     86,613        7.11       86.63
+{txt}        70+ {c |}{res}    162,849       13.37      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate marstat
+
+    {txt}Marital status of {c |}
+           respondent {c |}      Freq.     Percent        Cum.
+{hline 22}{c +}{hline 35}
+              Married {c |}{res}    590,103       48.46       48.46
+{txt} Living in common law {c |}{res}    144,785       11.89       60.35
+{txt}              Widowed {c |}{res}     67,005        5.50       65.85
+{txt}            Separated {c |}{res}     30,890        2.54       68.39
+{txt}             Divorced {c |}{res}     62,266        5.11       73.50
+{txt}Single, never married {c |}{res}    322,638       26.50      100.00
+{txt}{hline 22}{c +}{hline 35}
+                Total {c |}{res}  1,217,687      100.00
+
+{com}. tabulate marstat, gen(marstat)
+
+    {txt}Marital status of {c |}
+           respondent {c |}      Freq.     Percent        Cum.
+{hline 22}{c +}{hline 35}
+              Married {c |}{res}    590,103       48.46       48.46
+{txt} Living in common law {c |}{res}    144,785       11.89       60.35
+{txt}              Widowed {c |}{res}     67,005        5.50       65.85
+{txt}            Separated {c |}{res}     30,890        2.54       68.39
+{txt}             Divorced {c |}{res}     62,266        5.11       73.50
+{txt}Single, never married {c |}{res}    322,638       26.50      100.00
+{txt}{hline 22}{c +}{hline 35}
+                Total {c |}{res}  1,217,687      100.00
+
+{com}. tabulate sex, gen(gender)
+
+     {txt}Sex of {c |}
+ respondent {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+       Male {c |}{res}    590,976       48.53       48.53
+{txt}     Female {c |}{res}    626,711       51.47      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,687      100.00
+
+{com}. tabulate schooln
+
+     {txt}Current student {c |}
+  status and type of {c |}
+              school {c |}      Freq.     Percent        Cum.
+{hline 21}{c +}{hline 35}
+         Non-student {c |}{res}    855,706       88.38       88.38
+{txt} Prim/sec school, ft {c |}{res}     45,826        4.73       93.11
+{txt} Prim/sec school, pt {c |}{res}      2,247        0.23       93.34
+{txt}University full-time {c |}{res}     28,578        2.95       96.30
+{txt}University part-time {c |}{res}      7,647        0.79       97.09
+{txt}  Comm coll/CEGEP ft {c |}{res}     17,795        1.84       98.92
+{txt}  Comm coll/CEGEP pt {c |}{res}      4,752        0.49       99.41
+{txt}     Other full-time {c |}{res}      2,654        0.27       99.69
+{txt}     Other part-time {c |}{res}      3,020        0.31      100.00
+{txt}{hline 21}{c +}{hline 35}
+               Total {c |}{res}    968,225      100.00
+
+{com}. tabulate educ90
+
+{txt}Highest educational attainment (1990- {c |}
+                                    ) {c |}      Freq.     Percent        Cum.
+{hline 38}{c +}{hline 35}
+                         0 to 8 years {c |}{res}     72,554        5.96        5.96
+{txt}                       Some secondary {c |}{res}    167,749       13.78       19.73
+{txt}                Gr 11 to 13, graduate {c |}{res}    257,135       21.12       40.85
+{txt}                  Some post secondary {c |}{res}     80,212        6.59       47.44
+{txt}Post secondary certificate or diploma {c |}{res}    400,315       32.88       80.31
+{txt}         University: bachelors degree {c |}{res}    165,429       13.59       93.90
+{txt}          University: graduate degree {c |}{res}     74,294        6.10      100.00
+{txt}{hline 38}{c +}{hline 35}
+                                Total {c |}{res}  1,217,688      100.00
+
+{com}. tabulate educ90, gen(educ)
+
+{txt}Highest educational attainment (1990- {c |}
+                                    ) {c |}      Freq.     Percent        Cum.
+{hline 38}{c +}{hline 35}
+                         0 to 8 years {c |}{res}     72,554        5.96        5.96
+{txt}                       Some secondary {c |}{res}    167,749       13.78       19.73
+{txt}                Gr 11 to 13, graduate {c |}{res}    257,135       21.12       40.85
+{txt}                  Some post secondary {c |}{res}     80,212        6.59       47.44
+{txt}Post secondary certificate or diploma {c |}{res}    400,315       32.88       80.31
+{txt}         University: bachelors degree {c |}{res}    165,429       13.59       93.90
+{txt}          University: graduate degree {c |}{res}     74,294        6.10      100.00
+{txt}{hline 38}{c +}{hline 35}
+                                Total {c |}{res}  1,217,688      100.00
+
+{com}. tabulate cma
+
+      {txt}3 largest CMAs {c |}
+(census metropolitan {c |}
+              areas) {c |}      Freq.     Percent        Cum.
+{hline 21}{c +}{hline 35}
+            Montreal {c |}{res}     44,968        3.69        3.69
+{txt}             Toronto {c |}{res}     67,264        5.52        9.22
+{txt}           Vancouver {c |}{res}     45,800        3.76       12.98
+{txt}Other CMA or Non-CMA {c |}{res}  1,059,654       87.02      100.00
+{txt}{hline 21}{c +}{hline 35}
+               Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate cowmain
+
+{txt}Class of worker, main {c |}
+                  job {c |}      Freq.     Percent        Cum.
+{hline 22}{c +}{hline 35}
+      Public employee {c |}{res}    178,537       21.72       21.72
+{txt}     Private employee {c |}{res}    528,355       64.29       86.01
+{txt} Priv/self/inc/w/empl {c |}{res}     26,936        3.28       89.29
+{txt}Priv/self/inc/no empl {c |}{res}     20,948        2.55       91.84
+{txt}Priv/self/uninc/w/emp {c |}{res}      9,410        1.14       92.98
+{txt}Priv/self/uninc/0 emp {c |}{res}     56,549        6.88       99.86
+{txt} Priv/unpaid fam work {c |}{res}      1,145        0.14      100.00
+{txt}{hline 22}{c +}{hline 35}
+                Total {c |}{res}    821,880      100.00
+
+{com}. tabulate cowmain, gen(cow)
+
+{txt}Class of worker, main {c |}
+                  job {c |}      Freq.     Percent        Cum.
+{hline 22}{c +}{hline 35}
+      Public employee {c |}{res}    178,537       21.72       21.72
+{txt}     Private employee {c |}{res}    528,355       64.29       86.01
+{txt} Priv/self/inc/w/empl {c |}{res}     26,936        3.28       89.29
+{txt}Priv/self/inc/no empl {c |}{res}     20,948        2.55       91.84
+{txt}Priv/self/uninc/w/emp {c |}{res}      9,410        1.14       92.98
+{txt}Priv/self/uninc/0 emp {c |}{res}     56,549        6.88       99.86
+{txt} Priv/unpaid fam work {c |}{res}      1,145        0.14      100.00
+{txt}{hline 22}{c +}{hline 35}
+                Total {c |}{res}    821,880      100.00
+
+{com}. tabulate efamtype
+
+      {txt}Type of economic {c |}
+                family {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+ Unattached individual {c |}{res}    224,115       18.40       18.40
+{txt} Hus-wif 2earn,0kid<25 {c |}{res}    161,006       13.22       31.63
+{txt} Hus-wif 2earn, kid<18 {c |}{res}    221,452       18.19       49.81
+{txt}  Hus-wif 2earn, 18-24 {c |}{res}     65,805        5.40       55.22
+{txt} H-W/hus empl/0kids<25 {c |}{res}     64,536        5.30       60.52
+{txt} H-W/hus empl/child<18 {c |}{res}     60,701        4.98       65.50
+{txt}H-W/hus empl/kid 18-24 {c |}{res}     14,878        1.22       66.72
+{txt} H-W/wif empl/0kids<25 {c |}{res}     47,826        3.93       70.65
+{txt} H-W/wif empl/child<18 {c |}{res}     18,568        1.52       72.18
+{txt} H-W/wif empl/kid18-24 {c |}{res}      9,777        0.80       72.98
+{txt} H-W non-earn/0kids<25 {c |}{res}    154,446       12.68       85.66
+{txt} H-W non-earn/child<18 {c |}{res}     11,014        0.90       86.57
+{txt}H-W non-earn/kids18-24 {c |}{res}      4,952        0.41       86.97
+{txt}  1par/par empl/kid<18 {c |}{res}     40,818        3.35       90.33
+{txt}1par/par empl/kid18-24 {c |}{res}     18,905        1.55       91.88
+{txt}1par/par no-emp/kid<18 {c |}{res}     15,716        1.29       93.17
+{txt} 1par/par no-emp/18-24 {c |}{res}      5,636        0.46       93.63
+{txt}    Other family types {c |}{res}     77,536        6.37      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}  1,217,687      100.00
+
+{com}. cookbook
+{err}unrecognized command:  cookbook
+{txt}{search r(199):r(199);}
+
+{com}. tabulate efamsize
+
+  {txt}Number of {c |}
+individuals {c |}
+in economic {c |}
+     family {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}    224,115       18.40       18.40
+{txt}          2 {c |}{res}    430,177       35.33       53.73
+{txt}          3 {c |}{res}    212,426       17.45       71.18
+{txt}          4 {c |}{res}    213,144       17.50       88.68
+{txt}  5 or more {c |}{res}    137,824       11.32      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,686      100.00
+
+{com}. regress wage prov6 age3 marstat6 gender1 educ6 cow1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616434
+{txt}{hline 13}{char +}{hline 30}           F(  6,616427) ={res}25255.56
+    {txt}   Model {char |} {res} 20119208.7     6  3353201.45           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 81843519.2616427  132.770822           {txt}R-squared     = {res} 0.1973
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1973
+    {txt}   Total {char |} {res}  101962728616433   165.40764           {txt}Root MSE      = {res} 11.523
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}prov6 {c |}{col 14}{res}{space 2} .8522285{col 26}{space 2} .0329492{col 37}{space 1}   25.86{col 46}{space 3}0.000{col 54}{space 4} .7876492{col 67}{space 3} .9168079
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.4878297{col 26}{space 2} .0495029{col 37}{space 1}   -9.85{col 46}{space 3}0.000{col 54}{space 4}-.5848539{col 67}{space 3}-.3908055
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-6.448197{col 26}{space 2} .0330501{col 37}{space 1} -195.10{col 46}{space 3}0.000{col 54}{space 4}-6.512974{col 67}{space 3} -6.38342
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 5.445096{col 26}{space 2} .0298174{col 37}{space 1}  182.61{col 46}{space 3}0.000{col 54}{space 4} 5.386655{col 67}{space 3} 5.503537
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.609611{col 26}{space 2}  .039852{col 37}{space 1}  140.76{col 46}{space 3}0.000{col 54}{space 4} 5.531503{col 67}{space 3}  5.68772
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.457364{col 26}{space 2} .0345215{col 37}{space 1}  216.02{col 46}{space 3}0.000{col 54}{space 4} 7.389703{col 67}{space 3} 7.525025
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 20.73922{col 26}{space 2} .0283682{col 37}{space 1}  731.07{col 46}{space 3}0.000{col 54}{space 4} 20.68362{col 67}{space 3} 20.79482
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. codebook
+
+{txt}{hline}
+{res}CASEID{right:Order of record in file (rec_num)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}long{txt})
+
+{col 18}range:  [{res}1{txt},{res}102762{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}102762{col 51}{txt}missing .:  {res}0{txt}/{res}1217689
+
+{txt}{col 19}mean:{res}{col 26} 50740.3
+{txt}{col 15}std. dev:{res}{col 26} 29298.3
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   10148{col 37}   25369{col 47}   50737{col 57}   76106{col 67}   91327
+
+{txt}{hline}
+{res}rec_num{right:Order of record in file}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}long{txt})
+
+{col 18}range:  [{res}1{txt},{res}270430{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}102763{col 51}{txt}missing .:  {res}2{txt}/{res}1217689
+
+{txt}{col 19}mean:{res}{col 26} 50740.6
+{txt}{col 15}std. dev:{res}{col 26} 29298.9
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   10148{col 37}   25369{col 47}   50737{col 57}   76106{col 67}   91327
+
+{txt}{hline}
+{res}survyear{right:Survey year}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}2015{txt},{res}2015{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}2{txt}/{res}1217689
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 24}{res} 1.2e+06{col 33}2015
+{col 24}      2{col 33}.
+
+{txt}{hline}
+{res}survmnth{right:Survey month}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+{ralign 22:label}:  {res:survmnth}
+
+{col 18}range:  [{res}1{txt},{res}12{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}12{col 51}{txt}missing .:  {res}3{txt}/{res}1217689
+
+{txt}{ralign 23: examples:}{col 26}{res}3{col 32}{txt}March
+{ralign 23: }{col 26}{res}5{col 32}{txt}May
+{ralign 23: }{col 26}{res}8{col 32}{txt}August
+{ralign 23: }{col 26}{res}10{col 32}{txt}October
+
+{txt}{hline}
+{res}prov{right:Province}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+{ralign 22:label}:  {res:prov}
+
+{col 18}range:  [{res}10{txt},{res}59{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}10{col 51}{txt}missing .:  {res}3{txt}/{res}1217689
+
+{txt}{ralign 23: examples:}{col 26}{res}24{col 32}{txt}Quebec
+{ralign 23: }{col 26}{res}35{col 32}{txt}Ontario
+{ralign 23: }{col 26}{res}35{col 32}{txt}Ontario
+{ralign 23: }{col 26}{res}48{col 32}{txt}Alberta
+
+{txt}{hline}
+{res}cma{right:3 largest CMAs (census metropolitan areas)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+{ralign 22:label}:  {res:cma}
+
+{col 18}range:  [{res}1{txt},{res}4{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}4{col 51}{txt}missing .:  {res}3{txt}/{res}1217689
+
+{txt}{col 13}tabulation:  Freq.   Numeric  Label
+{col 24}{res}  44968{col 33}       1{col 43}{txt}Montreal
+{col 24}{res}  67264{col 33}       2{col 43}{txt}Toronto
+{col 24}{res}  45800{col 33}       3{col 43}{txt}Vancouver
+{col 24}{res} 1.1e+06{col 33}       4{col 43}{txt}Other CMA or Non-CMA
+{col 24}{res}      3{col 33}       .{col 43}
+
+{txt}{hline}
+{res}age_12{right:Five-year age group of respondent}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+{ralign 22:label}:  {res:age_12}
+
+{col 18}range:  [{res}1{txt},{res}12{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}12{col 51}{txt}missing .:  {res}3{txt}/{res}1217689
+
+{txt}{ralign 23: examples:}{col 26}{res}3{col 32}{txt}25 to 29
+{ralign 23: }{col 26}{res}6{col 32}{txt}40 to 44
+{ralign 23: }{col 26}{res}8{col 32}{txt}50 to 54
+{ralign 23: }{col 26}{res}11{col 32}{txt}65 to 69
+
+{txt}{hline}
+{res}age_6{right:Age in 2 and 3 year groups, 15 to 29 only}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+{ralign 22:label}:  {res:age_6}
+
+{col 18}range:  [{res}1{txt},{res}6{txt}]{col 55}units:  {res}1
+{err}{hline 2}Break{hline 2}
+{txt}{search r(1):r(1);}
+
+{com}. tabulate permtemp, gen(pt)
+
+{txt}Permanent or temporary {c |}
+                   job {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+             Permanent {c |}{res}    531,776       86.27       86.27
+{txt}Not permanent/seasonal {c |}{res}     21,361        3.47       89.73
+{txt}Not perm/temp/contract {c |}{res}     40,539        6.58       96.31
+{txt} Not perm/casual/other {c |}{res}     22,761        3.69      100.00
+{txt}                     8 {c |}{res}          1        0.00      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}    616,438      100.00
+
+{com}. tabulate mjh
+
+ {txt}Multiple or single {c |}
+         job holder {c |}      Freq.     Percent        Cum.
+{hline 20}{c +}{hline 35}
+  single job holder {c |}{res}    686,154       94.39       94.39
+{txt}Multiple job holder {c |}{res}     40,819        5.61      100.00
+{txt}{hline 20}{c +}{hline 35}
+              Total {c |}{res}    726,973      100.00
+
+{com}. tabulate mjh, gen(mjh)
+
+ {txt}Multiple or single {c |}
+         job holder {c |}      Freq.     Percent        Cum.
+{hline 20}{c +}{hline 35}
+  single job holder {c |}{res}    686,154       94.39       94.39
+{txt}Multiple job holder {c |}{res}     40,819        5.61      100.00
+{txt}{hline 20}{c +}{hline 35}
+              Total {c |}{res}    726,973      100.00
+
+{com}. tabulate utothrs
+
+ {txt}Usual hours per {c |}
+week at all jobs {c |}      Freq.     Percent        Cum.
+{hline 17}{c +}{hline 35}
+               0 {c |}{res}          1        0.00        0.00
+{txt}              .1 {c |}{res}          2        0.00        0.00
+{txt}              .2 {c |}{res}         12        0.00        0.00
+{txt}              .3 {c |}{res}          6        0.00        0.00
+{txt}              .5 {c |}{res}         50        0.01        0.01
+{txt}              .7 {c |}{res}          4        0.00        0.01
+{txt}              .8 {c |}{res}          3        0.00        0.01
+{txt}               1 {c |}{res}        654        0.09        0.10
+{txt}             1.2 {c |}{res}          1        0.00        0.10
+{txt}             1.3 {c |}{res}          1        0.00        0.10
+{txt}             1.5 {c |}{res}        136        0.02        0.12
+{txt}             1.8 {c |}{res}          2        0.00        0.12
+{txt}               2 {c |}{res}      1,280        0.18        0.30
+{txt}             2.2 {c |}{res}          1        0.00        0.30
+{txt}             2.3 {c |}{res}          2        0.00        0.30
+{txt}             2.4 {c |}{res}          2        0.00        0.30
+{txt}             2.5 {c |}{res}        156        0.02        0.32
+{txt}             2.7 {c |}{res}          1        0.00        0.32
+{txt}               3 {c |}{res}      1,487        0.20        0.52
+{txt}             3.1 {c |}{res}          1        0.00        0.52
+{txt}             3.2 {c |}{res}          3        0.00        0.52
+{txt}             3.3 {c |}{res}          4        0.00        0.52
+{txt}             3.5 {c |}{res}        129        0.02        0.54
+{txt}             3.7 {c |}{res}          2        0.00        0.54
+{txt}             3.8 {c |}{res}          5        0.00        0.54
+{txt}               4 {c |}{res}      2,497        0.34        0.89
+{txt}             4.1 {c |}{res}          3        0.00        0.89
+{txt}             4.2 {c |}{res}          2        0.00        0.89
+{txt}             4.5 {c |}{res}        154        0.02        0.91
+{txt}             4.6 {c |}{res}          1        0.00        0.91
+{txt}             4.7 {c |}{res}          3        0.00        0.91
+{txt}               5 {c |}{res}      3,304        0.45        1.36
+{txt}             5.1 {c |}{res}          2        0.00        1.36
+{txt}             5.2 {c |}{res}          6        0.00        1.36
+{txt}             5.3 {c |}{res}          6        0.00        1.36
+{txt}             5.4 {c |}{res}          2        0.00        1.37
+{txt}             5.5 {c |}{res}        112        0.02        1.38
+{txt}             5.7 {c |}{res}          2        0.00        1.38
+{txt}             5.8 {c |}{res}          3        0.00        1.38
+{txt}               6 {c |}{res}      2,682        0.37        1.75
+{txt}             6.1 {c |}{res}          1        0.00        1.75
+{txt}             6.2 {c |}{res}         21        0.00        1.75
+{txt}             6.3 {c |}{res}          7        0.00        1.75
+{txt}             6.4 {c |}{res}          3        0.00        1.75
+{txt}             6.5 {c |}{res}        100        0.01        1.77
+{txt}             6.8 {c |}{res}          2        0.00        1.77
+{txt}               7 {c |}{res}      1,380        0.19        1.96
+{txt}             7.2 {c |}{res}         21        0.00        1.96
+{txt}             7.3 {c |}{res}         10        0.00        1.96
+{txt}             7.4 {c |}{res}          7        0.00        1.96
+{txt}             7.5 {c |}{res}        424        0.06        2.02
+{txt}             7.7 {c |}{res}         18        0.00        2.02
+{txt}             7.8 {c |}{res}          8        0.00        2.03
+{txt}             7.9 {c |}{res}          1        0.00        2.03
+{txt}               8 {c |}{res}      5,605        0.77        2.80
+{txt}             8.2 {c |}{res}          5        0.00        2.80
+{txt}             8.3 {c |}{res}          4        0.00        2.80
+{txt}             8.5 {c |}{res}         98        0.01        2.81
+{txt}             8.7 {c |}{res}          3        0.00        2.81
+{txt}               9 {c |}{res}      1,090        0.15        2.96
+{txt}             9.2 {c |}{res}          1        0.00        2.96
+{txt}             9.3 {c |}{res}          1        0.00        2.96
+{txt}             9.4 {c |}{res}          1        0.00        2.96
+{txt}             9.5 {c |}{res}         55        0.01        2.97
+{txt}             9.7 {c |}{res}          3        0.00        2.97
+{txt}             9.8 {c |}{res}          3        0.00        2.97
+{txt}              10 {c |}{res}      9,280        1.28        4.25
+{txt}            10.2 {c |}{res}          3        0.00        4.25
+{txt}            10.3 {c |}{res}          1        0.00        4.25
+{txt}            10.5 {c |}{res}         78        0.01        4.26
+{txt}            10.7 {c |}{res}          2        0.00        4.26
+{txt}            10.8 {c |}{res}          1        0.00        4.26
+{txt}              11 {c |}{res}        697        0.10        4.35
+{txt}            11.1 {c |}{res}          4        0.00        4.36
+{txt}            11.2 {c |}{res}          7        0.00        4.36
+{txt}            11.3 {c |}{res}         16        0.00        4.36
+{txt}            11.4 {c |}{res}          1        0.00        4.36
+{txt}            11.5 {c |}{res}         91        0.01        4.37
+{txt}            11.6 {c |}{res}          1        0.00        4.37
+{txt}            11.7 {c |}{res}          9        0.00        4.37
+{txt}            11.8 {c |}{res}          4        0.00        4.37
+{txt}              12 {c |}{res}      6,370        0.88        5.25
+{txt}            12.1 {c |}{res}          1        0.00        5.25
+{txt}            12.2 {c |}{res}          5        0.00        5.25
+{txt}            12.3 {c |}{res}          3        0.00        5.25
+{txt}            12.5 {c |}{res}        422        0.06        5.31
+{txt}            12.7 {c |}{res}          1        0.00        5.31
+{txt}            12.8 {c |}{res}          5        0.00        5.31
+{txt}              13 {c |}{res}        924        0.13        5.44
+{txt}            13.1 {c |}{res}          1        0.00        5.44
+{txt}            13.2 {c |}{res}          3        0.00        5.44
+{txt}            13.3 {c |}{res}          3        0.00        5.44
+{txt}            13.5 {c |}{res}        180        0.02        5.46
+{txt}            13.8 {c |}{res}          5        0.00        5.46
+{txt}              14 {c |}{res}      1,996        0.27        5.74
+{txt}            14.2 {c |}{res}          2        0.00        5.74
+{txt}            14.3 {c |}{res}          5        0.00        5.74
+{txt}            14.4 {c |}{res}          2        0.00        5.74
+{txt}            14.5 {c |}{res}         68        0.01        5.75
+{txt}            14.6 {c |}{res}          1        0.00        5.75
+{txt}            14.7 {c |}{res}          3        0.00        5.75
+{txt}              15 {c |}{res}     12,493        1.72        7.47
+{txt}            15.2 {c |}{res}          6        0.00        7.47
+{txt}            15.3 {c |}{res}          3        0.00        7.47
+{txt}            15.4 {c |}{res}          5        0.00        7.47
+{txt}            15.5 {c |}{res}        130        0.02        7.49
+{txt}            15.6 {c |}{res}          1        0.00        7.49
+{txt}            15.7 {c |}{res}          1        0.00        7.49
+{txt}            15.8 {c |}{res}          2        0.00        7.49
+{txt}              16 {c |}{res}      6,210        0.85        8.34
+{txt}            16.1 {c |}{res}          1        0.00        8.34
+{txt}            16.2 {c |}{res}         17        0.00        8.34
+{txt}            16.3 {c |}{res}          9        0.00        8.35
+{txt}            16.4 {c |}{res}          1        0.00        8.35
+{txt}            16.5 {c |}{res}        124        0.02        8.36
+{txt}            16.7 {c |}{res}          4        0.00        8.36
+{txt}            16.8 {c |}{res}          2        0.00        8.36
+{txt}              17 {c |}{res}      1,057        0.15        8.51
+{txt}            17.2 {c |}{res}          8        0.00        8.51
+{txt}            17.3 {c |}{res}          6        0.00        8.51
+{txt}            17.5 {c |}{res}        727        0.10        8.61
+{txt}            17.6 {c |}{res}          2        0.00        8.61
+{txt}            17.7 {c |}{res}          1        0.00        8.61
+{txt}            17.8 {c |}{res}          1        0.00        8.61
+{txt}              18 {c |}{res}      3,033        0.42        9.03
+{txt}            18.1 {c |}{res}          2        0.00        9.03
+{txt}            18.2 {c |}{res}         19        0.00        9.03
+{txt}            18.3 {c |}{res}          8        0.00        9.03
+{txt}            18.4 {c |}{res}          1        0.00        9.03
+{txt}            18.5 {c |}{res}         82        0.01        9.04
+{txt}            18.6 {c |}{res}          1        0.00        9.04
+{txt}            18.7 {c |}{res}        104        0.01        9.06
+{txt}            18.8 {c |}{res}         30        0.00        9.06
+{txt}              19 {c |}{res}        644        0.09        9.15
+{txt}            19.1 {c |}{res}          1        0.00        9.15
+{txt}            19.2 {c |}{res}          7        0.00        9.15
+{txt}            19.3 {c |}{res}          3        0.00        9.15
+{txt}            19.4 {c |}{res}          5        0.00        9.15
+{txt}            19.5 {c |}{res}        123        0.02        9.17
+{txt}            19.7 {c |}{res}          3        0.00        9.17
+{txt}            19.8 {c |}{res}          2        0.00        9.17
+{txt}              20 {c |}{res}     23,036        3.17       12.34
+{txt}            20.1 {c |}{res}          2        0.00       12.34
+{txt}            20.3 {c |}{res}          5        0.00       12.34
+{txt}            20.4 {c |}{res}          3        0.00       12.34
+{txt}            20.5 {c |}{res}         55        0.01       12.35
+{txt}            20.7 {c |}{res}          2        0.00       12.35
+{txt}            20.8 {c |}{res}          4        0.00       12.35
+{txt}              21 {c |}{res}      2,084        0.29       12.64
+{txt}            21.2 {c |}{res}          9        0.00       12.64
+{txt}            21.3 {c |}{res}          9        0.00       12.64
+{txt}            21.5 {c |}{res}         81        0.01       12.65
+{txt}            21.6 {c |}{res}         16        0.00       12.65
+{txt}            21.7 {c |}{res}         40        0.01       12.66
+{txt}            21.8 {c |}{res}         15        0.00       12.66
+{txt}              22 {c |}{res}      2,054        0.28       12.94
+{txt}            22.1 {c |}{res}          4        0.00       12.94
+{txt}            22.2 {c |}{res}          7        0.00       12.94
+{txt}            22.3 {c |}{res}          3        0.00       12.94
+{txt}            22.4 {c |}{res}          5        0.00       12.94
+{txt}            22.5 {c |}{res}      1,253        0.17       13.12
+{txt}            22.7 {c |}{res}          5        0.00       13.12
+{txt}            22.8 {c |}{res}          4        0.00       13.12
+{txt}              23 {c |}{res}      1,273        0.18       13.29
+{txt}            23.1 {c |}{res}          1        0.00       13.29
+{txt}            23.2 {c |}{res}         40        0.01       13.30
+{txt}            23.3 {c |}{res}         28        0.00       13.30
+{txt}            23.4 {c |}{res}          1        0.00       13.30
+{txt}            23.5 {c |}{res}        128        0.02       13.32
+{txt}            23.7 {c |}{res}         12        0.00       13.32
+{txt}            23.8 {c |}{res}          1        0.00       13.32
+{txt}              24 {c |}{res}      8,520        1.17       14.49
+{txt}            24.2 {c |}{res}          3        0.00       14.49
+{txt}            24.3 {c |}{res}          2        0.00       14.50
+{txt}            24.5 {c |}{res}        121        0.02       14.51
+{txt}            24.7 {c |}{res}          6        0.00       14.51
+{txt}            24.8 {c |}{res}          3        0.00       14.51
+{txt}            24.9 {c |}{res}          1        0.00       14.51
+{txt}              25 {c |}{res}     13,804        1.90       16.41
+{txt}            25.1 {c |}{res}          2        0.00       16.41
+{txt}            25.2 {c |}{res}          6        0.00       16.41
+{txt}            25.3 {c |}{res}          8        0.00       16.41
+{txt}            25.4 {c |}{res}          9        0.00       16.42
+{txt}            25.5 {c |}{res}        116        0.02       16.43
+{txt}            25.6 {c |}{res}          1        0.00       16.43
+{txt}            25.7 {c |}{res}          2        0.00       16.43
+{txt}            25.8 {c |}{res}          4        0.00       16.43
+{txt}              26 {c |}{res}      1,456        0.20       16.63
+{txt}            26.1 {c |}{res}          3        0.00       16.63
+{txt}            26.2 {c |}{res}         61        0.01       16.64
+{txt}            26.3 {c |}{res}         27        0.00       16.65
+{txt}            26.4 {c |}{res}          1        0.00       16.65
+{txt}            26.5 {c |}{res}        127        0.02       16.66
+{txt}            26.6 {c |}{res}          6        0.00       16.66
+{txt}            26.7 {c |}{res}          4        0.00       16.66
+{txt}            26.8 {c |}{res}          4        0.00       16.66
+{txt}              27 {c |}{res}      1,887        0.26       16.92
+{txt}            27.1 {c |}{res}         17        0.00       16.93
+{txt}            27.2 {c |}{res}         11        0.00       16.93
+{txt}            27.3 {c |}{res}          8        0.00       16.93
+{txt}            27.4 {c |}{res}          2        0.00       16.93
+{txt}            27.5 {c |}{res}      1,012        0.14       17.07
+{txt}            27.6 {c |}{res}          1        0.00       17.07
+{txt}            27.7 {c |}{res}          5        0.00       17.07
+{txt}            27.9 {c |}{res}          1        0.00       17.07
+{txt}              28 {c |}{res}      4,751        0.65       17.72
+{txt}            28.1 {c |}{res}          3        0.00       17.72
+{txt}            28.2 {c |}{res}          7        0.00       17.72
+{txt}            28.3 {c |}{res}          4        0.00       17.72
+{txt}            28.4 {c |}{res}          2        0.00       17.73
+{txt}            28.5 {c |}{res}        159        0.02       17.75
+{txt}            28.6 {c |}{res}          3        0.00       17.75
+{txt}            28.7 {c |}{res}         17        0.00       17.75
+{txt}            28.8 {c |}{res}         26        0.00       17.75
+{txt}              29 {c |}{res}        814        0.11       17.87
+{txt}            29.2 {c |}{res}         10        0.00       17.87
+{txt}            29.3 {c |}{res}          9        0.00       17.87
+{txt}            29.4 {c |}{res}          2        0.00       17.87
+{txt}            29.5 {c |}{res}         83        0.01       17.88
+{txt}            29.6 {c |}{res}          9        0.00       17.88
+{txt}            29.7 {c |}{res}          4        0.00       17.88
+{txt}            29.8 {c |}{res}          5        0.00       17.88
+{txt}              30 {c |}{res}     32,089        4.41       22.30
+{txt}            30.1 {c |}{res}          2        0.00       22.30
+{txt}            30.2 {c |}{res}          2        0.00       22.30
+{txt}            30.3 {c |}{res}          5        0.00       22.30
+{txt}            30.4 {c |}{res}          3        0.00       22.30
+{txt}            30.5 {c |}{res}        123        0.02       22.31
+{txt}            30.6 {c |}{res}          1        0.00       22.31
+{txt}            30.7 {c |}{res}         11        0.00       22.32
+{txt}            30.8 {c |}{res}          5        0.00       22.32
+{txt}            30.9 {c |}{res}          8        0.00       22.32
+{txt}              31 {c |}{res}      1,051        0.14       22.46
+{txt}            31.1 {c |}{res}          5        0.00       22.46
+{txt}            31.2 {c |}{res}         38        0.01       22.47
+{txt}            31.3 {c |}{res}         25        0.00       22.47
+{txt}            31.4 {c |}{res}          2        0.00       22.47
+{txt}            31.5 {c |}{res}        249        0.03       22.51
+{txt}            31.6 {c |}{res}          2        0.00       22.51
+{txt}            31.7 {c |}{res}         11        0.00       22.51
+{txt}            31.8 {c |}{res}          8        0.00       22.51
+{txt}            31.9 {c |}{res}          2        0.00       22.51
+{txt}              32 {c |}{res}     12,431        1.71       24.22
+{txt}            32.1 {c |}{res}          4        0.00       24.22
+{txt}            32.2 {c |}{res}         25        0.00       24.22
+{txt}            32.3 {c |}{res}         72        0.01       24.23
+{txt}            32.4 {c |}{res}          4        0.00       24.23
+{txt}            32.5 {c |}{res}      2,503        0.34       24.58
+{txt}            32.6 {c |}{res}         13        0.00       24.58
+{txt}            32.7 {c |}{res}         11        0.00       24.58
+{txt}            32.8 {c |}{res}         16        0.00       24.58
+{txt}            32.9 {c |}{res}          2        0.00       24.58
+{txt}              33 {c |}{res}      1,967        0.27       24.85
+{txt}            33.2 {c |}{res}         16        0.00       24.86
+{txt}            33.3 {c |}{res}         28        0.00       24.86
+{txt}            33.4 {c |}{res}         15        0.00       24.86
+{txt}            33.5 {c |}{res}        315        0.04       24.91
+{txt}            33.7 {c |}{res}        285        0.04       24.95
+{txt}            33.8 {c |}{res}        121        0.02       24.96
+{txt}              34 {c |}{res}      2,051        0.28       25.24
+{txt}            34.1 {c |}{res}          1        0.00       25.24
+{txt}            34.2 {c |}{res}          7        0.00       25.25
+{txt}            34.3 {c |}{res}          5        0.00       25.25
+{txt}            34.4 {c |}{res}          6        0.00       25.25
+{txt}            34.5 {c |}{res}        157        0.02       25.27
+{txt}            34.6 {c |}{res}          2        0.00       25.27
+{txt}            34.7 {c |}{res}         14        0.00       25.27
+{txt}            34.8 {c |}{res}          7        0.00       25.27
+{txt}            34.9 {c |}{res}         10        0.00       25.27
+{txt}              35 {c |}{res}     55,536        7.64       32.91
+{txt}            35.1 {c |}{res}          4        0.00       32.91
+{txt}            35.2 {c |}{res}         34        0.00       32.92
+{txt}            35.3 {c |}{res}         34        0.00       32.92
+{txt}            35.4 {c |}{res}          5        0.00       32.92
+{txt}            35.5 {c |}{res}        497        0.07       32.99
+{txt}            35.6 {c |}{res}         25        0.00       32.99
+{txt}            35.7 {c |}{res}         42        0.01       33.00
+{txt}            35.8 {c |}{res}         23        0.00       33.00
+{txt}            35.9 {c |}{res}          2        0.00       33.00
+{txt}              36 {c |}{res}      8,695        1.20       34.20
+{txt}            36.1 {c |}{res}         25        0.00       34.20
+{txt}            36.2 {c |}{res}      1,894        0.26       34.46
+{txt}            36.3 {c |}{res}      1,117        0.15       34.62
+{txt}            36.4 {c |}{res}         18        0.00       34.62
+{txt}            36.5 {c |}{res}        844        0.12       34.74
+{txt}            36.6 {c |}{res}         13        0.00       34.74
+{txt}            36.7 {c |}{res}        106        0.01       34.75
+{txt}            36.8 {c |}{res}         81        0.01       34.76
+{txt}            36.9 {c |}{res}         31        0.00       34.77
+{txt}              37 {c |}{res}      7,092        0.98       35.74
+{txt}            37.1 {c |}{res}          4        0.00       35.74
+{txt}            37.2 {c |}{res}        657        0.09       35.83
+{txt}            37.3 {c |}{res}        693        0.10       35.93
+{txt}            37.4 {c |}{res}         25        0.00       35.93
+{txt}            37.5 {c |}{res}     59,909        8.24       44.17
+{txt}            37.6 {c |}{res}         29        0.00       44.18
+{txt}            37.7 {c |}{res}        451        0.06       44.24
+{txt}            37.8 {c |}{res}        236        0.03       44.27
+{txt}            37.9 {c |}{res}         10        0.00       44.27
+{txt}              38 {c |}{res}      6,079        0.84       45.11
+{txt}            38.1 {c |}{res}          2        0.00       45.11
+{txt}            38.2 {c |}{res}         53        0.01       45.12
+{txt}            38.3 {c |}{res}         50        0.01       45.12
+{txt}            38.4 {c |}{res}         25        0.00       45.13
+{txt}            38.5 {c |}{res}        830        0.11       45.24
+{txt}            38.6 {c |}{res}          9        0.00       45.24
+{txt}            38.7 {c |}{res}        957        0.13       45.38
+{txt}            38.8 {c |}{res}        556        0.08       45.45
+{txt}            38.9 {c |}{res}         17        0.00       45.45
+{txt}              39 {c |}{res}      1,989        0.27       45.73
+{txt}            39.1 {c |}{res}          7        0.00       45.73
+{txt}            39.2 {c |}{res}         28        0.00       45.73
+{txt}            39.3 {c |}{res}         21        0.00       45.74
+{txt}            39.4 {c |}{res}         22        0.00       45.74
+{txt}            39.5 {c |}{res}        489        0.07       45.81
+{txt}            39.6 {c |}{res}         26        0.00       45.81
+{txt}            39.7 {c |}{res}         30        0.00       45.81
+{txt}            39.8 {c |}{res}         18        0.00       45.82
+{txt}            39.9 {c |}{res}         10        0.00       45.82
+{txt}              40 {c |}{res}    266,424       36.65       82.47
+{txt}            40.1 {c |}{res}          2        0.00       82.47
+{txt}            40.2 {c |}{res}         30        0.00       82.47
+{txt}            40.3 {c |}{res}         12        0.00       82.47
+{txt}            40.4 {c |}{res}          3        0.00       82.47
+{txt}            40.5 {c |}{res}        285        0.04       82.51
+{txt}            40.6 {c |}{res}         10        0.00       82.51
+{txt}            40.7 {c |}{res}          9        0.00       82.51
+{txt}            40.8 {c |}{res}         11        0.00       82.52
+{txt}              41 {c |}{res}      1,004        0.14       82.65
+{txt}            41.2 {c |}{res}         25        0.00       82.66
+{txt}            41.3 {c |}{res}         15        0.00       82.66
+{txt}            41.4 {c |}{res}          2        0.00       82.66
+{txt}            41.5 {c |}{res}        305        0.04       82.70
+{txt}            41.6 {c |}{res}         12        0.00       82.70
+{txt}            41.7 {c |}{res}          9        0.00       82.70
+{txt}            41.8 {c |}{res}          8        0.00       82.71
+{txt}              42 {c |}{res}      8,436        1.16       83.87
+{txt}            42.1 {c |}{res}          5        0.00       83.87
+{txt}            42.2 {c |}{res}         17        0.00       83.87
+{txt}            42.3 {c |}{res}          7        0.00       83.87
+{txt}            42.5 {c |}{res}      2,073        0.29       84.15
+{txt}            42.6 {c |}{res}          1        0.00       84.15
+{txt}            42.7 {c |}{res}         17        0.00       84.16
+{txt}            42.8 {c |}{res}          7        0.00       84.16
+{txt}            42.9 {c |}{res}          2        0.00       84.16
+{txt}              43 {c |}{res}      1,652        0.23       84.39
+{txt}            43.2 {c |}{res}         11        0.00       84.39
+{txt}            43.3 {c |}{res}         29        0.00       84.39
+{txt}            43.4 {c |}{res}          1        0.00       84.39
+{txt}            43.5 {c |}{res}        228        0.03       84.42
+{txt}            43.7 {c |}{res}         14        0.00       84.42
+{txt}            43.8 {c |}{res}          6        0.00       84.43
+{txt}            43.9 {c |}{res}          2        0.00       84.43
+{txt}              44 {c |}{res}      9,444        1.30       85.72
+{txt}            44.2 {c |}{res}         14        0.00       85.73
+{txt}            44.3 {c |}{res}         11        0.00       85.73
+{txt}            44.4 {c |}{res}          2        0.00       85.73
+{txt}            44.5 {c |}{res}        179        0.02       85.75
+{txt}            44.6 {c |}{res}          2        0.00       85.75
+{txt}            44.7 {c |}{res}          5        0.00       85.75
+{txt}            44.8 {c |}{res}          2        0.00       85.75
+{txt}              45 {c |}{res}     17,164        2.36       88.12
+{txt}            45.1 {c |}{res}          1        0.00       88.12
+{txt}            45.2 {c |}{res}          2        0.00       88.12
+{txt}            45.3 {c |}{res}          9        0.00       88.12
+{txt}            45.5 {c |}{res}        309        0.04       88.16
+{txt}            45.7 {c |}{res}          7        0.00       88.16
+{txt}            45.8 {c |}{res}          1        0.00       88.16
+{txt}              46 {c |}{res}      1,383        0.19       88.35
+{txt}            46.1 {c |}{res}          1        0.00       88.35
+{txt}            46.2 {c |}{res}         25        0.00       88.35
+{txt}            46.3 {c |}{res}         15        0.00       88.36
+{txt}            46.5 {c |}{res}        130        0.02       88.37
+{txt}            46.6 {c |}{res}         23        0.00       88.38
+{txt}            46.7 {c |}{res}         31        0.00       88.38
+{txt}            46.8 {c |}{res}          8        0.00       88.38
+{txt}              47 {c |}{res}      1,114        0.15       88.54
+{txt}            47.1 {c |}{res}          5        0.00       88.54
+{txt}            47.2 {c |}{res}          6        0.00       88.54
+{txt}            47.3 {c |}{res}          1        0.00       88.54
+{txt}            47.5 {c |}{res}        970        0.13       88.67
+{txt}            47.7 {c |}{res}          6        0.00       88.67
+{txt}            47.8 {c |}{res}          5        0.00       88.67
+{txt}              48 {c |}{res}      5,797        0.80       89.47
+{txt}            48.1 {c |}{res}          1        0.00       89.47
+{txt}            48.2 {c |}{res}          4        0.00       89.47
+{txt}            48.3 {c |}{res}          3        0.00       89.47
+{txt}            48.5 {c |}{res}         72        0.01       89.48
+{txt}            48.7 {c |}{res}         13        0.00       89.48
+{txt}            48.8 {c |}{res}          8        0.00       89.48
+{txt}              49 {c |}{res}        494        0.07       89.55
+{txt}            49.2 {c |}{res}          5        0.00       89.55
+{txt}            49.3 {c |}{res}          4        0.00       89.55
+{txt}            49.5 {c |}{res}        183        0.03       89.58
+{txt}            49.7 {c |}{res}          3        0.00       89.58
+{txt}              50 {c |}{res}     26,722        3.68       93.25
+{txt}            50.1 {c |}{res}          1        0.00       93.25
+{txt}            50.2 {c |}{res}          5        0.00       93.26
+{txt}            50.4 {c |}{res}          2        0.00       93.26
+{txt}            50.5 {c |}{res}         61        0.01       93.26
+{txt}              51 {c |}{res}        362        0.05       93.31
+{txt}            51.2 {c |}{res}         14        0.00       93.32
+{txt}            51.3 {c |}{res}          7        0.00       93.32
+{txt}            51.5 {c |}{res}         74        0.01       93.33
+{txt}            51.7 {c |}{res}          2        0.00       93.33
+{txt}            51.8 {c |}{res}          1        0.00       93.33
+{txt}              52 {c |}{res}      1,298        0.18       93.51
+{txt}            52.2 {c |}{res}          5        0.00       93.51
+{txt}            52.3 {c |}{res}          5        0.00       93.51
+{txt}            52.5 {c |}{res}        499        0.07       93.58
+{txt}            52.7 {c |}{res}          3        0.00       93.58
+{txt}            52.8 {c |}{res}          3        0.00       93.58
+{txt}              53 {c |}{res}        410        0.06       93.63
+{txt}            53.2 {c |}{res}          4        0.00       93.63
+{txt}            53.3 {c |}{res}          5        0.00       93.63
+{txt}            53.4 {c |}{res}          1        0.00       93.63
+{txt}            53.5 {c |}{res}        112        0.02       93.65
+{txt}            53.6 {c |}{res}          1        0.00       93.65
+{txt}            53.7 {c |}{res}          5        0.00       93.65
+{txt}              54 {c |}{res}        766        0.11       93.76
+{txt}            54.2 {c |}{res}          1        0.00       93.76
+{txt}            54.3 {c |}{res}          6        0.00       93.76
+{txt}            54.5 {c |}{res}         32        0.00       93.76
+{txt}            54.7 {c |}{res}          1        0.00       93.76
+{txt}            54.8 {c |}{res}          1        0.00       93.76
+{txt}              55 {c |}{res}      6,615        0.91       94.67
+{txt}            55.2 {c |}{res}          3        0.00       94.67
+{txt}            55.5 {c |}{res}         54        0.01       94.68
+{txt}              56 {c |}{res}      1,659        0.23       94.91
+{txt}            56.2 {c |}{res}          3        0.00       94.91
+{txt}            56.3 {c |}{res}          4        0.00       94.91
+{txt}            56.5 {c |}{res}         16        0.00       94.91
+{txt}            56.9 {c |}{res}          1        0.00       94.91
+{txt}              57 {c |}{res}        314        0.04       94.95
+{txt}            57.2 {c |}{res}          4        0.00       94.95
+{txt}            57.3 {c |}{res}          9        0.00       94.96
+{txt}            57.5 {c |}{res}        311        0.04       95.00
+{txt}            57.7 {c |}{res}          5        0.00       95.00
+{txt}            57.8 {c |}{res}          2        0.00       95.00
+{txt}              58 {c |}{res}        388        0.05       95.05
+{txt}            58.5 {c |}{res}         23        0.00       95.06
+{txt}            58.7 {c |}{res}          1        0.00       95.06
+{txt}            58.8 {c |}{res}          1        0.00       95.06
+{txt}              59 {c |}{res}        156        0.02       95.08
+{txt}            59.2 {c |}{res}          1        0.00       95.08
+{txt}            59.5 {c |}{res}         35        0.00       95.08
+{txt}            59.7 {c |}{res}          1        0.00       95.08
+{txt}              60 {c |}{res}     15,289        2.10       97.19
+{txt}            60.5 {c |}{res}          8        0.00       97.19
+{txt}            60.6 {c |}{res}          2        0.00       97.19
+{txt}            60.7 {c |}{res}          3        0.00       97.19
+{txt}              61 {c |}{res}        136        0.02       97.21
+{txt}            61.2 {c |}{res}          3        0.00       97.21
+{txt}            61.3 {c |}{res}          2        0.00       97.21
+{txt}            61.5 {c |}{res}         44        0.01       97.21
+{txt}              62 {c |}{res}        327        0.04       97.26
+{txt}            62.2 {c |}{res}          1        0.00       97.26
+{txt}            62.5 {c |}{res}        139        0.02       97.28
+{txt}            62.7 {c |}{res}          1        0.00       97.28
+{txt}              63 {c |}{res}        294        0.04       97.32
+{txt}            63.5 {c |}{res}          3        0.00       97.32
+{txt}            63.7 {c |}{res}          3        0.00       97.32
+{txt}              64 {c |}{res}        364        0.05       97.37
+{txt}            64.1 {c |}{res}          1        0.00       97.37
+{txt}            64.4 {c |}{res}          1        0.00       97.37
+{txt}            64.5 {c |}{res}         13        0.00       97.37
+{txt}              65 {c |}{res}      2,341        0.32       97.69
+{txt}            65.1 {c |}{res}          1        0.00       97.69
+{txt}            65.3 {c |}{res}          1        0.00       97.69
+{txt}            65.5 {c |}{res}          8        0.00       97.69
+{txt}              66 {c |}{res}        276        0.04       97.73
+{txt}            66.3 {c |}{res}          1        0.00       97.73
+{txt}            66.5 {c |}{res}         10        0.00       97.73
+{txt}            66.7 {c |}{res}          2        0.00       97.73
+{txt}              67 {c |}{res}        126        0.02       97.75
+{txt}            67.5 {c |}{res}         96        0.01       97.76
+{txt}              68 {c |}{res}        194        0.03       97.79
+{txt}            68.3 {c |}{res}          3        0.00       97.79
+{txt}            68.5 {c |}{res}          5        0.00       97.79
+{txt}            68.7 {c |}{res}          2        0.00       97.79
+{txt}              69 {c |}{res}         56        0.01       97.80
+{txt}            69.2 {c |}{res}          1        0.00       97.80
+{txt}            69.3 {c |}{res}          2        0.00       97.80
+{txt}            69.5 {c |}{res}          6        0.00       97.80
+{txt}            69.7 {c |}{res}          1        0.00       97.80
+{txt}            69.8 {c |}{res}          1        0.00       97.80
+{txt}              70 {c |}{res}      5,573        0.77       98.57
+{txt}            70.3 {c |}{res}          1        0.00       98.57
+{txt}            70.4 {c |}{res}          1        0.00       98.57
+{txt}            70.5 {c |}{res}          3        0.00       98.57
+{txt}            70.6 {c |}{res}          2        0.00       98.57
+{txt}              71 {c |}{res}         44        0.01       98.58
+{txt}            71.5 {c |}{res}          2        0.00       98.58
+{txt}              72 {c |}{res}        996        0.14       98.71
+{txt}            72.2 {c |}{res}          3        0.00       98.71
+{txt}            72.4 {c |}{res}          4        0.00       98.71
+{txt}            72.5 {c |}{res}         45        0.01       98.72
+{txt}            72.6 {c |}{res}          3        0.00       98.72
+{txt}            72.8 {c |}{res}          1        0.00       98.72
+{txt}            72.9 {c |}{res}          1        0.00       98.72
+{txt}              73 {c |}{res}         54        0.01       98.73
+{txt}            73.5 {c |}{res}         21        0.00       98.73
+{txt}            73.6 {c |}{res}          1        0.00       98.73
+{txt}            73.7 {c |}{res}          4        0.00       98.73
+{txt}              74 {c |}{res}         91        0.01       98.74
+{txt}            74.2 {c |}{res}          1        0.00       98.74
+{txt}            74.3 {c |}{res}          1        0.00       98.74
+{txt}            74.5 {c |}{res}          3        0.00       98.75
+{txt}            74.7 {c |}{res}          1        0.00       98.75
+{txt}              75 {c |}{res}        997        0.14       98.88
+{txt}            75.2 {c |}{res}          1        0.00       98.88
+{txt}            75.5 {c |}{res}          7        0.00       98.88
+{txt}            75.6 {c |}{res}          1        0.00       98.88
+{txt}              76 {c |}{res}         87        0.01       98.90
+{txt}            76.2 {c |}{res}          2        0.00       98.90
+{txt}            76.3 {c |}{res}          1        0.00       98.90
+{txt}            76.5 {c |}{res}          2        0.00       98.90
+{txt}            76.8 {c |}{res}          1        0.00       98.90
+{txt}              77 {c |}{res}        261        0.04       98.93
+{txt}            77.5 {c |}{res}         46        0.01       98.94
+{txt}              78 {c |}{res}        104        0.01       98.95
+{txt}            78.2 {c |}{res}          1        0.00       98.95
+{txt}            78.5 {c |}{res}          3        0.00       98.95
+{txt}            78.7 {c |}{res}          3        0.00       98.95
+{txt}            78.8 {c |}{res}          4        0.00       98.95
+{txt}              79 {c |}{res}         13        0.00       98.96
+{txt}            79.5 {c |}{res}          1        0.00       98.96
+{txt}              80 {c |}{res}      2,924        0.40       99.36
+{txt}            80.5 {c |}{res}          8        0.00       99.36
+{txt}              81 {c |}{res}         16        0.00       99.36
+{txt}            81.5 {c |}{res}          2        0.00       99.36
+{txt}              82 {c |}{res}         77        0.01       99.37
+{txt}            82.5 {c |}{res}         17        0.00       99.38
+{txt}              83 {c |}{res}         32        0.00       99.38
+{txt}            83.5 {c |}{res}          5        0.00       99.38
+{txt}              84 {c |}{res}      1,777        0.24       99.62
+{txt}            84.5 {c |}{res}          1        0.00       99.62
+{txt}              85 {c |}{res}        251        0.03       99.66
+{txt}            85.5 {c |}{res}          2        0.00       99.66
+{txt}              86 {c |}{res}         47        0.01       99.67
+{txt}            86.5 {c |}{res}          3        0.00       99.67
+{txt}            86.6 {c |}{res}          1        0.00       99.67
+{txt}              87 {c |}{res}         15        0.00       99.67
+{txt}            87.2 {c |}{res}          1        0.00       99.67
+{txt}            87.5 {c |}{res}         11        0.00       99.67
+{txt}              88 {c |}{res}         52        0.01       99.68
+{txt}            88.5 {c |}{res}          2        0.00       99.68
+{txt}              89 {c |}{res}          8        0.00       99.68
+{txt}            89.2 {c |}{res}          3        0.00       99.68
+{txt}              90 {c |}{res}        528        0.07       99.75
+{txt}            90.8 {c |}{res}          2        0.00       99.75
+{txt}              91 {c |}{res}         49        0.01       99.76
+{txt}              92 {c |}{res}         27        0.00       99.76
+{txt}            92.5 {c |}{res}          4        0.00       99.76
+{txt}              93 {c |}{res}         14        0.00       99.77
+{txt}            93.2 {c |}{res}          1        0.00       99.77
+{txt}            93.3 {c |}{res}          1        0.00       99.77
+{txt}            93.5 {c |}{res}          2        0.00       99.77
+{txt}              94 {c |}{res}         28        0.00       99.77
+{txt}            94.5 {c |}{res}          7        0.00       99.77
+{txt}              95 {c |}{res}        105        0.01       99.78
+{txt}            95.5 {c |}{res}          1        0.00       99.79
+{txt}              96 {c |}{res}         96        0.01       99.80
+{txt}            96.5 {c |}{res}          1        0.00       99.80
+{txt}              97 {c |}{res}          1        0.00       99.80
+{txt}            97.5 {c |}{res}          5        0.00       99.80
+{txt}              98 {c |}{res}        168        0.02       99.82
+{txt}99 or more hours {c |}{res}      1,291        0.18      100.00
+{txt}{hline 17}{c +}{hline 35}
+           Total {c |}{res}    726,974      100.00
+
+{com}. regress mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow2
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F(  9,616423) ={res} 3429.33
+    {txt}   Model {char |} {res} 1504.92873     9  167.214303           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 30056.8354616423  .048760081           {txt}R-squared     = {res} 0.0477
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0477
+    {txt}   Total {char |} {res} 31561.7641616432  .051200723           {txt}Root MSE      = {res} .22082
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        mjh1{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}pt1 {c |}{col 14}{res}{space 2} .0451733{col 26}{space 2} .0008381{col 37}{space 1}   53.90{col 46}{space 3}0.000{col 54}{space 4} .0435307{col 67}{space 3} .0468159
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2}-.0044984{col 26}{space 2} .0000273{col 37}{space 1} -164.98{col 46}{space 3}0.000{col 54}{space 4}-.0045518{col 67}{space 3} -.004445
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} .0214272{col 26}{space 2}  .001823{col 37}{space 1}   11.75{col 46}{space 3}0.000{col 54}{space 4} .0178543{col 67}{space 3} .0250002
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2}-.0054123{col 26}{space 2} .0006319{col 37}{space 1}   -8.57{col 46}{space 3}0.000{col 54}{space 4}-.0066508{col 67}{space 3}-.0041739
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2} .0033433{col 26}{space 2} .0009514{col 37}{space 1}    3.51{col 46}{space 3}0.000{col 54}{space 4} .0014786{col 67}{space 3} .0052081
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-.0289642{col 26}{space 2}  .000653{col 37}{space 1}  -44.35{col 46}{space 3}0.000{col 54}{space 4}-.0302441{col 67}{space 3}-.0276843
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} .0459187{col 26}{space 2} .0005894{col 37}{space 1}   77.90{col 46}{space 3}0.000{col 54}{space 4} .0447635{col 67}{space 3}  .047074
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2}-.0061542{col 26}{space 2} .0007674{col 37}{space 1}   -8.02{col 46}{space 3}0.000{col 54}{space 4}-.0076583{col 67}{space 3}-.0046502
+{txt}{space 8}cow2 {c |}{col 14}{res}{space 2} .0095473{col 26}{space 2} .0006635{col 37}{space 1}   14.39{col 46}{space 3}0.000{col 54}{space 4} .0082469{col 67}{space 3} .0108478
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.049856{col 26}{space 2} .0012779{col 37}{space 1}  821.56{col 46}{space 3}0.000{col 54}{space 4} 1.047352{col 67}{space 3} 1.052361
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow2
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F( 10,616422) ={res}19467.76
+    {txt}   Model {char |} {res} 24472626.6    10  2447262.66           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77489491.7616422  125.708511           {txt}R-squared     = {res} 0.2400
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2400
+    {txt}   Total {char |} {res}  101962118616432   165.40692           {txt}Root MSE      = {res} 11.212
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2}   3.4155{col 26}{space 2} .0646712{col 37}{space 1}   52.81{col 46}{space 3}0.000{col 54}{space 4} 3.288746{col 67}{space 3} 3.542253
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.656981{col 26}{space 2}  .042653{col 37}{space 1}   85.74{col 46}{space 3}0.000{col 54}{space 4} 3.573382{col 67}{space 3} 3.740579
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1658744{col 26}{space 2} .0014147{col 37}{space 1}  117.25{col 46}{space 3}0.000{col 54}{space 4} .1631016{col 67}{space 3} .1686472
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 8.063867{col 26}{space 2} .0925714{col 37}{space 1}   87.11{col 46}{space 3}0.000{col 54}{space 4}  7.88243{col 67}{space 3} 8.245304
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .8768828{col 26}{space 2} .0320851{col 37}{space 1}   27.33{col 46}{space 3}0.000{col 54}{space 4}  .813997{col 67}{space 3} .9397686
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.9713167{col 26}{space 2} .0483085{col 37}{space 1}  -20.11{col 46}{space 3}0.000{col 54}{space 4}   -1.066{col 67}{space 3}-.8766337
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.045471{col 26}{space 2} .0332101{col 37}{space 1} -151.93{col 46}{space 3}0.000{col 54}{space 4}-5.110561{col 67}{space 3} -4.98038
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.572548{col 26}{space 2} .0300759{col 37}{space 1}  152.03{col 46}{space 3}0.000{col 54}{space 4}   4.5136{col 67}{space 3} 4.631496
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.145805{col 26}{space 2} .0389665{col 37}{space 1}  132.06{col 46}{space 3}0.000{col 54}{space 4} 5.069432{col 67}{space 3} 5.222178
+{txt}{space 8}cow2 {c |}{col 14}{res}{space 2}-7.855047{col 26}{space 2} .0336947{col 37}{space 1} -233.12{col 46}{space 3}0.000{col 54}{space 4}-7.921087{col 67}{space 3}-7.789006
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  16.0497{col 26}{space 2} .0939136{col 37}{space 1}  170.90{col 46}{space 3}0.000{col 54}{space 4} 15.86563{col 67}{space 3} 16.23377
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F( 10,616422) ={res}19467.76
+    {txt}   Model {char |} {res} 24472626.6    10  2447262.66           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77489491.7616422  125.708511           {txt}R-squared     = {res} 0.2400
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2400
+    {txt}   Total {char |} {res}  101962118616432   165.40692           {txt}Root MSE      = {res} 11.212
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2}   3.4155{col 26}{space 2} .0646712{col 37}{space 1}   52.81{col 46}{space 3}0.000{col 54}{space 4} 3.288746{col 67}{space 3} 3.542253
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.656981{col 26}{space 2}  .042653{col 37}{space 1}   85.74{col 46}{space 3}0.000{col 54}{space 4} 3.573382{col 67}{space 3} 3.740579
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1658744{col 26}{space 2} .0014147{col 37}{space 1}  117.25{col 46}{space 3}0.000{col 54}{space 4} .1631016{col 67}{space 3} .1686472
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 8.063867{col 26}{space 2} .0925714{col 37}{space 1}   87.11{col 46}{space 3}0.000{col 54}{space 4}  7.88243{col 67}{space 3} 8.245304
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .8768828{col 26}{space 2} .0320851{col 37}{space 1}   27.33{col 46}{space 3}0.000{col 54}{space 4}  .813997{col 67}{space 3} .9397686
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.9713167{col 26}{space 2} .0483085{col 37}{space 1}  -20.11{col 46}{space 3}0.000{col 54}{space 4}   -1.066{col 67}{space 3}-.8766337
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.045471{col 26}{space 2} .0332101{col 37}{space 1} -151.93{col 46}{space 3}0.000{col 54}{space 4}-5.110561{col 67}{space 3} -4.98038
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.572548{col 26}{space 2} .0300759{col 37}{space 1}  152.03{col 46}{space 3}0.000{col 54}{space 4}   4.5136{col 67}{space 3} 4.631496
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.145805{col 26}{space 2} .0389665{col 37}{space 1}  132.06{col 46}{space 3}0.000{col 54}{space 4} 5.069432{col 67}{space 3} 5.222178
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.855047{col 26}{space 2} .0336947{col 37}{space 1}  233.12{col 46}{space 3}0.000{col 54}{space 4} 7.789006{col 67}{space 3} 7.921087
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.194655{col 26}{space 2} .0935166{col 37}{space 1}   87.63{col 46}{space 3}0.000{col 54}{space 4} 8.011365{col 67}{space 3} 8.377944
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. tabulate cma
+
+      {txt}3 largest CMAs {c |}
+(census metropolitan {c |}
+              areas) {c |}      Freq.     Percent        Cum.
+{hline 21}{c +}{hline 35}
+            Montreal {c |}{res}     44,968        3.69        3.69
+{txt}             Toronto {c |}{res}     67,264        5.52        9.22
+{txt}           Vancouver {c |}{res}     45,800        3.76       12.98
+{txt}Other CMA or Non-CMA {c |}{res}  1,059,654       87.02      100.00
+{txt}{hline 21}{c +}{hline 35}
+               Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate cma, gen(cma)
+
+      {txt}3 largest CMAs {c |}
+(census metropolitan {c |}
+              areas) {c |}      Freq.     Percent        Cum.
+{hline 21}{c +}{hline 35}
+            Montreal {c |}{res}     44,968        3.69        3.69
+{txt}             Toronto {c |}{res}     67,264        5.52        9.22
+{txt}           Vancouver {c |}{res}     45,800        3.76       12.98
+{txt}Other CMA or Non-CMA {c |}{res}  1,059,654       87.02      100.00
+{txt}{hline 21}{c +}{hline 35}
+               Total {c |}{res}  1,217,686      100.00
+
+{com}. tabulate survyear
+
+{txt}Survey year {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+       2015 {c |}{res}  1,217,687      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,687      100.00
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow2 cma2
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F( 11,616421) ={res}17754.65
+    {txt}   Model {char |} {res} 24532186.7    11  2230198.79           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77429931.6616421  125.612092           {txt}R-squared     = {res} 0.2406
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2406
+    {txt}   Total {char |} {res}  101962118616432   165.40692           {txt}Root MSE      = {res} 11.208
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 3.393636{col 26}{space 2} .0646542{col 37}{space 1}   52.49{col 46}{space 3}0.000{col 54}{space 4} 3.266915{col 67}{space 3} 3.520356
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.666473{col 26}{space 2} .0426389{col 37}{space 1}   85.99{col 46}{space 3}0.000{col 54}{space 4} 3.582902{col 67}{space 3} 3.750044
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1653977{col 26}{space 2} .0014144{col 37}{space 1}  116.94{col 46}{space 3}0.000{col 54}{space 4} .1626256{col 67}{space 3} .1681698
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 7.993354{col 26}{space 2} .0925925{col 37}{space 1}   86.33{col 46}{space 3}0.000{col 54}{space 4} 7.811876{col 67}{space 3} 8.174833
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5778749{col 26}{space 2} .0348887{col 37}{space 1}   16.56{col 46}{space 3}0.000{col 54}{space 4} .5094941{col 67}{space 3} .6462557
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.9753438{col 26}{space 2} .0482903{col 37}{space 1}  -20.20{col 46}{space 3}0.000{col 54}{space 4}-1.069991{col 67}{space 3}-.8806964
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.057694{col 26}{space 2} .0332021{col 37}{space 1} -152.33{col 46}{space 3}0.000{col 54}{space 4}-5.122769{col 67}{space 3}-4.992619
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.577205{col 26}{space 2} .0300652{col 37}{space 1}  152.24{col 46}{space 3}0.000{col 54}{space 4} 4.518279{col 67}{space 3} 4.636132
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.085198{col 26}{space 2} .0390509{col 37}{space 1}  130.22{col 46}{space 3}0.000{col 54}{space 4}  5.00866{col 67}{space 3} 5.161737
+{txt}{space 8}cow2 {c |}{col 14}{res}{space 2}-7.892985{col 26}{space 2} .0337268{col 37}{space 1} -234.03{col 46}{space 3}0.000{col 54}{space 4}-7.959088{col 67}{space 3}-7.826881
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.488525{col 26}{space 2} .0683587{col 37}{space 1}   21.78{col 46}{space 3}0.000{col 54}{space 4} 1.354544{col 67}{space 3} 1.622506
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 16.12065{col 26}{space 2} .0939341{col 37}{space 1}  171.62{col 46}{space 3}0.000{col 54}{space 4} 15.93654{col 67}{space 3} 16.30476
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F( 11,616421) ={res}17754.65
+    {txt}   Model {char |} {res} 24532186.7    11  2230198.79           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77429931.6616421  125.612092           {txt}R-squared     = {res} 0.2406
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2406
+    {txt}   Total {char |} {res}  101962118616432   165.40692           {txt}Root MSE      = {res} 11.208
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 3.393636{col 26}{space 2} .0646542{col 37}{space 1}   52.49{col 46}{space 3}0.000{col 54}{space 4} 3.266915{col 67}{space 3} 3.520356
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.666473{col 26}{space 2} .0426389{col 37}{space 1}   85.99{col 46}{space 3}0.000{col 54}{space 4} 3.582902{col 67}{space 3} 3.750044
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1653977{col 26}{space 2} .0014144{col 37}{space 1}  116.94{col 46}{space 3}0.000{col 54}{space 4} .1626256{col 67}{space 3} .1681698
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 7.993354{col 26}{space 2} .0925925{col 37}{space 1}   86.33{col 46}{space 3}0.000{col 54}{space 4} 7.811876{col 67}{space 3} 8.174833
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5778749{col 26}{space 2} .0348887{col 37}{space 1}   16.56{col 46}{space 3}0.000{col 54}{space 4} .5094941{col 67}{space 3} .6462557
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.9753438{col 26}{space 2} .0482903{col 37}{space 1}  -20.20{col 46}{space 3}0.000{col 54}{space 4}-1.069991{col 67}{space 3}-.8806964
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.057694{col 26}{space 2} .0332021{col 37}{space 1} -152.33{col 46}{space 3}0.000{col 54}{space 4}-5.122769{col 67}{space 3}-4.992619
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.577205{col 26}{space 2} .0300652{col 37}{space 1}  152.24{col 46}{space 3}0.000{col 54}{space 4} 4.518279{col 67}{space 3} 4.636132
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.085198{col 26}{space 2} .0390509{col 37}{space 1}  130.22{col 46}{space 3}0.000{col 54}{space 4}  5.00866{col 67}{space 3} 5.161737
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.892985{col 26}{space 2} .0337268{col 37}{space 1}  234.03{col 46}{space 3}0.000{col 54}{space 4} 7.826881{col 67}{space 3} 7.959088
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.488525{col 26}{space 2} .0683587{col 37}{space 1}   21.78{col 46}{space 3}0.000{col 54}{space 4} 1.354544{col 67}{space 3} 1.622506
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.227664{col 26}{space 2}  .093493{col 37}{space 1}   88.00{col 46}{space 3}0.000{col 54}{space 4}  8.04442{col 67}{space 3} 8.410907
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. tabulate flowunem
+
+            {txt}Flows into {c |}
+          unemployment {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+ Job loser/temp layoff {c |}{res}      3,573        6.38        6.38
+{txt} Job losers, permanent {c |}{res}     18,010       32.17       38.55
+{txt}           Job leavers {c |}{res}      4,502        8.04       46.59
+{txt}    Job leavers/losers {c |}{res}      4,758        8.50       55.09
+{txt}          New entrants {c |}{res}      5,471        9.77       64.86
+{txt}Re-entrants-work <1 yr {c |}{res}      9,307       16.62       81.48
+{txt}Re-entrants-work >1 yr {c |}{res}      7,792       13.92       95.40
+{txt}         Future starts {c |}{res}      2,574        4.60      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}     55,987      100.00
+
+{com}. tabulate flowunem, gen(flowunem)
+
+            {txt}Flows into {c |}
+          unemployment {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+ Job loser/temp layoff {c |}{res}      3,573        6.38        6.38
+{txt} Job losers, permanent {c |}{res}     18,010       32.17       38.55
+{txt}           Job leavers {c |}{res}      4,502        8.04       46.59
+{txt}    Job leavers/losers {c |}{res}      4,758        8.50       55.09
+{txt}          New entrants {c |}{res}      5,471        9.77       64.86
+{txt}Re-entrants-work <1 yr {c |}{res}      9,307       16.62       81.48
+{txt}Re-entrants-work >1 yr {c |}{res}      7,792       13.92       95.40
+{txt}         Future starts {c |}{res}      2,574        4.60      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}     55,987      100.00
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 flowunem5
+{err}no observations
+{txt}{search r(2000):r(2000);}
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 flowunem5
+{err}no observations
+{txt}{search r(2000):r(2000);}
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 flowunem6
+{err}no observations
+{txt}{search r(2000):r(2000);}
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 flowunem7
+{err}no observations
+{txt}{search r(2000):r(2000);}
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 flowunem8
+{err}no observations
+{txt}{search r(2000):r(2000);}
+
+{com}. tabulate tenure
+
+ {txt}Job tenure {c |}
+  in months {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}     11,937        1.64        1.64
+{txt}          2 {c |}{res}     16,941        2.33        3.97
+{txt}          3 {c |}{res}     15,920        2.19        6.16
+{txt}          4 {c |}{res}     14,242        1.96        8.12
+{txt}          5 {c |}{res}     12,738        1.75        9.87
+{txt}          6 {c |}{res}     11,651        1.60       11.48
+{txt}          7 {c |}{res}     11,053        1.52       13.00
+{txt}          8 {c |}{res}     10,044        1.38       14.38
+{txt}          9 {c |}{res}      9,430        1.30       15.68
+{txt}         10 {c |}{res}      8,826        1.21       16.89
+{txt}         11 {c |}{res}      8,146        1.12       18.01
+{txt}         12 {c |}{res}      7,649        1.05       19.06
+{txt}         13 {c |}{res}      8,536        1.17       20.24
+{txt}         14 {c |}{res}      8,244        1.13       21.37
+{txt}         15 {c |}{res}      7,558        1.04       22.41
+{txt}         16 {c |}{res}      6,919        0.95       23.36
+{txt}         17 {c |}{res}      6,632        0.91       24.27
+{txt}         18 {c |}{res}      6,246        0.86       25.13
+{txt}         19 {c |}{res}      5,723        0.79       25.92
+{txt}         20 {c |}{res}      5,442        0.75       26.67
+{txt}         21 {c |}{res}      5,189        0.71       27.38
+{txt}         22 {c |}{res}      4,941        0.68       28.06
+{txt}         23 {c |}{res}      4,807        0.66       28.72
+{txt}         24 {c |}{res}      4,827        0.66       29.39
+{txt}         25 {c |}{res}      5,152        0.71       30.10
+{txt}         26 {c |}{res}      5,202        0.72       30.81
+{txt}         27 {c |}{res}      5,072        0.70       31.51
+{txt}         28 {c |}{res}      4,883        0.67       32.18
+{txt}         29 {c |}{res}      4,665        0.64       32.82
+{txt}         30 {c |}{res}      4,567        0.63       33.45
+{txt}         31 {c |}{res}      4,401        0.61       34.06
+{txt}         32 {c |}{res}      4,241        0.58       34.64
+{txt}         33 {c |}{res}      4,167        0.57       35.21
+{txt}         34 {c |}{res}      4,164        0.57       35.79
+{txt}         35 {c |}{res}      3,997        0.55       36.34
+{txt}         36 {c |}{res}      4,114        0.57       36.90
+{txt}         37 {c |}{res}      4,368        0.60       37.50
+{txt}         38 {c |}{res}      4,349        0.60       38.10
+{txt}         39 {c |}{res}      4,313        0.59       38.69
+{txt}         40 {c |}{res}      4,155        0.57       39.27
+{txt}         41 {c |}{res}      3,969        0.55       39.81
+{txt}         42 {c |}{res}      3,928        0.54       40.35
+{txt}         43 {c |}{res}      3,656        0.50       40.85
+{txt}         44 {c |}{res}      3,635        0.50       41.35
+{txt}         45 {c |}{res}      3,524        0.48       41.84
+{txt}         46 {c |}{res}      3,429        0.47       42.31
+{txt}         47 {c |}{res}      3,433        0.47       42.78
+{txt}         48 {c |}{res}      3,404        0.47       43.25
+{txt}         49 {c |}{res}      3,555        0.49       43.74
+{txt}         50 {c |}{res}      3,520        0.48       44.22
+{txt}         51 {c |}{res}      3,469        0.48       44.70
+{txt}         52 {c |}{res}      3,259        0.45       45.15
+{txt}         53 {c |}{res}      3,148        0.43       45.58
+{txt}         54 {c |}{res}      3,138        0.43       46.02
+{txt}         55 {c |}{res}      3,031        0.42       46.43
+{txt}         56 {c |}{res}      3,010        0.41       46.85
+{txt}         57 {c |}{res}      2,986        0.41       47.26
+{txt}         58 {c |}{res}      2,947        0.41       47.66
+{txt}         59 {c |}{res}      2,909        0.40       48.06
+{txt}         60 {c |}{res}      2,931        0.40       48.47
+{txt}         61 {c |}{res}      3,183        0.44       48.90
+{txt}         62 {c |}{res}      3,291        0.45       49.36
+{txt}         63 {c |}{res}      3,211        0.44       49.80
+{txt}         64 {c |}{res}      3,117        0.43       50.23
+{txt}         65 {c |}{res}      2,982        0.41       50.64
+{txt}         66 {c |}{res}      2,867        0.39       51.03
+{txt}         67 {c |}{res}      2,766        0.38       51.41
+{txt}         68 {c |}{res}      2,650        0.36       51.78
+{txt}         69 {c |}{res}      2,472        0.34       52.12
+{txt}         70 {c |}{res}      2,481        0.34       52.46
+{txt}         71 {c |}{res}      2,326        0.32       52.78
+{txt}         72 {c |}{res}      2,276        0.31       53.09
+{txt}         73 {c |}{res}      2,363        0.33       53.42
+{txt}         74 {c |}{res}      2,377        0.33       53.74
+{txt}         75 {c |}{res}      2,317        0.32       54.06
+{txt}         76 {c |}{res}      2,282        0.31       54.38
+{txt}         77 {c |}{res}      2,242        0.31       54.68
+{txt}         78 {c |}{res}      2,290        0.32       55.00
+{txt}         79 {c |}{res}      2,259        0.31       55.31
+{txt}         80 {c |}{res}      2,315        0.32       55.63
+{txt}         81 {c |}{res}      2,299        0.32       55.94
+{txt}         82 {c |}{res}      2,272        0.31       56.26
+{txt}         83 {c |}{res}      2,211        0.30       56.56
+{txt}         84 {c |}{res}      2,206        0.30       56.86
+{txt}         85 {c |}{res}      2,443        0.34       57.20
+{txt}         86 {c |}{res}      2,498        0.34       57.54
+{txt}         87 {c |}{res}      2,436        0.34       57.88
+{txt}         88 {c |}{res}      2,355        0.32       58.20
+{txt}         89 {c |}{res}      2,271        0.31       58.52
+{txt}         90 {c |}{res}      2,210        0.30       58.82
+{txt}         91 {c |}{res}      2,219        0.31       59.12
+{txt}         92 {c |}{res}      2,145        0.30       59.42
+{txt}         93 {c |}{res}      2,256        0.31       59.73
+{txt}         94 {c |}{res}      2,244        0.31       60.04
+{txt}         95 {c |}{res}      2,178        0.30       60.34
+{txt}         96 {c |}{res}      2,132        0.29       60.63
+{txt}         97 {c |}{res}      2,316        0.32       60.95
+{txt}         98 {c |}{res}      2,340        0.32       61.27
+{txt}         99 {c |}{res}      2,262        0.31       61.58
+{txt}        100 {c |}{res}      2,231        0.31       61.89
+{txt}        101 {c |}{res}      2,145        0.30       62.18
+{txt}        102 {c |}{res}      2,098        0.29       62.47
+{txt}        103 {c |}{res}      2,029        0.28       62.75
+{txt}        104 {c |}{res}      1,997        0.27       63.03
+{txt}        105 {c |}{res}      1,886        0.26       63.29
+{txt}        106 {c |}{res}      1,821        0.25       63.54
+{txt}        107 {c |}{res}      1,821        0.25       63.79
+{txt}        108 {c |}{res}      1,689        0.23       64.02
+{txt}        109 {c |}{res}      1,721        0.24       64.26
+{txt}        110 {c |}{res}      1,758        0.24       64.50
+{txt}        111 {c |}{res}      1,688        0.23       64.73
+{txt}        112 {c |}{res}      1,665        0.23       64.96
+{txt}        113 {c |}{res}      1,663        0.23       65.19
+{txt}        114 {c |}{res}      1,694        0.23       65.42
+{txt}        115 {c |}{res}      1,645        0.23       65.65
+{txt}        116 {c |}{res}      1,686        0.23       65.88
+{txt}        117 {c |}{res}      1,775        0.24       66.12
+{txt}        118 {c |}{res}      1,748        0.24       66.36
+{txt}        119 {c |}{res}      1,753        0.24       66.61
+{txt}        120 {c |}{res}      1,795        0.25       66.85
+{txt}        121 {c |}{res}      1,991        0.27       67.13
+{txt}        122 {c |}{res}      2,046        0.28       67.41
+{txt}        123 {c |}{res}      2,028        0.28       67.69
+{txt}        124 {c |}{res}      2,013        0.28       67.96
+{txt}        125 {c |}{res}      2,026        0.28       68.24
+{txt}        126 {c |}{res}      1,964        0.27       68.51
+{txt}        127 {c |}{res}      1,840        0.25       68.77
+{txt}        128 {c |}{res}      1,745        0.24       69.01
+{txt}        129 {c |}{res}      1,720        0.24       69.24
+{txt}        130 {c |}{res}      1,618        0.22       69.46
+{txt}        131 {c |}{res}      1,536        0.21       69.68
+{txt}        132 {c |}{res}      1,515        0.21       69.88
+{txt}        133 {c |}{res}      1,491        0.21       70.09
+{txt}        134 {c |}{res}      1,446        0.20       70.29
+{txt}        135 {c |}{res}      1,344        0.18       70.47
+{txt}        136 {c |}{res}      1,296        0.18       70.65
+{txt}        137 {c |}{res}      1,254        0.17       70.82
+{txt}        138 {c |}{res}      1,230        0.17       70.99
+{txt}        139 {c |}{res}      1,199        0.16       71.16
+{txt}        140 {c |}{res}      1,214        0.17       71.33
+{txt}        141 {c |}{res}      1,203        0.17       71.49
+{txt}        142 {c |}{res}      1,177        0.16       71.65
+{txt}        143 {c |}{res}      1,171        0.16       71.81
+{txt}        144 {c |}{res}      1,110        0.15       71.97
+{txt}        145 {c |}{res}      1,184        0.16       72.13
+{txt}        146 {c |}{res}      1,218        0.17       72.30
+{txt}        147 {c |}{res}      1,266        0.17       72.47
+{txt}        148 {c |}{res}      1,205        0.17       72.64
+{txt}        149 {c |}{res}      1,165        0.16       72.80
+{txt}        150 {c |}{res}      1,184        0.16       72.96
+{txt}        151 {c |}{res}      1,132        0.16       73.12
+{txt}        152 {c |}{res}      1,129        0.16       73.27
+{txt}        153 {c |}{res}      1,097        0.15       73.42
+{txt}        154 {c |}{res}      1,109        0.15       73.57
+{txt}        155 {c |}{res}      1,082        0.15       73.72
+{txt}        156 {c |}{res}      1,104        0.15       73.87
+{txt}        157 {c |}{res}      1,120        0.15       74.03
+{txt}        158 {c |}{res}      1,145        0.16       74.19
+{txt}        159 {c |}{res}      1,111        0.15       74.34
+{txt}        160 {c |}{res}      1,105        0.15       74.49
+{txt}        161 {c |}{res}      1,128        0.16       74.65
+{txt}        162 {c |}{res}      1,106        0.15       74.80
+{txt}        163 {c |}{res}      1,103        0.15       74.95
+{txt}        164 {c |}{res}      1,108        0.15       75.10
+{txt}        165 {c |}{res}      1,139        0.16       75.26
+{txt}        166 {c |}{res}      1,126        0.15       75.41
+{txt}        167 {c |}{res}      1,079        0.15       75.56
+{txt}        168 {c |}{res}      1,098        0.15       75.71
+{txt}        169 {c |}{res}      1,140        0.16       75.87
+{txt}        170 {c |}{res}      1,143        0.16       76.03
+{txt}        171 {c |}{res}      1,159        0.16       76.19
+{txt}        172 {c |}{res}      1,207        0.17       76.35
+{txt}        173 {c |}{res}      1,232        0.17       76.52
+{txt}        174 {c |}{res}      1,250        0.17       76.69
+{txt}        175 {c |}{res}      1,291        0.18       76.87
+{txt}        176 {c |}{res}      1,356        0.19       77.06
+{txt}        177 {c |}{res}      1,367        0.19       77.25
+{txt}        178 {c |}{res}      1,409        0.19       77.44
+{txt}        179 {c |}{res}      1,450        0.20       77.64
+{txt}        180 {c |}{res}      1,407        0.19       77.83
+{txt}        181 {c |}{res}      1,633        0.22       78.06
+{txt}        182 {c |}{res}      1,597        0.22       78.28
+{txt}        183 {c |}{res}      1,652        0.23       78.51
+{txt}        184 {c |}{res}      1,646        0.23       78.73
+{txt}        185 {c |}{res}      1,621        0.22       78.95
+{txt}        186 {c |}{res}      1,500        0.21       79.16
+{txt}        187 {c |}{res}      1,459        0.20       79.36
+{txt}        188 {c |}{res}      1,359        0.19       79.55
+{txt}        189 {c |}{res}      1,296        0.18       79.73
+{txt}        190 {c |}{res}      1,266        0.17       79.90
+{txt}        191 {c |}{res}      1,175        0.16       80.06
+{txt}        192 {c |}{res}      1,165        0.16       80.22
+{txt}        193 {c |}{res}      1,028        0.14       80.36
+{txt}        194 {c |}{res}      1,002        0.14       80.50
+{txt}        195 {c |}{res}        967        0.13       80.64
+{txt}        196 {c |}{res}        970        0.13       80.77
+{txt}        197 {c |}{res}        958        0.13       80.90
+{txt}        198 {c |}{res}        972        0.13       81.03
+{txt}        199 {c |}{res}        928        0.13       81.16
+{txt}        200 {c |}{res}        929        0.13       81.29
+{txt}        201 {c |}{res}        897        0.12       81.41
+{txt}        202 {c |}{res}        973        0.13       81.55
+{txt}        203 {c |}{res}        933        0.13       81.68
+{txt}        204 {c |}{res}        914        0.13       81.80
+{txt}        205 {c |}{res}        931        0.13       81.93
+{txt}        206 {c |}{res}        902        0.12       82.05
+{txt}        207 {c |}{res}        886        0.12       82.17
+{txt}        208 {c |}{res}        884        0.12       82.30
+{txt}        209 {c |}{res}        867        0.12       82.42
+{txt}        210 {c |}{res}        849        0.12       82.53
+{txt}        211 {c |}{res}        839        0.12       82.65
+{txt}        212 {c |}{res}        841        0.12       82.76
+{txt}        213 {c |}{res}        827        0.11       82.88
+{txt}        214 {c |}{res}        799        0.11       82.99
+{txt}        215 {c |}{res}        780        0.11       83.09
+{txt}        216 {c |}{res}        767        0.11       83.20
+{txt}        217 {c |}{res}        787        0.11       83.31
+{txt}        218 {c |}{res}        781        0.11       83.42
+{txt}        219 {c |}{res}        781        0.11       83.52
+{txt}        220 {c |}{res}        779        0.11       83.63
+{txt}        221 {c |}{res}        742        0.10       83.73
+{txt}        222 {c |}{res}        700        0.10       83.83
+{txt}        223 {c |}{res}        647        0.09       83.92
+{txt}        224 {c |}{res}        643        0.09       84.01
+{txt}        225 {c |}{res}        653        0.09       84.10
+{txt}        226 {c |}{res}        608        0.08       84.18
+{txt}        227 {c |}{res}        620        0.09       84.26
+{txt}        228 {c |}{res}        615        0.08       84.35
+{txt}        229 {c |}{res}        683        0.09       84.44
+{txt}        230 {c |}{res}        703        0.10       84.54
+{txt}        231 {c |}{res}        701        0.10       84.64
+{txt}        232 {c |}{res}        689        0.09       84.73
+{txt}        233 {c |}{res}        711        0.10       84.83
+{txt}        234 {c |}{res}        755        0.10       84.93
+{txt}        235 {c |}{res}        729        0.10       85.03
+{txt}        236 {c |}{res}        749        0.10       85.14
+{txt}        237 {c |}{res}        777        0.11       85.24
+{txt}        238 {c |}{res}        812        0.11       85.35
+{txt}        239 {c |}{res}        796        0.11       85.46
+{txt}240 or more {c |}{res}    105,670       14.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}    726,974      100.00
+
+{com}. generate tenure1 = tenure == 12
+
+. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow2 cma2 tenure1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F( 12,616420) ={res}16300.20
+    {txt}   Model {char |} {res} 24560943.9    12  2046745.33           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77401174.4616420  125.565644           {txt}R-squared     = {res} 0.2409
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2409
+    {txt}   Total {char |} {res}  101962118616432   165.40692           {txt}Root MSE      = {res} 11.206
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2}  3.38862{col 26}{space 2} .0646431{col 37}{space 1}   52.42{col 46}{space 3}0.000{col 54}{space 4} 3.261922{col 67}{space 3} 3.515319
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.658409{col 26}{space 2} .0426344{col 37}{space 1}   85.81{col 46}{space 3}0.000{col 54}{space 4} 3.574847{col 67}{space 3} 3.741971
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1651501{col 26}{space 2} .0014142{col 37}{space 1}  116.78{col 46}{space 3}0.000{col 54}{space 4} .1623783{col 67}{space 3} .1679218
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 7.993009{col 26}{space 2} .0925754{col 37}{space 1}   86.34{col 46}{space 3}0.000{col 54}{space 4} 7.811564{col 67}{space 3} 8.174454
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5761478{col 26}{space 2} .0348824{col 37}{space 1}   16.52{col 46}{space 3}0.000{col 54}{space 4} .5077793{col 67}{space 3} .6445163
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.9684446{col 26}{space 2} .0482835{col 37}{space 1}  -20.06{col 46}{space 3}0.000{col 54}{space 4}-1.063079{col 67}{space 3}-.8738105
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.043644{col 26}{space 2}  .033209{col 37}{space 1} -151.88{col 46}{space 3}0.000{col 54}{space 4}-5.108733{col 67}{space 3}-4.978556
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.577099{col 26}{space 2} .0300596{col 37}{space 1}  152.27{col 46}{space 3}0.000{col 54}{space 4} 4.518183{col 67}{space 3} 4.636015
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.084767{col 26}{space 2} .0390437{col 37}{space 1}  130.23{col 46}{space 3}0.000{col 54}{space 4} 5.008243{col 67}{space 3} 5.161292
+{txt}{space 8}cow2 {c |}{col 14}{res}{space 2}-7.880438{col 26}{space 2} .0337308{col 37}{space 1} -233.63{col 46}{space 3}0.000{col 54}{space 4}-7.946549{col 67}{space 3}-7.814326
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2}  1.48987{col 26}{space 2} .0683462{col 37}{space 1}   21.80{col 46}{space 3}0.000{col 54}{space 4} 1.355913{col 67}{space 3} 1.623826
+{txt}{space 5}tenure1 {c |}{col 14}{res}{space 2}-2.049892{col 26}{space 2} .1354543{col 37}{space 1}  -15.13{col 46}{space 3}0.000{col 54}{space 4}-2.315378{col 67}{space 3}-1.784406
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 16.15092{col 26}{space 2} .0939381{col 37}{space 1}  171.93{col 46}{space 3}0.000{col 54}{space 4}  15.9668{col 67}{space 3} 16.33503
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 tenure1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616433
+{txt}{hline 13}{char +}{hline 30}           F( 12,616420) ={res}16300.20
+    {txt}   Model {char |} {res} 24560943.9    12  2046745.33           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77401174.4616420  125.565644           {txt}R-squared     = {res} 0.2409
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2409
+    {txt}   Total {char |} {res}  101962118616432   165.40692           {txt}Root MSE      = {res} 11.206
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2}  3.38862{col 26}{space 2} .0646431{col 37}{space 1}   52.42{col 46}{space 3}0.000{col 54}{space 4} 3.261922{col 67}{space 3} 3.515319
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.658409{col 26}{space 2} .0426344{col 37}{space 1}   85.81{col 46}{space 3}0.000{col 54}{space 4} 3.574847{col 67}{space 3} 3.741971
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1651501{col 26}{space 2} .0014142{col 37}{space 1}  116.78{col 46}{space 3}0.000{col 54}{space 4} .1623783{col 67}{space 3} .1679218
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 7.993009{col 26}{space 2} .0925754{col 37}{space 1}   86.34{col 46}{space 3}0.000{col 54}{space 4} 7.811564{col 67}{space 3} 8.174454
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5761478{col 26}{space 2} .0348824{col 37}{space 1}   16.52{col 46}{space 3}0.000{col 54}{space 4} .5077793{col 67}{space 3} .6445163
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-.9684446{col 26}{space 2} .0482835{col 37}{space 1}  -20.06{col 46}{space 3}0.000{col 54}{space 4}-1.063079{col 67}{space 3}-.8738105
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.043644{col 26}{space 2}  .033209{col 37}{space 1} -151.88{col 46}{space 3}0.000{col 54}{space 4}-5.108733{col 67}{space 3}-4.978556
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.577099{col 26}{space 2} .0300596{col 37}{space 1}  152.27{col 46}{space 3}0.000{col 54}{space 4} 4.518183{col 67}{space 3} 4.636015
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.084767{col 26}{space 2} .0390437{col 37}{space 1}  130.23{col 46}{space 3}0.000{col 54}{space 4} 5.008243{col 67}{space 3} 5.161292
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.880438{col 26}{space 2} .0337308{col 37}{space 1}  233.63{col 46}{space 3}0.000{col 54}{space 4} 7.814326{col 67}{space 3} 7.946549
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2}  1.48987{col 26}{space 2} .0683462{col 37}{space 1}   21.80{col 46}{space 3}0.000{col 54}{space 4} 1.355913{col 67}{space 3} 1.623826
+{txt}{space 5}tenure1 {c |}{col 14}{res}{space 2}-2.049892{col 26}{space 2} .1354543{col 37}{space 1}  -15.13{col 46}{space 3}0.000{col 54}{space 4}-2.315378{col 67}{space 3}-1.784406
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.270482{col 26}{space 2} .0935186{col 37}{space 1}   88.44{col 46}{space 3}0.000{col 54}{space 4} 8.087188{col 67}{space 3} 8.453775
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. tabulate efamtype
+
+      {txt}Type of economic {c |}
+                family {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+ Unattached individual {c |}{res}    224,115       18.40       18.40
+{txt} Hus-wif 2earn,0kid<25 {c |}{res}    161,006       13.22       31.63
+{txt} Hus-wif 2earn, kid<18 {c |}{res}    221,452       18.19       49.81
+{txt}  Hus-wif 2earn, 18-24 {c |}{res}     65,805        5.40       55.22
+{txt} H-W/hus empl/0kids<25 {c |}{res}     64,536        5.30       60.52
+{txt} H-W/hus empl/child<18 {c |}{res}     60,701        4.98       65.50
+{txt}H-W/hus empl/kid 18-24 {c |}{res}     14,878        1.22       66.72
+{txt} H-W/wif empl/0kids<25 {c |}{res}     47,826        3.93       70.65
+{txt} H-W/wif empl/child<18 {c |}{res}     18,568        1.52       72.18
+{txt} H-W/wif empl/kid18-24 {c |}{res}      9,777        0.80       72.98
+{txt} H-W non-earn/0kids<25 {c |}{res}    154,446       12.68       85.66
+{txt} H-W non-earn/child<18 {c |}{res}     11,014        0.90       86.57
+{txt}H-W non-earn/kids18-24 {c |}{res}      4,952        0.41       86.97
+{txt}  1par/par empl/kid<18 {c |}{res}     40,818        3.35       90.33
+{txt}1par/par empl/kid18-24 {c |}{res}     18,905        1.55       91.88
+{txt}1par/par no-emp/kid<18 {c |}{res}     15,716        1.29       93.17
+{txt} 1par/par no-emp/18-24 {c |}{res}      5,636        0.46       93.63
+{txt}    Other family types {c |}{res}     77,536        6.37      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}  1,217,687      100.00
+
+{com}. tabulate efamtype, gen(fam)
+
+      {txt}Type of economic {c |}
+                family {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+ Unattached individual {c |}{res}    224,115       18.40       18.40
+{txt} Hus-wif 2earn,0kid<25 {c |}{res}    161,006       13.22       31.63
+{txt} Hus-wif 2earn, kid<18 {c |}{res}    221,452       18.19       49.81
+{txt}  Hus-wif 2earn, 18-24 {c |}{res}     65,805        5.40       55.22
+{txt} H-W/hus empl/0kids<25 {c |}{res}     64,536        5.30       60.52
+{txt} H-W/hus empl/child<18 {c |}{res}     60,701        4.98       65.50
+{txt}H-W/hus empl/kid 18-24 {c |}{res}     14,878        1.22       66.72
+{txt} H-W/wif empl/0kids<25 {c |}{res}     47,826        3.93       70.65
+{txt} H-W/wif empl/child<18 {c |}{res}     18,568        1.52       72.18
+{txt} H-W/wif empl/kid18-24 {c |}{res}      9,777        0.80       72.98
+{txt} H-W non-earn/0kids<25 {c |}{res}    154,446       12.68       85.66
+{txt} H-W non-earn/child<18 {c |}{res}     11,014        0.90       86.57
+{txt}H-W non-earn/kids18-24 {c |}{res}      4,952        0.41       86.97
+{txt}  1par/par empl/kid<18 {c |}{res}     40,818        3.35       90.33
+{txt}1par/par empl/kid18-24 {c |}{res}     18,905        1.55       91.88
+{txt}1par/par no-emp/kid<18 {c |}{res}     15,716        1.29       93.17
+{txt} 1par/par no-emp/18-24 {c |}{res}      5,636        0.46       93.63
+{txt}    Other family types {c |}{res}     77,536        6.37      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}  1,217,687      100.00
+
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow2 cma2 tenure1 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 13,616417) ={res}15241.36
+    {txt}   Model {char |} {res} 24801670.1    13  1907820.78           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77159341.5616417  125.173935           {txt}R-squared     = {res} 0.2432
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2432
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.188
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 3.346154{col 26}{space 2} .0645494{col 37}{space 1}   51.84{col 46}{space 3}0.000{col 54}{space 4} 3.219639{col 67}{space 3} 3.472669
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.568074{col 26}{space 2} .0426176{col 37}{space 1}   83.72{col 46}{space 3}0.000{col 54}{space 4} 3.484545{col 67}{space 3} 3.651603
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2}  .157706{col 26}{space 2} .0014221{col 37}{space 1}  110.89{col 46}{space 3}0.000{col 54}{space 4} .1549187{col 67}{space 3} .1604933
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 7.963622{col 26}{space 2} .0924334{col 37}{space 1}   86.16{col 46}{space 3}0.000{col 54}{space 4} 7.782456{col 67}{space 3} 8.144789
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2}  .618412{col 26}{space 2} .0348413{col 37}{space 1}   17.75{col 46}{space 3}0.000{col 54}{space 4} .5501242{col 67}{space 3} .6866997
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-1.001389{col 26}{space 2}  .048214{col 37}{space 1}  -20.77{col 46}{space 3}0.000{col 54}{space 4}-1.095887{col 67}{space 3}-.9068914
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.666829{col 26}{space 2} .0360681{col 37}{space 1} -157.11{col 46}{space 3}0.000{col 54}{space 4}-5.737521{col 67}{space 3}-5.596137
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.570023{col 26}{space 2} .0300131{col 37}{space 1}  152.27{col 46}{space 3}0.000{col 54}{space 4} 4.511198{col 67}{space 3} 4.628848
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.040461{col 26}{space 2} .0389958{col 37}{space 1}  129.26{col 46}{space 3}0.000{col 54}{space 4}  4.96403{col 67}{space 3} 5.116892
+{txt}{space 8}cow2 {c |}{col 14}{res}{space 2}-7.826985{col 26}{space 2} .0337002{col 37}{space 1} -232.25{col 46}{space 3}0.000{col 54}{space 4}-7.893037{col 67}{space 3}-7.760934
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.510304{col 26}{space 2} .0682419{col 37}{space 1}   22.13{col 46}{space 3}0.000{col 54}{space 4} 1.376552{col 67}{space 3} 1.644055
+{txt}{space 5}tenure1 {c |}{col 14}{res}{space 2} -2.01687{col 26}{space 2} .1352449{col 37}{space 1}  -14.91{col 46}{space 3}0.000{col 54}{space 4}-2.281946{col 67}{space 3}-1.751794
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 1.879392{col 26}{space 2} .0428082{col 37}{space 1}   43.90{col 46}{space 3}0.000{col 54}{space 4} 1.795489{col 67}{space 3} 1.963295
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 16.38583{col 26}{space 2}  .093944{col 37}{space 1}  174.42{col 46}{space 3}0.000{col 54}{space 4} 16.20171{col 67}{space 3} 16.56996
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress wage mjh1 pt1 utothrs noc5 prov6 age3 marstat6 gender1 educ6 cow1 cma2 tenure1 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 13,616417) ={res}15241.36
+    {txt}   Model {char |} {res} 24801670.1    13  1907820.78           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77159341.5616417  125.173935           {txt}R-squared     = {res} 0.2432
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2432
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.188
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 3.346154{col 26}{space 2} .0645494{col 37}{space 1}   51.84{col 46}{space 3}0.000{col 54}{space 4} 3.219639{col 67}{space 3} 3.472669
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.568074{col 26}{space 2} .0426176{col 37}{space 1}   83.72{col 46}{space 3}0.000{col 54}{space 4} 3.484545{col 67}{space 3} 3.651603
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2}  .157706{col 26}{space 2} .0014221{col 37}{space 1}  110.89{col 46}{space 3}0.000{col 54}{space 4} .1549187{col 67}{space 3} .1604933
+{txt}{space 8}noc5 {c |}{col 14}{res}{space 2} 7.963622{col 26}{space 2} .0924334{col 37}{space 1}   86.16{col 46}{space 3}0.000{col 54}{space 4} 7.782456{col 67}{space 3} 8.144789
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2}  .618412{col 26}{space 2} .0348413{col 37}{space 1}   17.75{col 46}{space 3}0.000{col 54}{space 4} .5501242{col 67}{space 3} .6866997
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-1.001389{col 26}{space 2}  .048214{col 37}{space 1}  -20.77{col 46}{space 3}0.000{col 54}{space 4}-1.095887{col 67}{space 3}-.9068914
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.666829{col 26}{space 2} .0360681{col 37}{space 1} -157.11{col 46}{space 3}0.000{col 54}{space 4}-5.737521{col 67}{space 3}-5.596137
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.570023{col 26}{space 2} .0300131{col 37}{space 1}  152.27{col 46}{space 3}0.000{col 54}{space 4} 4.511198{col 67}{space 3} 4.628848
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.040461{col 26}{space 2} .0389958{col 37}{space 1}  129.26{col 46}{space 3}0.000{col 54}{space 4}  4.96403{col 67}{space 3} 5.116892
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.826985{col 26}{space 2} .0337002{col 37}{space 1}  232.25{col 46}{space 3}0.000{col 54}{space 4} 7.760934{col 67}{space 3} 7.893037
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.510304{col 26}{space 2} .0682419{col 37}{space 1}   22.13{col 46}{space 3}0.000{col 54}{space 4} 1.376552{col 67}{space 3} 1.644055
+{txt}{space 5}tenure1 {c |}{col 14}{res}{space 2} -2.01687{col 26}{space 2} .1352449{col 37}{space 1}  -14.91{col 46}{space 3}0.000{col 54}{space 4}-2.281946{col 67}{space 3}-1.751794
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 1.879392{col 26}{space 2} .0428082{col 37}{space 1}   43.90{col 46}{space 3}0.000{col 54}{space 4} 1.795489{col 67}{space 3} 1.963295
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.558848{col 26}{space 2} .0936036{col 37}{space 1}   91.44{col 46}{space 3}0.000{col 54}{space 4} 8.375388{col 67}{space 3} 8.742308
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress wage mjh1 pt1 utothrs noc17 prov6 age3 marstat6 gender1 educ6 cow1 cma2 tenure1 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 13,616417) ={res}14855.80
+    {txt}   Model {char |} {res} 24323934.6    13  1871071.89           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}   77637077616417  125.948955           {txt}R-squared     = {res} 0.2386
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2385
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.223
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 3.427927{col 26}{space 2} .0647423{col 37}{space 1}   52.95{col 46}{space 3}0.000{col 54}{space 4} 3.301034{col 67}{space 3}  3.55482
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.650864{col 26}{space 2} .0427374{col 37}{space 1}   85.43{col 46}{space 3}0.000{col 54}{space 4}   3.5671{col 67}{space 3} 3.734628
+{txt}{space 5}utothrs {c |}{col 14}{res}{space 2} .1593786{col 26}{space 2} .0014263{col 37}{space 1}  111.75{col 46}{space 3}0.000{col 54}{space 4} .1565832{col 67}{space 3} .1621741
+{txt}{space 7}noc17 {c |}{col 14}{res}{space 2}  5.55843{col 26}{space 2} .0928475{col 37}{space 1}   59.87{col 46}{space 3}0.000{col 54}{space 4} 5.376452{col 67}{space 3} 5.740408
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5844702{col 26}{space 2} .0349502{col 37}{space 1}   16.72{col 46}{space 3}0.000{col 54}{space 4} .5159689{col 67}{space 3} .6529715
+{txt}{space 8}age3 {c |}{col 14}{res}{space 2}-1.000606{col 26}{space 2} .0483635{col 37}{space 1}  -20.69{col 46}{space 3}0.000{col 54}{space 4}-1.095396{col 67}{space 3}-.9058148
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-5.704065{col 26}{space 2} .0361747{col 37}{space 1} -157.68{col 46}{space 3}0.000{col 54}{space 4}-5.774967{col 67}{space 3}-5.633164
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.533033{col 26}{space 2} .0301009{col 37}{space 1}  150.59{col 46}{space 3}0.000{col 54}{space 4} 4.474036{col 67}{space 3}  4.59203
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2}  5.15604{col 26}{space 2} .0390835{col 37}{space 1}  131.92{col 46}{space 3}0.000{col 54}{space 4} 5.079438{col 67}{space 3} 5.232642
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2}  7.57939{col 26}{space 2} .0339164{col 37}{space 1}  223.47{col 46}{space 3}0.000{col 54}{space 4} 7.512915{col 67}{space 3} 7.645865
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2}   1.6896{col 26}{space 2} .0684122{col 37}{space 1}   24.70{col 46}{space 3}0.000{col 54}{space 4} 1.555514{col 67}{space 3} 1.823686
+{txt}{space 5}tenure1 {c |}{col 14}{res}{space 2}-2.018346{col 26}{space 2}  .135663{col 37}{space 1}  -14.88{col 46}{space 3}0.000{col 54}{space 4}-2.284241{col 67}{space 3}-1.752451
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 1.871043{col 26}{space 2} .0429434{col 37}{space 1}   43.57{col 46}{space 3}0.000{col 54}{space 4} 1.786876{col 67}{space 3} 1.955211
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.484079{col 26}{space 2}  .093892{col 37}{space 1}   90.36{col 46}{space 3}0.000{col 54}{space 4} 8.300054{col 67}{space 3} 8.668105
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\labour\log_feb_4_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 4 Feb 2017, 23:27:35
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

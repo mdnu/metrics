@@ -1,0 +1,408 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\3.Labour II\log_jan_17_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}17 Jan 2017, 16:34:36
+
+{com}. generate yrseduc = educ90
+{txt}(1 missing value generated)
+
+{com}. tabulate yrseduc
+
+    {txt}yrseduc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     72,554        5.96        5.96
+{txt}          1 {c |}{res}    167,749       13.78       19.73
+{txt}          2 {c |}{res}    257,135       21.12       40.85
+{txt}          3 {c |}{res}     80,212        6.59       47.44
+{txt}          4 {c |}{res}    400,315       32.88       80.31
+{txt}          5 {c |}{res}    165,429       13.59       93.90
+{txt}          6 {c |}{res}     74,294        6.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,688      100.00
+
+{com}. recode yrseduc (0 = 4.5) (1 = 11) (2 = 13) (3 = 15.5) (4 = 16) (5 = 17) (6 = 21)
+{txt}(yrseduc: 1217688 changes made)
+
+{com}. drop educ90a
+
+. tabulate yrseduc
+
+    {txt}yrseduc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+        4.5 {c |}{res}     72,554        5.96        5.96
+{txt}         11 {c |}{res}    167,749       13.78       19.73
+{txt}         13 {c |}{res}    257,135       21.12       40.85
+{txt}       15.5 {c |}{res}     80,212        6.59       47.44
+{txt}         16 {c |}{res}    400,315       32.88       80.31
+{txt}         17 {c |}{res}    165,429       13.59       93.90
+{txt}         21 {c |}{res}     74,294        6.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}  1,217,688      100.00
+
+{com}. generate wage = hrlyearn
+{txt}(601251 missing values generated)
+
+{com}. tabulate wage
+{err}too many values
+{txt}{search r(134):r(134);}
+
+{com}. reg wage yrseduc
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616437
+{txt}{hline 13}{char +}{hline 30}           F(  1,616435) ={res}79357.65
+    {txt}   Model {char |} {res} 11629356.8     1  11629356.8           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 90334615.6616435  146.543619           {txt}R-squared     = {res} 0.1141
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1141
+    {txt}   Total {char |} {res}  101963972616436  165.408854           {txt}Root MSE      = {res} 12.106
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}yrseduc {c |}{col 14}{res}{space 2} 1.576804{col 26}{space 2} .0055974{col 37}{space 1}  281.70{col 46}{space 3}0.000{col 54}{space 4} 1.565834{col 67}{space 3} 1.587775
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .6852344{col 26}{space 2} .0865998{col 37}{space 1}    7.91{col 46}{space 3}0.000{col 54}{space 4} .5155016{col 67}{space 3} .8549673
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. recode wage = ln(wage)
+{err}=exp not allowed
+{txt}{search r(101):r(101);}
+
+{com}. regen wage = ln(wage)
+{err}unrecognized command:  regen
+{txt}{search r(199):r(199);}
+
+{com}. generate lnwage = ln(wage)
+{txt}(601252 missing values generated)
+
+{com}. reg lnwage yrseduc
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F(  1,616434) ={res}83723.52
+    {txt}   Model {char |} {res} 17779.4203     1  17779.4203           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 130905.147616434   .21235874           {txt}R-squared     = {res} 0.1196
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1196
+    {txt}   Total {char |} {res} 148684.568616435  .241200723           {txt}Root MSE      = {res} .46082
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}yrseduc {c |}{col 14}{res}{space 2} .0616537{col 26}{space 2} .0002131{col 37}{space 1}  289.35{col 46}{space 3}0.000{col 54}{space 4} .0612361{col 67}{space 3} .0620713
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.145474{col 26}{space 2} .0032966{col 37}{space 1}  650.81{col 46}{space 3}0.000{col 54}{space 4} 2.139013{col 67}{space 3} 2.151935
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. err = N(0,1)
+{err}unknown function =N()
+{txt}{search r(197):r(197);}
+
+{com}. err = normal(0,1)
+{err}unknown function =normal()
+{txt}{search r(197):r(197);}
+
+{com}. err = rnormal(0,1)
+{err}unknown function =rnormal()
+{txt}{search r(197):r(197);}
+
+{com}. generate err = rnormal(0,1)
+
+. genera errb = N(0,3)
+{err}unknown function N()
+{txt}{search r(133):r(133);}
+
+{com}. generate errb = N(0,3)
+{err}unknown function N()
+{txt}{search r(133):r(133);}
+
+{com}. generate errb = rnormal(0,3)
+
+. yrseducerr = yrseduc + err
+{err}unrecognized command:  yrseducerr
+{txt}{search r(199):r(199);}
+
+{com}. generate yrseducerr = yrseduc + err
+{txt}(1 missing value generated)
+
+{com}. generate yrseducerrb = yrseduc + errb
+{txt}(1 missing value generated)
+
+{com}. reg lnwage yrseducerr
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F(  1,616434) ={res}72810.81
+    {txt}   Model {char |} {res} 15706.8186     1  15706.8186           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 132977.749616434  .215720984           {txt}R-squared     = {res} 0.1056
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1056
+    {txt}   Total {char |} {res} 148684.568616435  .241200723           {txt}Root MSE      = {res} .46446
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}yrseducerr {c |}{col 14}{res}{space 2} .0544827{col 26}{space 2} .0002019{col 37}{space 1}  269.83{col 46}{space 3}0.000{col 54}{space 4}  .054087{col 67}{space 3} .0548784
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.254629{col 26}{space 2} .0031304{col 37}{space 1}  720.23{col 46}{space 3}0.000{col 54}{space 4} 2.248494{col 67}{space 3} 2.260765
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnwage yrseducerrb
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F(  1,616434) ={res}35065.45
+    {txt}   Model {char |} {res} 8002.60326     1  8002.60326           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 140681.965616434  .228219022           {txt}R-squared     = {res} 0.0538
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0538
+    {txt}   Total {char |} {res} 148684.568616435  .241200723           {txt}Root MSE      = {res} .47772
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}yrseducerrb {c |}{col 14}{res}{space 2} .0279653{col 26}{space 2} .0001493{col 37}{space 1}  187.26{col 46}{space 3}0.000{col 54}{space 4} .0276726{col 67}{space 3}  .028258
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.658367{col 26}{space 2} .0023536{col 37}{space 1} 1129.50{col 46}{space 3}0.000{col 54}{space 4} 2.653754{col 67}{space 3}  2.66298
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. display yrseduc err errb
+{res}17-.44087866.92986327
+
+{com}. reg lnwage yrseduc
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F(  1,616434) ={res}83723.52
+    {txt}   Model {char |} {res} 17779.4203     1  17779.4203           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 130905.147616434   .21235874           {txt}R-squared     = {res} 0.1196
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1196
+    {txt}   Total {char |} {res} 148684.568616435  .241200723           {txt}Root MSE      = {res} .46082
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}yrseduc {c |}{col 14}{res}{space 2} .0616537{col 26}{space 2} .0002131{col 37}{space 1}  289.35{col 46}{space 3}0.000{col 54}{space 4} .0612361{col 67}{space 3} .0620713
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.145474{col 26}{space 2} .0032966{col 37}{space 1}  650.81{col 46}{space 3}0.000{col 54}{space 4} 2.139013{col 67}{space 3} 2.151935
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnwage yrseducerr
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F(  1,616434) ={res}72810.81
+    {txt}   Model {char |} {res} 15706.8186     1  15706.8186           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 132977.749616434  .215720984           {txt}R-squared     = {res} 0.1056
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1056
+    {txt}   Total {char |} {res} 148684.568616435  .241200723           {txt}Root MSE      = {res} .46446
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}yrseducerr {c |}{col 14}{res}{space 2} .0544827{col 26}{space 2} .0002019{col 37}{space 1}  269.83{col 46}{space 3}0.000{col 54}{space 4}  .054087{col 67}{space 3} .0548784
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.254629{col 26}{space 2} .0031304{col 37}{space 1}  720.23{col 46}{space 3}0.000{col 54}{space 4} 2.248494{col 67}{space 3} 2.260765
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnwage yrseducerrb
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F(  1,616434) ={res}35065.45
+    {txt}   Model {char |} {res} 8002.60326     1  8002.60326           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 140681.965616434  .228219022           {txt}R-squared     = {res} 0.0538
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0538
+    {txt}   Total {char |} {res} 148684.568616435  .241200723           {txt}Root MSE      = {res} .47772
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}yrseducerrb {c |}{col 14}{res}{space 2} .0279653{col 26}{space 2} .0001493{col 37}{space 1}  187.26{col 46}{space 3}0.000{col 54}{space 4} .0276726{col 67}{space 3}  .028258
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.658367{col 26}{space 2} .0023536{col 37}{space 1} 1129.50{col 46}{space 3}0.000{col 54}{space 4} 2.653754{col 67}{space 3}  2.66298
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. summarize yrseduc err errb
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}yrseduc {c |}{res}   1217688    14.40047     3.51334        4.5         21
+{txt}{space 9}err {c |}{res}   1217689   -.0013968    .9994581  -4.633008   4.660497
+{txt}{space 8}errb {c |}{res}   1217689   -.0002093    3.001581  -13.85645   14.50319
+
+{com}. summarize sex
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}sex {c |}{res}   1217687    1.514673    .4997849          1          2
+
+{com}. histogram sex
+{txt}(bin={res}60{txt}, start={res}1{txt}, width={res}.01666667{txt})
+{res}
+{com}. generate male = sex == 1
+
+. reg lnwage male
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616437
+{txt}{hline 13}{char +}{hline 30}           F(  1,616435) ={res}14412.26
+    {txt}   Model {char |} {res} 3396.83576     1  3396.83576           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 145287.983616435  .235690678           {txt}R-squared     = {res} 0.0228
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0228
+    {txt}   Total {char |} {res} 148684.819616436  .241200739           {txt}Root MSE      = {res} .48548
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}male {c |}{col 14}{res}{space 2} .1484651{col 26}{space 2} .0012367{col 37}{space 1}  120.05{col 46}{space 3}0.000{col 54}{space 4} .1460412{col 67}{space 3} .1508889
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.010066{col 26}{space 2} .0008734{col 37}{space 1} 3446.51{col 46}{space 3}0.000{col 54}{space 4} 3.008355{col 67}{space 3} 3.011778
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. drop male
+
+. histogram age_12
+{txt}(bin={res}60{txt}, start={res}1{txt}, width={res}.18333333{txt})
+{res}
+{com}. histogram age_6
+{txt}(bin={res}54{txt}, start={res}1{txt}, width={res}.09259259{txt})
+{res}
+{com}. generate male = sex == 1 & age_12 < 8
+
+. drop male
+
+. generate male = sex == 1 & age_12 < 6
+
+. reg lnwage male
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616437
+{txt}{hline 13}{char +}{hline 30}           F(  1,616435) ={res} 2272.88
+    {txt}   Model {char |} {res} 546.207356     1  546.207356           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 148138.612616435  .240315056           {txt}R-squared     = {res} 0.0037
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0037
+    {txt}   Total {char |} {res} 148684.819616436  .241200739           {txt}Root MSE      = {res} .49022
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}male {c |}{col 14}{res}{space 2}-.0703503{col 26}{space 2} .0014756{col 37}{space 1}  -47.67{col 46}{space 3}0.000{col 54}{space 4}-.0732425{col 67}{space 3}-.0674581
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.100546{col 26}{space 2} .0007132{col 37}{space 1} 4347.28{col 46}{space 3}0.000{col 54}{space 4} 3.099149{col 67}{space 3} 3.101944
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. drop male
+
+. generate male = sex == 1
+
+. reg lnwage male i.age_12
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F( 12,616423) ={res}13838.88
+    {txt}   Model {char |} {res}   31555.15    12  2629.59584           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 117129.651616423  .190015056           {txt}R-squared     = {res} 0.2122
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2122
+    {txt}   Total {char |} {res} 148684.801616435  .241201101           {txt}Root MSE      = {res} .43591
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}male {c |}{col 14}{res}{space 2} .1503196{col 26}{space 2} .0011109{col 37}{space 1}  135.31{col 46}{space 3}0.000{col 54}{space 4} .1481422{col 67}{space 3}  .152497
+{txt}{space 12} {c |}
+{space 6}age_12 {c |}
+{space 3}20 to 24  {c |}{col 14}{res}{space 2} .2548609{col 26}{space 2} .0029251{col 37}{space 1}   87.13{col 46}{space 3}0.000{col 54}{space 4} .2491278{col 67}{space 3} .2605939
+{txt}{space 3}25 to 29  {c |}{col 14}{res}{space 2} .5844324{col 26}{space 2} .0028847{col 37}{space 1}  202.60{col 46}{space 3}0.000{col 54}{space 4} .5787785{col 67}{space 3} .5900863
+{txt}{space 3}30 to 34  {c |}{col 14}{res}{space 2} .7024219{col 26}{space 2} .0028544{col 37}{space 1}  246.08{col 46}{space 3}0.000{col 54}{space 4} .6968274{col 67}{space 3} .7080164
+{txt}{space 3}35 to 39  {c |}{col 14}{res}{space 2}  .749108{col 26}{space 2}  .002864{col 37}{space 1}  261.56{col 46}{space 3}0.000{col 54}{space 4} .7434946{col 67}{space 3} .7547213
+{txt}{space 3}40 to 44  {c |}{col 14}{res}{space 2} .7650626{col 26}{space 2} .0028563{col 37}{space 1}  267.85{col 46}{space 3}0.000{col 54}{space 4} .7594644{col 67}{space 3} .7706608
+{txt}{space 3}45 to 49  {c |}{col 14}{res}{space 2} .7616393{col 26}{space 2} .0028356{col 37}{space 1}  268.60{col 46}{space 3}0.000{col 54}{space 4} .7560817{col 67}{space 3} .7671969
+{txt}{space 3}50 to 54  {c |}{col 14}{res}{space 2} .7527267{col 26}{space 2} .0027754{col 37}{space 1}  271.21{col 46}{space 3}0.000{col 54}{space 4}  .747287{col 67}{space 3} .7581664
+{txt}{space 3}55 to 59  {c |}{col 14}{res}{space 2} .7112876{col 26}{space 2} .0028805{col 37}{space 1}  246.93{col 46}{space 3}0.000{col 54}{space 4} .7056418{col 67}{space 3} .7169333
+{txt}{space 3}60 to 64  {c |}{col 14}{res}{space 2}  .649428{col 26}{space 2} .0032159{col 37}{space 1}  201.94{col 46}{space 3}0.000{col 54}{space 4} .6431249{col 67}{space 3} .6557312
+{txt}{space 3}65 to 69  {c |}{col 14}{res}{space 2}  .509771{col 26}{space 2}  .004413{col 37}{space 1}  115.52{col 46}{space 3}0.000{col 54}{space 4} .5011216{col 67}{space 3} .5184203
+{txt}{space 8}70+  {c |}{col 14}{res}{space 2} .4485516{col 26}{space 2} .0064863{col 37}{space 1}   69.15{col 46}{space 3}0.000{col 54}{space 4} .4358386{col 67}{space 3} .4612646
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 2.385788{col 26}{space 2} .0023548{col 37}{space 1} 1013.14{col 46}{space 3}0.000{col 54}{space 4} 2.381173{col 67}{space 3} 2.390403
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnwage male
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616437
+{txt}{hline 13}{char +}{hline 30}           F(  1,616435) ={res}14412.26
+    {txt}   Model {char |} {res} 3396.83576     1  3396.83576           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 145287.983616435  .235690678           {txt}R-squared     = {res} 0.0228
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0228
+    {txt}   Total {char |} {res} 148684.819616436  .241200739           {txt}Root MSE      = {res} .48548
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}male {c |}{col 14}{res}{space 2} .1484651{col 26}{space 2} .0012367{col 37}{space 1}  120.05{col 46}{space 3}0.000{col 54}{space 4} .1460412{col 67}{space 3} .1508889
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.010066{col 26}{space 2} .0008734{col 37}{space 1} 3446.51{col 46}{space 3}0.000{col 54}{space 4} 3.008355{col 67}{space 3} 3.011778
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. drop male
+
+. generate male = sex == 1 & age_12 < 6
+
+. reg lnwage male i.age_12
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F( 12,616423) ={res}12470.33
+    {txt}   Model {char |} {res}  29044.167    12  2420.34725           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 119640.634616423   .19408853           {txt}R-squared     = {res} 0.1953
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.1953
+    {txt}   Total {char |} {res} 148684.801616435  .241201101           {txt}Root MSE      = {res} .44055
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}male {c |}{col 14}{res}{space 2} .1163164{col 26}{space 2} .0016472{col 37}{space 1}   70.62{col 46}{space 3}0.000{col 54}{space 4} .1130881{col 67}{space 3} .1195448
+{txt}{space 12} {c |}
+{space 6}age_12 {c |}
+{space 3}20 to 24  {c |}{col 14}{res}{space 2} .2558328{col 26}{space 2} .0029565{col 37}{space 1}   86.53{col 46}{space 3}0.000{col 54}{space 4} .2500382{col 67}{space 3} .2616274
+{txt}{space 3}25 to 29  {c |}{col 14}{res}{space 2} .5853192{col 26}{space 2} .0029156{col 37}{space 1}  200.75{col 46}{space 3}0.000{col 54}{space 4} .5796046{col 67}{space 3} .5910337
+{txt}{space 3}30 to 34  {c |}{col 14}{res}{space 2} .7034658{col 26}{space 2} .0028851{col 37}{space 1}  243.83{col 46}{space 3}0.000{col 54}{space 4} .6978112{col 67}{space 3} .7091205
+{txt}{space 3}35 to 39  {c |}{col 14}{res}{space 2} .7496551{col 26}{space 2} .0028946{col 37}{space 1}  258.98{col 46}{space 3}0.000{col 54}{space 4} .7439818{col 67}{space 3} .7553284
+{txt}{space 3}40 to 44  {c |}{col 14}{res}{space 2} .8234097{col 26}{space 2} .0029934{col 37}{space 1}  275.08{col 46}{space 3}0.000{col 54}{space 4} .8175427{col 67}{space 3} .8292766
+{txt}{space 3}45 to 49  {c |}{col 14}{res}{space 2} .8179318{col 26}{space 2} .0029733{col 37}{space 1}  275.10{col 46}{space 3}0.000{col 54}{space 4} .8121043{col 67}{space 3} .8237593
+{txt}{space 3}50 to 54  {c |}{col 14}{res}{space 2} .8089561{col 26}{space 2} .0029147{col 37}{space 1}  277.54{col 46}{space 3}0.000{col 54}{space 4} .8032433{col 67}{space 3} .8146688
+{txt}{space 3}55 to 59  {c |}{col 14}{res}{space 2} .7694011{col 26}{space 2}  .003017{col 37}{space 1}  255.02{col 46}{space 3}0.000{col 54}{space 4} .7634878{col 67}{space 3} .7753144
+{txt}{space 3}60 to 64  {c |}{col 14}{res}{space 2} .7091715{col 26}{space 2} .0033453{col 37}{space 1}  211.99{col 46}{space 3}0.000{col 54}{space 4} .7026149{col 67}{space 3}  .715728
+{txt}{space 3}65 to 69  {c |}{col 14}{res}{space 2} .5752551{col 26}{space 2} .0045293{col 37}{space 1}  127.01{col 46}{space 3}0.000{col 54}{space 4} .5663778{col 67}{space 3} .5841324
+{txt}{space 8}70+  {c |}{col 14}{res}{space 2} .5217965{col 26}{space 2} .0066019{col 37}{space 1}   79.04{col 46}{space 3}0.000{col 54}{space 4}  .508857{col 67}{space 3}  .534736
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 2.402141{col 26}{space 2} .0024495{col 37}{space 1}  980.66{col 46}{space 3}0.000{col 54}{space 4}  2.39734{col 67}{space 3} 2.406942
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. drop male
+
+. generate male = sex == 1
+
+. reg lnwage male i.age_12
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616436
+{txt}{hline 13}{char +}{hline 30}           F( 12,616423) ={res}13838.88
+    {txt}   Model {char |} {res}   31555.15    12  2629.59584           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 117129.651616423  .190015056           {txt}R-squared     = {res} 0.2122
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2122
+    {txt}   Total {char |} {res} 148684.801616435  .241201101           {txt}Root MSE      = {res} .43591
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}male {c |}{col 14}{res}{space 2} .1503196{col 26}{space 2} .0011109{col 37}{space 1}  135.31{col 46}{space 3}0.000{col 54}{space 4} .1481422{col 67}{space 3}  .152497
+{txt}{space 12} {c |}
+{space 6}age_12 {c |}
+{space 3}20 to 24  {c |}{col 14}{res}{space 2} .2548609{col 26}{space 2} .0029251{col 37}{space 1}   87.13{col 46}{space 3}0.000{col 54}{space 4} .2491278{col 67}{space 3} .2605939
+{txt}{space 3}25 to 29  {c |}{col 14}{res}{space 2} .5844324{col 26}{space 2} .0028847{col 37}{space 1}  202.60{col 46}{space 3}0.000{col 54}{space 4} .5787785{col 67}{space 3} .5900863
+{txt}{space 3}30 to 34  {c |}{col 14}{res}{space 2} .7024219{col 26}{space 2} .0028544{col 37}{space 1}  246.08{col 46}{space 3}0.000{col 54}{space 4} .6968274{col 67}{space 3} .7080164
+{txt}{space 3}35 to 39  {c |}{col 14}{res}{space 2}  .749108{col 26}{space 2}  .002864{col 37}{space 1}  261.56{col 46}{space 3}0.000{col 54}{space 4} .7434946{col 67}{space 3} .7547213
+{txt}{space 3}40 to 44  {c |}{col 14}{res}{space 2} .7650626{col 26}{space 2} .0028563{col 37}{space 1}  267.85{col 46}{space 3}0.000{col 54}{space 4} .7594644{col 67}{space 3} .7706608
+{txt}{space 3}45 to 49  {c |}{col 14}{res}{space 2} .7616393{col 26}{space 2} .0028356{col 37}{space 1}  268.60{col 46}{space 3}0.000{col 54}{space 4} .7560817{col 67}{space 3} .7671969
+{txt}{space 3}50 to 54  {c |}{col 14}{res}{space 2} .7527267{col 26}{space 2} .0027754{col 37}{space 1}  271.21{col 46}{space 3}0.000{col 54}{space 4}  .747287{col 67}{space 3} .7581664
+{txt}{space 3}55 to 59  {c |}{col 14}{res}{space 2} .7112876{col 26}{space 2} .0028805{col 37}{space 1}  246.93{col 46}{space 3}0.000{col 54}{space 4} .7056418{col 67}{space 3} .7169333
+{txt}{space 3}60 to 64  {c |}{col 14}{res}{space 2}  .649428{col 26}{space 2} .0032159{col 37}{space 1}  201.94{col 46}{space 3}0.000{col 54}{space 4} .6431249{col 67}{space 3} .6557312
+{txt}{space 3}65 to 69  {c |}{col 14}{res}{space 2}  .509771{col 26}{space 2}  .004413{col 37}{space 1}  115.52{col 46}{space 3}0.000{col 54}{space 4} .5011216{col 67}{space 3} .5184203
+{txt}{space 8}70+  {c |}{col 14}{res}{space 2} .4485516{col 26}{space 2} .0064863{col 37}{space 1}   69.15{col 46}{space 3}0.000{col 54}{space 4} .4358386{col 67}{space 3} .4612646
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 2.385788{col 26}{space 2} .0023548{col 37}{space 1} 1013.14{col 46}{space 3}0.000{col 54}{space 4} 2.381173{col 67}{space 3} 2.390403
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. male = 1
+{err}unrecognized command:  male
+{txt}{search r(199):r(199);}
+
+{com}. save "C:\Users\m\Sync\NOTES\fin\3.Labour II\LFS2015.dta", replace
+{txt}file C:\Users\m\Sync\NOTES\fin\3.Labour II\LFS2015.dta saved
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\3.Labour II\log_jan_17_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}17 Jan 2017, 18:33:23
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

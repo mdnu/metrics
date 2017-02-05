@@ -1,0 +1,169 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\overview_of_syntax.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Feb 2017, 21:09:29
+
+{com}. use auto
+{err}no; data in memory would be lost
+{txt}{search r(4):r(4);}
+
+{com}. use "C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\WAGE2.DTA", clear
+
+. use auto
+{err}{p 0 4 2}
+file auto.dta
+not found
+{p_end}
+{txt}{search r(601):r(601);}
+
+{com}. sysuse auto
+{txt}(1978 Automobile Data)
+
+{com}. summarize
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 8}make {c |}{res}         0
+{txt}{space 7}price {c |}{res}        74    6165.257    2949.496       3291      15906
+{txt}{space 9}mpg {c |}{res}        74     21.2973    5.785503         12         41
+{txt}{space 7}rep78 {c |}{res}        69    3.405797    .9899323          1          5
+{txt}{space 4}headroom {c |}{res}        74    2.993243    .8459948        1.5          5
+{txt}{hline 13}{c +}{hline 56}
+{space 7}trunk {c |}{res}        74    13.75676    4.277404          5         23
+{txt}{space 6}weight {c |}{res}        74    3019.459    777.1936       1760       4840
+{txt}{space 6}length {c |}{res}        74    187.9324    22.26634        142        233
+{txt}{space 8}turn {c |}{res}        74    39.64865    4.399354         31         51
+{txt}displacement {c |}{res}        74    197.2973    91.83722         79        425
+{txt}{hline 13}{c +}{hline 56}
+{space 2}gear_ratio {c |}{res}        74    3.014865    .4562871       2.19       3.89
+{txt}{space 5}foreign {c |}{res}        74    .2972973    .4601885          0          1
+
+{com}. summarize mpg price
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}mpg {c |}{res}        74     21.2973    5.785503         12         41
+{txt}{space 7}price {c |}{res}        74    6165.257    2949.496       3291      15906
+
+{com}. summarize mpg price if (foreign == 1)
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}mpg {c |}{res}        22    24.77273    6.611187         14         41
+{txt}{space 7}price {c |}{res}        22    6384.682    2621.915       3748      12990
+
+{com}. summarize mpg price if foreign == 1 & mpg < 30
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}mpg {c |}{res}        17    21.94118    3.896643         14         28
+{txt}{space 7}price {c |}{res}        17    6996.235    2674.552       3895      12990
+
+{com}. summarize mpg price if foreign == 1 & mpg < 30, detail
+
+                        {txt}Mileage (mpg)
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}       14             14
+{txt} 5%    {res}       14             17
+{txt}10%    {res}       17             17       {txt}Obs         {res}         17
+{txt}25%    {res}       18             18       {txt}Sum of Wgt. {res}         17
+
+{txt}50%    {res}       23                      {txt}Mean          {res} 21.94118
+                        {txt}Largest       Std. Dev.     {res} 3.896643
+{txt}75%    {res}       25             25
+{txt}90%    {res}       26             25       {txt}Variance      {res} 15.18382
+{txt}95%    {res}       28             26       {txt}Skewness      {res}-.4901235
+{txt}99%    {res}       28             28       {txt}Kurtosis      {res} 2.201759
+
+                            {txt}Price
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}     3895           3895
+{txt} 5%    {res}     3895           4296
+{txt}10%    {res}     4296           4499       {txt}Obs         {res}         17
+{txt}25%    {res}     5079           4697       {txt}Sum of Wgt. {res}         17
+
+{txt}50%    {res}     6229                      {txt}Mean          {res} 6996.235
+                        {txt}Largest       Std. Dev.     {res} 2674.552
+{txt}75%    {res}     8129           9690
+{txt}90%    {res}    11995           9735       {txt}Variance      {res}  7153229
+{txt}95%    {res}    12990          11995       {txt}Skewness      {res} .9818272
+{txt}99%    {res}    12990          12990       {txt}Kurtosis      {res} 2.930843
+
+{com}. summarize in 1/10
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 8}make {c |}{res}         0
+{txt}{space 7}price {c |}{res}        10      5517.4    2063.518       3799      10372
+{txt}{space 9}mpg {c |}{res}        10        19.5     3.27448         15         26
+{txt}{space 7}rep78 {c |}{res}         8       3.125    .3535534          3          4
+{txt}{space 4}headroom {c |}{res}        10         3.3    .7527727          2        4.5
+{txt}{hline 13}{c +}{hline 56}
+{space 7}trunk {c |}{res}        10        14.7     3.88873         10         21
+{txt}{space 6}weight {c |}{res}        10        3271    558.3796       2230       4080
+{txt}{space 6}length {c |}{res}        10         194    19.32759        168        222
+{txt}{space 8}turn {c |}{res}        10        40.2    3.259175         34         43
+{txt}displacement {c |}{res}        10       223.9    71.77503        121        350
+{txt}{hline 13}{c +}{hline 56}
+{space 2}gear_ratio {c |}{res}        10       2.907    .3225264       2.41       3.58
+{txt}{space 5}foreign {c |}{res}        10           0           0          0          0
+
+{com}. sort foreign
+
+. by foreign: summarize
+
+{txt}{hline}
+-> foreign = Domestic
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 8}make {c |}{res}         0
+{txt}{space 7}price {c |}{res}        52    6072.423    3097.104       3291      15906
+{txt}{space 9}mpg {c |}{res}        52    19.82692    4.743297         12         34
+{txt}{space 7}rep78 {c |}{res}        48    3.020833     .837666          1          5
+{txt}{space 4}headroom {c |}{res}        52    3.153846    .9157578        1.5          5
+{txt}{hline 13}{c +}{hline 56}
+{space 7}trunk {c |}{res}        52       14.75    4.306288          7         23
+{txt}{space 6}weight {c |}{res}        52    3317.115    695.3637       1800       4840
+{txt}{space 6}length {c |}{res}        52    196.1346    20.04605        147        233
+{txt}{space 8}turn {c |}{res}        52    41.44231    3.967582         31         51
+{txt}displacement {c |}{res}        52    233.7115    85.26299         86        425
+{txt}{hline 13}{c +}{hline 56}
+{space 2}gear_ratio {c |}{res}        52    2.806538    .3359556       2.19       3.58
+{txt}{space 5}foreign {c |}{res}        52           0           0          0          0
+
+{txt}{hline}
+-> foreign = Foreign
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 8}make {c |}{res}         0
+{txt}{space 7}price {c |}{res}        22    6384.682    2621.915       3748      12990
+{txt}{space 9}mpg {c |}{res}        22    24.77273    6.611187         14         41
+{txt}{space 7}rep78 {c |}{res}        21    4.285714    .7171372          3          5
+{txt}{space 4}headroom {c |}{res}        22    2.613636    .4862837        1.5        3.5
+{txt}{hline 13}{c +}{hline 56}
+{space 7}trunk {c |}{res}        22    11.40909    3.216906          5         16
+{txt}{space 6}weight {c |}{res}        22    2315.909    433.0035       1760       3420
+{txt}{space 6}length {c |}{res}        22    168.5455    13.68255        142        193
+{txt}{space 8}turn {c |}{res}        22    35.40909    1.501082         32         38
+{txt}displacement {c |}{res}        22    111.2273    24.88054         79        163
+{txt}{hline 13}{c +}{hline 56}
+{space 2}gear_ratio {c |}{res}        22    3.507273    .2969076       2.98       3.89
+{txt}{space 5}foreign {c |}{res}        22           1           0          1          1
+
+
+{com}. help summarize
+
+. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\overview_of_syntax.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 4 Feb 2017, 21:12:06
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

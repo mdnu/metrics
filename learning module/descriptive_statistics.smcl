@@ -1,0 +1,636 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\descriptive_statistics.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Feb 2017, 20:09:30
+
+{com}. sysuse auto
+{txt}(1978 Automobile Data)
+
+{com}. describe
+
+{txt}Contains data from {res}C:\Program Files (x86)\Stata13\ado\base/a/auto.dta
+{txt}  obs:{res}            74                          1978 Automobile Data
+{txt} vars:{res}            12                          13 Apr 2013 17:45
+{txt} size:{res}         3,182                          (_dta has notes)
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:make           }{txt}{bind: str18   }{bind:{txt}%-18s     }{space 1}{bind:         }{bind:  }{res}{res}Make and Model{p_end}
+{p 0 48}{bind:price          }{txt}{bind: int     }{bind:{txt}%8.0gc    }{space 1}{bind:         }{bind:  }{res}{res}Price{p_end}
+{p 0 48}{bind:mpg            }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Mileage (mpg){p_end}
+{p 0 48}{bind:rep78          }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Repair Record 1978{p_end}
+{p 0 48}{bind:headroom       }{txt}{bind: float   }{bind:{txt}%6.1f     }{space 1}{bind:         }{bind:  }{res}{res}Headroom (in.){p_end}
+{p 0 48}{bind:trunk          }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Trunk space (cu. ft.){p_end}
+{p 0 48}{bind:weight         }{txt}{bind: int     }{bind:{txt}%8.0gc    }{space 1}{bind:         }{bind:  }{res}{res}Weight (lbs.){p_end}
+{p 0 48}{bind:length         }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Length (in.){p_end}
+{p 0 48}{bind:turn           }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Turn Circle (ft.) {p_end}
+{p 0 48}{bind:displacement   }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Displacement (cu. in.){p_end}
+{p 0 48}{bind:gear_ratio     }{txt}{bind: float   }{bind:{txt}%6.2f     }{space 1}{bind:         }{bind:  }{res}{res}Gear Ratio{p_end}
+{p 0 48}{bind:foreign        }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:origin   }{bind:  }{res}{res}Car type{p_end}
+{txt}{hline}
+Sorted by:  {res}foreign
+
+{com}. codebook
+
+{txt}{hline}
+{res}make{right:Make and Model}
+{txt}{hline}
+
+{col 19}type:  string ({res}str18{txt}), but longest is str17
+
+{col 10}unique values:  {res}74{col 51}{txt}missing "":  {res}0{txt}/{res}74
+
+{txt}{col 15}examples:  {res}"Cad. Deville"
+{col 26}"Dodge Magnum"
+{col 26}"Merc. XR-7"
+{col 26}"Pont. Catalina"
+
+{txt}{col 16}warning:  variable has embedded blanks
+
+{txt}{hline}
+{res}price{right:Price}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}3291{txt},{res}15906{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}74{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 6165.26
+{txt}{col 15}std. dev:{res}{col 26}  2949.5
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}    3895{col 37}    4195{col 47}  5006.5{col 57}    6342{col 67}   11385
+
+{txt}{hline}
+{res}mpg{right:Mileage (mpg)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}12{txt},{res}41{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}21{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 21.2973
+{txt}{col 15}std. dev:{res}{col 26}  5.7855
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      14{col 37}      18{col 47}      20{col 57}      25{col 67}      29
+
+{txt}{hline}
+{res}rep78{right:Repair Record 1978}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1{txt},{res}5{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}5{col 51}{txt}missing .:  {res}5{txt}/{res}74
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 24}{res}      2{col 33}1
+{col 24}      8{col 33}2
+{col 24}     30{col 33}3
+{col 24}     18{col 33}4
+{col 24}     11{col 33}5
+{col 24}      5{col 33}.
+
+{txt}{hline}
+{res}headroom{right:Headroom (in.)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}float{txt})
+
+{col 18}range:  [{res}1.5{txt},{res}5{txt}]{col 55}units:  {res}.1
+{col 10}{txt}unique values:  {res}8{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 24}{res}      4{col 33}1.5
+{col 24}     13{col 33}2
+{col 24}     14{col 33}2.5
+{col 24}     13{col 33}3
+{col 24}     15{col 33}3.5
+{col 24}     10{col 33}4
+{col 24}      4{col 33}4.5
+{col 24}      1{col 33}5
+
+{txt}{hline}
+{res}trunk{right:Trunk space (cu. ft.)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}5{txt},{res}23{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}18{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 13.7568
+{txt}{col 15}std. dev:{res}{col 26}  4.2774
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}       8{col 37}      10{col 47}      14{col 57}      17{col 67}      20
+
+{txt}{hline}
+{res}weight{right:Weight (lbs.)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1760{txt},{res}4840{txt}]{col 55}units:  {res}10
+{col 10}{txt}unique values:  {res}64{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 3019.46
+{txt}{col 15}std. dev:{res}{col 26} 777.194
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}    2020{col 37}    2240{col 47}    3190{col 57}    3600{col 67}    4060
+
+{txt}{hline}
+{res}length{right:Length (in.)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}142{txt},{res}233{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}47{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 187.932
+{txt}{col 15}std. dev:{res}{col 26} 22.2663
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}     157{col 37}     170{col 47}   192.5{col 57}     204{col 67}     218
+
+{txt}{hline}
+{res}turn{right:Turn Circle (ft.) }
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}31{txt},{res}51{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}18{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 39.6486
+{txt}{col 15}std. dev:{res}{col 26} 4.39935
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      34{col 37}      36{col 47}      40{col 57}      43{col 67}      45
+
+{txt}{hline}
+{res}displacement{right:Displacement (cu. in.)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}79{txt},{res}425{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}31{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 197.297
+{txt}{col 15}std. dev:{res}{col 26} 91.8372
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      97{col 37}     119{col 47}     196{col 57}     250{col 67}     350
+
+{txt}{hline}
+{res}gear_ratio{right:Gear Ratio}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}float{txt})
+
+{col 18}range:  [{res}2.19{txt},{res}3.89{txt}]{col 55}units:  {res}.01
+{col 10}{txt}unique values:  {res}36{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 19}mean:{res}{col 26} 3.01486
+{txt}{col 15}std. dev:{res}{col 26} .456287
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}    2.43{col 37}    2.73{col 47}   2.955{col 57}    3.37{col 67}    3.72
+
+{txt}{hline}
+{res}foreign{right:Car type}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+{ralign 22:label}:  {res:origin}
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}74
+
+{txt}{col 13}tabulation:  Freq.   Numeric  Label
+{col 24}{res}     52{col 33}       0{col 43}{txt}Domestic
+{col 24}{res}     22{col 33}       1{col 43}{txt}Foreign
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. inspect
+
+{res}make:  Make and Model                           {txt}Number of Observations
+{hline 21}                       {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}                            Negative           {res}-         -          -
+{txt}{c |}                            Zero               {res}-         -          -
+{txt}{c |}                            Positive           {res}-         -          -
+{txt}{c |}                                           {hline 5}     {hline 5}      {hline 5}
+{c |}                            Total              {res}-         -          -
+{txt}{c |}                            Missing        {res}   74
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}.             -9.0e+307                        74
+   (0 unique value)
+
+price:  Price                                   {txt}Number of Observations
+{hline 13}                               {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}  {res}#                         {txt}Negative           {res}-         -          -
+{txt}{c |}  {res}#                         {txt}Zero               {res}-         -          -
+{txt}{c |}  {res}#                         {txt}Positive       {res}   74        74          -
+{txt}{c |}  {res}#                                        {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#                         {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   .   .   .         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}3291              15906                        74
+  (74 unique values)
+
+mpg:  Mileage (mpg)                             {txt}Number of Observations
+{hline 19}                         {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}      {res}#                     {txt}Negative           {res}-         -          -
+{txt}{c |}      {res}#                     {txt}Zero               {res}-         -          -
+{txt}{c |}      {res}#                     {txt}Positive       {res}   74        74          -
+{txt}{c |}  {res}#   #                                    {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #                 {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #   .         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}12                   41                        74
+  (21 unique values)
+
+rep78:  Repair Record 1978                      {txt}Number of Observations
+{hline 26}                  {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}          {res}#                 {txt}Negative           {res}-         -          -
+{txt}{c |}          {res}#                 {txt}Zero               {res}-         -          -
+{txt}{c |}          {res}#                 {txt}Positive       {res}   69        69          -
+{txt}{c |}          {res}#   #                            {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}          {res}#   #   #         {txt}Total          {res}   69        69          -
+{txt}{c |}  {res}.   #   #   #   #         {txt}Missing        {res}    5
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}1                     5                        74
+   (5 unique values)
+
+headroom:  Headroom (in.)                       {txt}Number of Observations
+{hline 25}                   {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}          {res}#                 {txt}Negative           {res}-         -          -
+{txt}{c |}          {res}#                 {txt}Zero               {res}-         -          -
+{txt}{c |}          {res}#                 {txt}Positive       {res}   74        37         37
+{txt}{c |}  {res}#   #   #                                {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #   #             {txt}Total          {res}   74        37         37
+{txt}{c |}  {res}#   #   #   #   #         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}1.5                   5                        74
+   (8 unique values)
+
+trunk:  Trunk space (cu. ft.)                   {txt}Number of Observations
+{hline 29}               {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}              {res}#             {txt}Negative           {res}-         -          -
+{txt}{c |}      {res}#       #             {txt}Zero               {res}-         -          -
+{txt}{c |}      {res}#       #             {txt}Positive       {res}   74        74          -
+{txt}{c |}      {res}#   #   #                            {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #   #   #         {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #   #         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}5                    23                        74
+  (18 unique values)
+
+weight:  Weight (lbs.)                          {txt}Number of Observations
+{hline 22}                      {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}  {res}#       #                 {txt}Negative           {res}-         -          -
+{txt}{c |}  {res}#       #                 {txt}Zero               {res}-         -          -
+{txt}{c |}  {res}#   #   #   #             {txt}Positive       {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #                            {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #   #             {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #   #         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}1760               4840                        74
+  (64 unique values)
+
+length:  Length (in.)                           {txt}Number of Observations
+{hline 21}                       {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}              {res}#             {txt}Negative           {res}-         -          -
+{txt}{c |}      {res}#       #             {txt}Zero               {res}-         -          -
+{txt}{c |}      {res}#       #             {txt}Positive       {res}   74        74          -
+{txt}{c |}      {res}#   #   #                            {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #   #   #         {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #   #         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}142                 233                        74
+  (47 unique values)
+
+turn:  Turn Circle (ft.)                        {txt}Number of Observations
+{hline 25}                   {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}      {res}#                     {txt}Negative           {res}-         -          -
+{txt}{c |}      {res}#       #             {txt}Zero               {res}-         -          -
+{txt}{c |}      {res}#   #   #             {txt}Positive       {res}   74        74          -
+{txt}{c |}      {res}#   #   #                            {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #   #             {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #   .         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}31                   51                        74
+  (18 unique values)
+
+displacement:  Displacement (cu. in.)           {txt}Number of Observations
+{hline 37}       {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}  {res}#                         {txt}Negative           {res}-         -          -
+{txt}{c |}  {res}#                         {txt}Zero               {res}-         -          -
+{txt}{c |}  {res}#                         {txt}Positive       {res}   74        74          -
+{txt}{c |}  {res}#       #                                {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #   #             {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #   #   #   .         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}79                  425                        74
+  (31 unique values)
+
+gear_ratio:  Gear Ratio                         {txt}Number of Observations
+{hline 23}                     {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}          {res}#                 {txt}Negative           {res}-         -          -
+{txt}{c |}          {res}#                 {txt}Zero               {res}-         -          -
+{txt}{c |}          {res}#                 {txt}Positive       {res}   74         -         74
+{txt}{c |}  {res}#   #   #       #                        {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #   #       #         {txt}Total          {res}   74         -         74
+{txt}{c |}  {res}#   #   #   #   #         {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}2.19               3.89                        74
+  (36 unique values)
+
+foreign:  Car type                              {txt}Number of Observations
+{hline 18}                          {hline 30}
+                                            Total   Integers   Nonintegers
+{c |}  {res}#                         {txt}Negative           {res}-         -          -
+{txt}{c |}  {res}#                         {txt}Zero           {res}   52        52          -
+{txt}{c |}  {res}#                         {txt}Positive       {res}   22        22          -
+{txt}{c |}  {res}#                                        {txt}{hline 5}     {hline 5}      {hline 5}
+{c |}  {res}#   #                     {txt}Total          {res}   74        74          -
+{txt}{c |}  {res}#   #                     {txt}Missing            {res}-
+{txt}{c +}{hline 22}{col 45}{hline 5}
+{res}0                     1                        74
+   (2 unique values)
+
+      {txt}foreign is labeled and all values are documented in the label.
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. list make price mpg rep78 foreign in 1/10
+{txt}
+     {c TLC}{hline 15}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c TRC}
+     {c |} {res}make             price   mpg   rep78    foreign {txt}{c |}
+     {c LT}{hline 15}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+  1. {c |} {res}AMC Concord      4,099    22       3   Domestic {txt}{c |}
+  2. {c |} {res}AMC Pacer        4,749    17       3   Domestic {txt}{c |}
+  3. {c |} {res}AMC Spirit       3,799    22       .   Domestic {txt}{c |}
+  4. {c |} {res}Buick Century    4,816    20       3   Domestic {txt}{c |}
+  5. {c |} {res}Buick Electra    7,827    15       4   Domestic {txt}{c |}
+     {c LT}{hline 15}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c RT}
+  6. {c |} {res}Buick LeSabre    5,788    18       3   Domestic {txt}{c |}
+  7. {c |} {res}Buick Opel       4,453    26       .   Domestic {txt}{c |}
+  8. {c |} {res}Buick Regal      5,189    20       3   Domestic {txt}{c |}
+  9. {c |} {res}Buick Riviera   10,372    16       3   Domestic {txt}{c |}
+ 10. {c |} {res}Buick Skylark    4,082    19       3   Domestic {txt}{c |}
+     {c BLC}{hline 15}{c -}{hline 8}{c -}{hline 5}{c -}{hline 7}{c -}{hline 10}{c BRC}
+
+{com}. tabulate rep78
+
+     {txt}Repair {c |}
+Record 1978 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          2        2.90        2.90
+{txt}          2 {c |}{res}          8       11.59       14.49
+{txt}          3 {c |}{res}         30       43.48       57.97
+{txt}          4 {c |}{res}         18       26.09       84.06
+{txt}          5 {c |}{res}         11       15.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         69      100.00
+
+{com}. tabulate foreign
+
+   {txt}Car type {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   Domestic {c |}{res}         52       70.27       70.27
+{txt}    Foreign {c |}{res}         22       29.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         74      100.00
+
+{com}. tab rep78 foreign
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}         2 {c |}{res}         8          0 {txt}{c |}{res}         8 
+{txt}         3 {c |}{res}        27          3 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         21 {txt}{c |}{res}        69 
+
+
+{com}. tabulate rep78, plot
+
+     {txt}Repair {c |}
+Record 1978 {c |}      Freq.
+{hline 12}{c +}{hline 12}{c +}{hline 53}
+          1 {c |}{res}          2 {txt}{c |}**
+          2 {c |}{res}          8 {txt}{c |}********
+          3 {c |}{res}         30 {txt}{c |}******************************
+          4 {c |}{res}         18 {txt}{c |}******************
+          5 {c |}{res}         11 {txt}{c |}***********
+{hline 12}{c +}{hline 12}{c +}{hline 53}
+      Total {c |}{res}         69 
+
+{com}. tabulate rep78, foreign
+{err}option {bf:foreign} not allowed
+{txt}{search r(198):r(198);}
+
+{com}. tabulate rep78 foreign
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}         2 {c |}{res}         8          0 {txt}{c |}{res}         8 
+{txt}         3 {c |}{res}        27          3 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         21 {txt}{c |}{res}        69 
+
+
+{com}. tabulate rep78 foreign, column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+    Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}         2          0 {txt}{c |}{res}         2 
+           {txt}{c |}{res}      4.17       0.00 {txt}{c |}{res}      2.90 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         2 {c |}{res}         8          0 {txt}{c |}{res}         8 
+           {txt}{c |}{res}     16.67       0.00 {txt}{c |}{res}     11.59 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         3 {c |}{res}        27          3 {txt}{c |}{res}        30 
+           {txt}{c |}{res}     56.25      14.29 {txt}{c |}{res}     43.48 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+           {txt}{c |}{res}     18.75      42.86 {txt}{c |}{res}     26.09 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+           {txt}{c |}{res}      4.17      42.86 {txt}{c |}{res}     15.94 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         21 {txt}{c |}{res}        69 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+
+{com}. tabulate rep78 foreign, column nofreq
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}      4.17       0.00 {txt}{c |}{res}      2.90 
+{txt}         2 {c |}{res}     16.67       0.00 {txt}{c |}{res}     11.59 
+{txt}         3 {c |}{res}     56.25      14.29 {txt}{c |}{res}     43.48 
+{txt}         4 {c |}{res}     18.75      42.86 {txt}{c |}{res}     26.09 
+{txt}         5 {c |}{res}      4.17      42.86 {txt}{c |}{res}     15.94 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+
+{com}. tabulate rep78 foreign, nofreq column
+
+    {txt}Repair {c |}
+    Record {c |}       Car type
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}      4.17       0.00 {txt}{c |}{res}      2.90 
+{txt}         2 {c |}{res}     16.67       0.00 {txt}{c |}{res}     11.59 
+{txt}         3 {c |}{res}     56.25      14.29 {txt}{c |}{res}     43.48 
+{txt}         4 {c |}{res}     18.75      42.86 {txt}{c |}{res}     26.09 
+{txt}         5 {c |}{res}      4.17      42.86 {txt}{c |}{res}     15.94 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+
+{com}. summarize mpg
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}mpg {c |}{res}        74     21.2973    5.785503         12         41
+
+{com}. summarize mpg, detail
+
+                        {txt}Mileage (mpg)
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}       12             12
+{txt} 5%    {res}       14             12
+{txt}10%    {res}       14             14       {txt}Obs         {res}         74
+{txt}25%    {res}       18             14       {txt}Sum of Wgt. {res}         74
+
+{txt}50%    {res}       20                      {txt}Mean          {res}  21.2973
+                        {txt}Largest       Std. Dev.     {res} 5.785503
+{txt}75%    {res}       25             34
+{txt}90%    {res}       29             35       {txt}Variance      {res} 33.47205
+{txt}95%    {res}       34             35       {txt}Skewness      {res} .9487176
+{txt}99%    {res}       41             41       {txt}Kurtosis      {res} 3.975005
+
+{com}. 
+. sort foreign
+
+. by foreign: summarize mpg
+
+{txt}{hline}
+-> foreign = Domestic
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}mpg {c |}{res}        52    19.82692    4.743297         12         34
+
+{txt}{hline}
+-> foreign = Foreign
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}mpg {c |}{res}        22    24.77273    6.611187         14         41
+
+
+{com}. tabulate foreign, summarize(mpg)
+
+            {txt}{c |}      Summary of Mileage (mpg)
+   Car type {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+   Domestic {c |}  {res} 19.826923   4.7432972          52
+  {txt}  Foreign {c |}  {res} 24.772727   6.6111869          22
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 21.297297   5.7855032          74
+
+{com}. tabulate rep78, summarize(price)
+
+     {txt}Repair {c |}          Summary of Price
+Record 1978 {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          1 {c |}  {res}   4,564.5   522.55191           2
+  {txt}        2 {c |}  {res} 5,967.625   3,579.357           8
+  {txt}        3 {c |}  {res} 6,429.233    3,525.14          30
+  {txt}        4 {c |}  {res}   6,071.5   1,709.608          18
+  {txt}        5 {c |}  {res}     5,913   2,615.763          11
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 6,146.043    2,912.44          69
+
+{com}. tabulate foreign, summarize(price)
+
+            {txt}{c |}          Summary of Price
+   Car type {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+   Domestic {c |}  {res} 6,072.423   3,097.104          52
+  {txt}  Foreign {c |}  {res} 6,384.682   2,621.915          22
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 6,165.257   2,949.496          74
+
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\do files\metrics\learning module\descriptive_statistics.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 4 Feb 2017, 20:24:51
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
