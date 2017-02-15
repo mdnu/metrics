@@ -1814,4 +1814,562 @@ week at all jobs {c |}      Freq.     Percent        Cum.
  {txt}paused on:  {res} 4 Feb 2017, 23:27:35
 {txt}{.-}
 {smcl}
+{txt}{sf}{ul off}{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\metrics\metrics.git\labour\log_feb_4_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 Feb 2017, 00:01:41
+
+{com}. ereturn list
+
+{txt}scalars:
+                  e(N) =  {res}616431
+               {txt}e(df_m) =  {res}13
+               {txt}e(df_r) =  {res}616417
+                  {txt}e(F) =  {res}15104.0623342444
+                 {txt}e(r2) =  {res}.2415847732604483
+               {txt}e(rmse) =  {res}11.20039363202473
+                {txt}e(mss) =  {res}24632227.8730194
+                {txt}e(rss) =  {res}77328783.74447946
+               {txt}e(r2_a) =  {res}.2415687785718728
+                 {txt}e(ll) =  {res}-2363936.509682751
+               {txt}e(ll_0) =  {res}-2449165.569902404
+               {txt}e(rank) =  {res}14
+
+{txt}macros:
+            e(cmdline) : "{res}regress wage mjh1 pt1 utothrs noc17 prov6 age3 marstat6 gender1 educ7{txt}.."
+              e(title) : "{res}Linear regression{txt}"
+          e(marginsok) : "{res}XB default{txt}"
+                e(vce) : "{res}ols{txt}"
+             e(depvar) : "{res}wage{txt}"
+                e(cmd) : "{res}regress{txt}"
+         e(properties) : "{res}b V{txt}"
+            e(predict) : "{res}regres_p{txt}"
+              e(model) : "{res}ols{txt}"
+          e(estat_cmd) : "{res}regress_estat{txt}"
+
+matrices:
+                  e(b) : {res} 1 x 14
+                  {txt}e(V) : {res} 14 x 14
+
+{txt}functions:
+             e(sample)   
+
+{com}. matrix list e(b)
+{res}
+{txt}e(b)[1,14]
+          mjh1         pt1     utothrs       noc17       prov6        age3    marstat6     gender1
+y1 {res}  3.4383513   3.8121062   .15885493   4.5895855   .50016532  -.56795857  -5.6377006    4.310422
+
+{txt}         educ7        cow1        cma2     tenure1        fam1       _cons
+y1 {res}  8.1537973   7.5356252   1.8239112  -2.1251797   1.8578869   8.7638052
+{reset}
+{com}. matrix coeffs = e(b)
+
+. coeffs
+{err}unrecognized command:  coeffs
+{txt}{search r(199):r(199);}
+
+{com}. list coeffs
+{err}variable coeffs not found
+{txt}{search r(111):r(111);}
+
+{com}. matrix list coeffs
+{res}
+{txt}coeffs[1,14]
+          mjh1         pt1     utothrs       noc17       prov6        age3    marstat6     gender1
+y1 {res}  3.4383513   3.8121062   .15885493   4.5895855   .50016532  -.56795857  -5.6377006    4.310422
+
+{txt}         educ7        cow1        cma2     tenure1        fam1       _cons
+y1 {res}  8.1537973   7.5356252   1.8239112  -2.1251797   1.8578869   8.7638052
+{reset}
+{com}. gen coeff* = coeffs[1,*]
+{err}* invalid name
+{txt}{search r(198):r(198);}
+
+{com}. list coeffs[1,*] in 1
+{err}variable coeffs not found
+{txt}{search r(111):r(111);}
+
+{com}. export excel "c:\test.xlsx" firstrow(variables)
+{err}factor variables and time-series operators not allowed
+{txt}{search r(101):r(101);}
+
+{com}. svy, subpop(subpop): mean mjh1 pt1 utothrs noc17 prov6 age3 marstat6 gender1 educ7 cow1 cma2 tenure1 fam1
+{err}data not set up for svy, use {helpb svyset##|_new:svyset}
+{txt}{search r(119):r(119);}
+
+{com}. svyset, subpop(subpop): mean mjh1 pt1 utothrs noc17 prov6 age3 marstat6 gender1 educ7 cow1 cma2 tenure1 fam1
+{err}option {bf:subpop()} not allowed
+{txt}{search r(198):r(198);}
+
+{com}. svyset
+{txt}no survey characteristics are set
+
+{com}. putexcel C4=("coefficients") B5=matrix(e(b)) using "c:\coefficients.xlsx"
+{res}{err}file already exists
+you must specify either the {bf:modify} or {bf:replace} option
+{txt}{search r(198):r(198);}
+
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\metrics\metrics.git\labour\log_feb_4_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res} 5 Feb 2017, 00:11:53
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\metrics\metrics.git\labour\log_feb_4_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 Feb 2017, 02:03:06
+
+{com}. regress wage mjh1 pt1 atothrs noc17 prov6 age4 marstat6 gender1 educ6 cow1 cma2 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 12,616418) ={res}15547.81
+    {txt}   Model {char |} {res} 23690462.8    12  1974205.24           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 78270548.8616418  126.976417           {txt}R-squared     = {res} 0.2323
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2323
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.268
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 2.686186{col 26}{space 2} .0641621{col 37}{space 1}   41.87{col 46}{space 3}0.000{col 54}{space 4}  2.56043{col 67}{space 3} 2.811941
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 4.078068{col 26}{space 2} .0425609{col 37}{space 1}   95.82{col 46}{space 3}0.000{col 54}{space 4}  3.99465{col 67}{space 3} 4.161486
+{txt}{space 5}atothrs {c |}{col 14}{res}{space 2} .0813139{col 26}{space 2} .0009333{col 37}{space 1}   87.12{col 46}{space 3}0.000{col 54}{space 4} .0794846{col 67}{space 3} .0831431
+{txt}{space 7}noc17 {c |}{col 14}{res}{space 2} 5.630558{col 26}{space 2} .0932223{col 37}{space 1}   60.40{col 46}{space 3}0.000{col 54}{space 4} 5.447845{col 67}{space 3}  5.81327
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5042775{col 26}{space 2} .0350782{col 37}{space 1}   14.38{col 46}{space 3}0.000{col 54}{space 4} .4355255{col 67}{space 3} .5730296
+{txt}{space 8}age4 {c |}{col 14}{res}{space 2} .6533761{col 26}{space 2} .0465967{col 37}{space 1}   14.02{col 46}{space 3}0.000{col 54}{space 4}  .562048{col 67}{space 3} .7447042
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-6.316929{col 26}{space 2} .0353279{col 37}{space 1} -178.81{col 46}{space 3}0.000{col 54}{space 4} -6.38617{col 67}{space 3}-6.247687
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.826075{col 26}{space 2} .0299252{col 37}{space 1}  161.27{col 46}{space 3}0.000{col 54}{space 4} 4.767422{col 67}{space 3} 4.884727
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.088859{col 26}{space 2} .0392038{col 37}{space 1}  129.81{col 46}{space 3}0.000{col 54}{space 4} 5.012021{col 67}{space 3} 5.165698
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.701584{col 26}{space 2} .0340767{col 37}{space 1}  226.01{col 46}{space 3}0.000{col 54}{space 4} 7.634794{col 67}{space 3} 7.768373
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2}  1.72224{col 26}{space 2} .0686891{col 37}{space 1}   25.07{col 46}{space 3}0.000{col 54}{space 4} 1.587612{col 67}{space 3} 1.856869
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2}  2.11109{col 26}{space 2} .0429535{col 37}{space 1}   49.15{col 46}{space 3}0.000{col 54}{space 4} 2.026903{col 67}{space 3} 2.195278
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 11.71114{col 26}{space 2} .0825407{col 37}{space 1}  141.88{col 46}{space 3}0.000{col 54}{space 4} 11.54937{col 67}{space 3} 11.87292
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. matrix list e(b)
+{res}
+{txt}e(b)[1,13]
+          mjh1         pt1     atothrs       noc17       prov6        age4    marstat6     gender1       educ6        cow1
+y1 {res}  2.6861858   4.0780682   .08131386   5.6305575   .50427754   .65337613  -6.3169285   4.8260746   5.0888594   7.7015836
+
+{txt}          cma2        fam1       _cons
+y1 {res}  1.7222401   2.1110902   11.711145
+{reset}
+{com}. regress wage mjh1 pt1 atothrs noc17 prov6 age4 marstat6 gender1 educ7 cow1 cma2 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 12,616418) ={res}15829.08
+    {txt}   Model {char |} {res} 24018083.1    12  2001506.93           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77942928.5616418  126.444926           {txt}R-squared     = {res} 0.2356
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2355
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.245
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 2.687579{col 26}{space 2} .0640272{col 37}{space 1}   41.98{col 46}{space 3}0.000{col 54}{space 4} 2.562088{col 67}{space 3}  2.81307
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 4.239682{col 26}{space 2} .0424715{col 37}{space 1}   99.82{col 46}{space 3}0.000{col 54}{space 4} 4.156439{col 67}{space 3} 4.322925
+{txt}{space 5}atothrs {c |}{col 14}{res}{space 2} .0802572{col 26}{space 2} .0009315{col 37}{space 1}   86.16{col 46}{space 3}0.000{col 54}{space 4} .0784315{col 67}{space 3} .0820829
+{txt}{space 7}noc17 {c |}{col 14}{res}{space 2} 4.665401{col 26}{space 2} .0937632{col 37}{space 1}   49.76{col 46}{space 3}0.000{col 54}{space 4} 4.481628{col 67}{space 3} 4.849174
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .4200794{col 26}{space 2} .0350038{col 37}{space 1}   12.00{col 46}{space 3}0.000{col 54}{space 4} .3514732{col 67}{space 3} .4886856
+{txt}{space 8}age4 {c |}{col 14}{res}{space 2} .8487581{col 26}{space 2} .0464314{col 37}{space 1}   18.28{col 46}{space 3}0.000{col 54}{space 4}  .757754{col 67}{space 3} .9397621
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-6.209715{col 26}{space 2} .0352853{col 37}{space 1} -175.99{col 46}{space 3}0.000{col 54}{space 4}-6.278873{col 67}{space 3}-6.140557
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.608629{col 26}{space 2}  .029841{col 37}{space 1}  154.44{col 46}{space 3}0.000{col 54}{space 4} 4.550142{col 67}{space 3} 4.667117
+{txt}{space 7}educ7 {c |}{col 14}{res}{space 2} 8.102988{col 26}{space 2}   .05801{col 37}{space 1}  139.68{col 46}{space 3}0.000{col 54}{space 4} 7.989291{col 67}{space 3} 8.216686
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.647546{col 26}{space 2} .0340101{col 37}{space 1}  224.86{col 46}{space 3}0.000{col 54}{space 4} 7.580887{col 67}{space 3} 7.714204
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.858436{col 26}{space 2} .0684586{col 37}{space 1}   27.15{col 46}{space 3}0.000{col 54}{space 4} 1.724259{col 67}{space 3} 1.992613
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 2.105795{col 26}{space 2} .0428625{col 37}{space 1}   49.13{col 46}{space 3}0.000{col 54}{space 4} 2.021786{col 67}{space 3} 2.189804
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 12.01535{col 26}{space 2} .0822482{col 37}{space 1}  146.09{col 46}{space 3}0.000{col 54}{space 4} 11.85415{col 67}{space 3} 12.17655
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. matrix list e(b)
+{res}
+{txt}e(b)[1,13]
+          mjh1         pt1     atothrs       noc17       prov6        age4    marstat6     gender1       educ7        cow1
+y1 {res}  2.6875788   4.2396821    .0802572   4.6654008   .42007942   .84875809  -6.2097152   4.6086294   8.1029885   7.6475458
+
+{txt}          cma2        fam1       _cons
+y1 {res}  1.8584359   2.1057948    12.01535
+{reset}
+{com}. matrix column e(b)
+{err}matrix operation not found
+{txt}{search r(501):r(501);}
+
+{com}. matrix coeffs = e(b)
+
+. vec(e(b))
+{err}variable b not found
+{txt}{search r(111):r(111);}
+
+{com}. vec(coeffs)
+{err}variable coeffs not found
+{txt}{search r(111):r(111);}
+
+{com}. list coeffs
+{err}variable coeffs not found
+{txt}{search r(111):r(111);}
+
+{com}. matrix list coeffs
+{res}
+{txt}coeffs[1,13]
+          mjh1         pt1     atothrs       noc17       prov6        age4    marstat6     gender1       educ7        cow1
+y1 {res}  2.6875788   4.2396821    .0802572   4.6654008   .42007942   .84875809  -6.2097152   4.6086294   8.1029885   7.6475458
+
+{txt}          cma2        fam1       _cons
+y1 {res}  1.8584359   2.1057948    12.01535
+{reset}
+{com}. vec()
+{err}too few variables specified
+{txt}{search r(102):r(102);}
+
+{com}. vec(coeffs)
+{err}variable coeffs not found
+{txt}{search r(111):r(111);}
+
+{com}. transposeonly(coeffs)
+{err}unrecognized command:  transposeonly
+{txt}{search r(199):r(199);}
+
+{com}. _transpose(coeffs)
+{err}unrecognized command:  _transpose
+{txt}{search r(199):r(199);}
+
+{com}. tabulate tenure
+
+ {txt}Job tenure {c |}
+  in months {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}     11,937        1.64        1.64
+{txt}          2 {c |}{res}     16,941        2.33        3.97
+{txt}          3 {c |}{res}     15,920        2.19        6.16
+{txt}          4 {c |}{res}     14,242        1.96        8.12
+{txt}          5 {c |}{res}     12,738        1.75        9.87
+{txt}          6 {c |}{res}     11,651        1.60       11.48
+{txt}          7 {c |}{res}     11,053        1.52       13.00
+{txt}          8 {c |}{res}     10,044        1.38       14.38
+{txt}          9 {c |}{res}      9,430        1.30       15.68
+{txt}         10 {c |}{res}      8,826        1.21       16.89
+{txt}         11 {c |}{res}      8,146        1.12       18.01
+{txt}         12 {c |}{res}      7,649        1.05       19.06
+{txt}         13 {c |}{res}      8,536        1.17       20.24
+{txt}         14 {c |}{res}      8,244        1.13       21.37
+{txt}         15 {c |}{res}      7,558        1.04       22.41
+{txt}         16 {c |}{res}      6,919        0.95       23.36
+{txt}         17 {c |}{res}      6,632        0.91       24.27
+{txt}         18 {c |}{res}      6,246        0.86       25.13
+{txt}         19 {c |}{res}      5,723        0.79       25.92
+{txt}         20 {c |}{res}      5,442        0.75       26.67
+{txt}         21 {c |}{res}      5,189        0.71       27.38
+{txt}         22 {c |}{res}      4,941        0.68       28.06
+{txt}         23 {c |}{res}      4,807        0.66       28.72
+{txt}         24 {c |}{res}      4,827        0.66       29.39
+{txt}         25 {c |}{res}      5,152        0.71       30.10
+{txt}         26 {c |}{res}      5,202        0.72       30.81
+{txt}         27 {c |}{res}      5,072        0.70       31.51
+{txt}         28 {c |}{res}      4,883        0.67       32.18
+{txt}         29 {c |}{res}      4,665        0.64       32.82
+{txt}         30 {c |}{res}      4,567        0.63       33.45
+{txt}         31 {c |}{res}      4,401        0.61       34.06
+{txt}         32 {c |}{res}      4,241        0.58       34.64
+{txt}         33 {c |}{res}      4,167        0.57       35.21
+{txt}         34 {c |}{res}      4,164        0.57       35.79
+{txt}         35 {c |}{res}      3,997        0.55       36.34
+{txt}         36 {c |}{res}      4,114        0.57       36.90
+{txt}         37 {c |}{res}      4,368        0.60       37.50
+{txt}         38 {c |}{res}      4,349        0.60       38.10
+{txt}         39 {c |}{res}      4,313        0.59       38.69
+{txt}         40 {c |}{res}      4,155        0.57       39.27
+{txt}         41 {c |}{res}      3,969        0.55       39.81
+{txt}         42 {c |}{res}      3,928        0.54       40.35
+{txt}         43 {c |}{res}      3,656        0.50       40.85
+{txt}         44 {c |}{res}      3,635        0.50       41.35
+{txt}         45 {c |}{res}      3,524        0.48       41.84
+{txt}         46 {c |}{res}      3,429        0.47       42.31
+{txt}         47 {c |}{res}      3,433        0.47       42.78
+{txt}         48 {c |}{res}      3,404        0.47       43.25
+{txt}         49 {c |}{res}      3,555        0.49       43.74
+{txt}         50 {c |}{res}      3,520        0.48       44.22
+{txt}         51 {c |}{res}      3,469        0.48       44.70
+{txt}         52 {c |}{res}      3,259        0.45       45.15
+{txt}         53 {c |}{res}      3,148        0.43       45.58
+{txt}         54 {c |}{res}      3,138        0.43       46.02
+{txt}         55 {c |}{res}      3,031        0.42       46.43
+{txt}         56 {c |}{res}      3,010        0.41       46.85
+{txt}         57 {c |}{res}      2,986        0.41       47.26
+{txt}         58 {c |}{res}      2,947        0.41       47.66
+{txt}         59 {c |}{res}      2,909        0.40       48.06
+{txt}         60 {c |}{res}      2,931        0.40       48.47
+{txt}         61 {c |}{res}      3,183        0.44       48.90
+{txt}         62 {c |}{res}      3,291        0.45       49.36
+{txt}         63 {c |}{res}      3,211        0.44       49.80
+{txt}         64 {c |}{res}      3,117        0.43       50.23
+{txt}         65 {c |}{res}      2,982        0.41       50.64
+{txt}         66 {c |}{res}      2,867        0.39       51.03
+{txt}         67 {c |}{res}      2,766        0.38       51.41
+{txt}         68 {c |}{res}      2,650        0.36       51.78
+{txt}         69 {c |}{res}      2,472        0.34       52.12
+{txt}         70 {c |}{res}      2,481        0.34       52.46
+{txt}         71 {c |}{res}      2,326        0.32       52.78
+{txt}         72 {c |}{res}      2,276        0.31       53.09
+{txt}         73 {c |}{res}      2,363        0.33       53.42
+{txt}         74 {c |}{res}      2,377        0.33       53.74
+{txt}         75 {c |}{res}      2,317        0.32       54.06
+{txt}         76 {c |}{res}      2,282        0.31       54.38
+{txt}         77 {c |}{res}      2,242        0.31       54.68
+{txt}         78 {c |}{res}      2,290        0.32       55.00
+{txt}         79 {c |}{res}      2,259        0.31       55.31
+{txt}         80 {c |}{res}      2,315        0.32       55.63
+{txt}         81 {c |}{res}      2,299        0.32       55.94
+{txt}         82 {c |}{res}      2,272        0.31       56.26
+{txt}         83 {c |}{res}      2,211        0.30       56.56
+{txt}         84 {c |}{res}      2,206        0.30       56.86
+{txt}         85 {c |}{res}      2,443        0.34       57.20
+{txt}         86 {c |}{res}      2,498        0.34       57.54
+{txt}         87 {c |}{res}      2,436        0.34       57.88
+{txt}         88 {c |}{res}      2,355        0.32       58.20
+{txt}         89 {c |}{res}      2,271        0.31       58.52
+{txt}         90 {c |}{res}      2,210        0.30       58.82
+{txt}         91 {c |}{res}      2,219        0.31       59.12
+{txt}         92 {c |}{res}      2,145        0.30       59.42
+{txt}         93 {c |}{res}      2,256        0.31       59.73
+{txt}         94 {c |}{res}      2,244        0.31       60.04
+{txt}         95 {c |}{res}      2,178        0.30       60.34
+{txt}         96 {c |}{res}      2,132        0.29       60.63
+{txt}         97 {c |}{res}      2,316        0.32       60.95
+{txt}         98 {c |}{res}      2,340        0.32       61.27
+{txt}         99 {c |}{res}      2,262        0.31       61.58
+{txt}        100 {c |}{res}      2,231        0.31       61.89
+{txt}        101 {c |}{res}      2,145        0.30       62.18
+{txt}        102 {c |}{res}      2,098        0.29       62.47
+{txt}        103 {c |}{res}      2,029        0.28       62.75
+{txt}        104 {c |}{res}      1,997        0.27       63.03
+{txt}        105 {c |}{res}      1,886        0.26       63.29
+{txt}        106 {c |}{res}      1,821        0.25       63.54
+{txt}        107 {c |}{res}      1,821        0.25       63.79
+{txt}        108 {c |}{res}      1,689        0.23       64.02
+{txt}        109 {c |}{res}      1,721        0.24       64.26
+{txt}        110 {c |}{res}      1,758        0.24       64.50
+{txt}        111 {c |}{res}      1,688        0.23       64.73
+{txt}        112 {c |}{res}      1,665        0.23       64.96
+{txt}        113 {c |}{res}      1,663        0.23       65.19
+{txt}        114 {c |}{res}      1,694        0.23       65.42
+{txt}        115 {c |}{res}      1,645        0.23       65.65
+{txt}        116 {c |}{res}      1,686        0.23       65.88
+{txt}        117 {c |}{res}      1,775        0.24       66.12
+{txt}        118 {c |}{res}      1,748        0.24       66.36
+{txt}        119 {c |}{res}      1,753        0.24       66.61
+{txt}        120 {c |}{res}      1,795        0.25       66.85
+{txt}        121 {c |}{res}      1,991        0.27       67.13
+{txt}        122 {c |}{res}      2,046        0.28       67.41
+{txt}        123 {c |}{res}      2,028        0.28       67.69
+{txt}        124 {c |}{res}      2,013        0.28       67.96
+{txt}        125 {c |}{res}      2,026        0.28       68.24
+{txt}        126 {c |}{res}      1,964        0.27       68.51
+{txt}        127 {c |}{res}      1,840        0.25       68.77
+{txt}        128 {c |}{res}      1,745        0.24       69.01
+{txt}        129 {c |}{res}      1,720        0.24       69.24
+{txt}        130 {c |}{res}      1,618        0.22       69.46
+{txt}        131 {c |}{res}      1,536        0.21       69.68
+{txt}        132 {c |}{res}      1,515        0.21       69.88
+{txt}        133 {c |}{res}      1,491        0.21       70.09
+{txt}        134 {c |}{res}      1,446        0.20       70.29
+{txt}        135 {c |}{res}      1,344        0.18       70.47
+{txt}        136 {c |}{res}      1,296        0.18       70.65
+{txt}        137 {c |}{res}      1,254        0.17       70.82
+{txt}        138 {c |}{res}      1,230        0.17       70.99
+{txt}        139 {c |}{res}      1,199        0.16       71.16
+{txt}        140 {c |}{res}      1,214        0.17       71.33
+{txt}        141 {c |}{res}      1,203        0.17       71.49
+{txt}        142 {c |}{res}      1,177        0.16       71.65
+{txt}        143 {c |}{res}      1,171        0.16       71.81
+{txt}        144 {c |}{res}      1,110        0.15       71.97
+{txt}        145 {c |}{res}      1,184        0.16       72.13
+{txt}        146 {c |}{res}      1,218        0.17       72.30
+{txt}        147 {c |}{res}      1,266        0.17       72.47
+{txt}        148 {c |}{res}      1,205        0.17       72.64
+{txt}        149 {c |}{res}      1,165        0.16       72.80
+{txt}        150 {c |}{res}      1,184        0.16       72.96
+{txt}        151 {c |}{res}      1,132        0.16       73.12
+{txt}        152 {c |}{res}      1,129        0.16       73.27
+{txt}        153 {c |}{res}      1,097        0.15       73.42
+{txt}        154 {c |}{res}      1,109        0.15       73.57
+{txt}        155 {c |}{res}      1,082        0.15       73.72
+{txt}        156 {c |}{res}      1,104        0.15       73.87
+{txt}        157 {c |}{res}      1,120        0.15       74.03
+{txt}        158 {c |}{res}      1,145        0.16       74.19
+{txt}        159 {c |}{res}      1,111        0.15       74.34
+{txt}        160 {c |}{res}      1,105        0.15       74.49
+{txt}        161 {c |}{res}      1,128        0.16       74.65
+{txt}        162 {c |}{res}      1,106        0.15       74.80
+{txt}        163 {c |}{res}      1,103        0.15       74.95
+{txt}        164 {c |}{res}      1,108        0.15       75.10
+{txt}        165 {c |}{res}      1,139        0.16       75.26
+{txt}        166 {c |}{res}      1,126        0.15       75.41
+{txt}        167 {c |}{res}      1,079        0.15       75.56
+{txt}        168 {c |}{res}      1,098        0.15       75.71
+{txt}        169 {c |}{res}      1,140        0.16       75.87
+{txt}        170 {c |}{res}      1,143        0.16       76.03
+{txt}        171 {c |}{res}      1,159        0.16       76.19
+{txt}        172 {c |}{res}      1,207        0.17       76.35
+{txt}        173 {c |}{res}      1,232        0.17       76.52
+{txt}        174 {c |}{res}      1,250        0.17       76.69
+{txt}        175 {c |}{res}      1,291        0.18       76.87
+{txt}        176 {c |}{res}      1,356        0.19       77.06
+{txt}        177 {c |}{res}      1,367        0.19       77.25
+{txt}        178 {c |}{res}      1,409        0.19       77.44
+{txt}        179 {c |}{res}      1,450        0.20       77.64
+{txt}        180 {c |}{res}      1,407        0.19       77.83
+{txt}        181 {c |}{res}      1,633        0.22       78.06
+{txt}        182 {c |}{res}      1,597        0.22       78.28
+{txt}        183 {c |}{res}      1,652        0.23       78.51
+{txt}        184 {c |}{res}      1,646        0.23       78.73
+{txt}        185 {c |}{res}      1,621        0.22       78.95
+{txt}        186 {c |}{res}      1,500        0.21       79.16
+{txt}        187 {c |}{res}      1,459        0.20       79.36
+{txt}        188 {c |}{res}      1,359        0.19       79.55
+{txt}        189 {c |}{res}      1,296        0.18       79.73
+{txt}        190 {c |}{res}      1,266        0.17       79.90
+{txt}        191 {c |}{res}      1,175        0.16       80.06
+{txt}        192 {c |}{res}      1,165        0.16       80.22
+{txt}        193 {c |}{res}      1,028        0.14       80.36
+{txt}        194 {c |}{res}      1,002        0.14       80.50
+{txt}        195 {c |}{res}        967        0.13       80.64
+{txt}        196 {c |}{res}        970        0.13       80.77
+{txt}        197 {c |}{res}        958        0.13       80.90
+{txt}        198 {c |}{res}        972        0.13       81.03
+{txt}        199 {c |}{res}        928        0.13       81.16
+{txt}        200 {c |}{res}        929        0.13       81.29
+{txt}        201 {c |}{res}        897        0.12       81.41
+{txt}        202 {c |}{res}        973        0.13       81.55
+{txt}        203 {c |}{res}        933        0.13       81.68
+{txt}        204 {c |}{res}        914        0.13       81.80
+{txt}        205 {c |}{res}        931        0.13       81.93
+{txt}        206 {c |}{res}        902        0.12       82.05
+{txt}        207 {c |}{res}        886        0.12       82.17
+{txt}        208 {c |}{res}        884        0.12       82.30
+{txt}        209 {c |}{res}        867        0.12       82.42
+{txt}        210 {c |}{res}        849        0.12       82.53
+{txt}        211 {c |}{res}        839        0.12       82.65
+{txt}        212 {c |}{res}        841        0.12       82.76
+{txt}        213 {c |}{res}        827        0.11       82.88
+{txt}        214 {c |}{res}        799        0.11       82.99
+{txt}        215 {c |}{res}        780        0.11       83.09
+{txt}        216 {c |}{res}        767        0.11       83.20
+{txt}        217 {c |}{res}        787        0.11       83.31
+{txt}        218 {c |}{res}        781        0.11       83.42
+{txt}        219 {c |}{res}        781        0.11       83.52
+{txt}        220 {c |}{res}        779        0.11       83.63
+{txt}        221 {c |}{res}        742        0.10       83.73
+{txt}        222 {c |}{res}        700        0.10       83.83
+{txt}        223 {c |}{res}        647        0.09       83.92
+{txt}        224 {c |}{res}        643        0.09       84.01
+{txt}        225 {c |}{res}        653        0.09       84.10
+{txt}        226 {c |}{res}        608        0.08       84.18
+{txt}        227 {c |}{res}        620        0.09       84.26
+{txt}        228 {c |}{res}        615        0.08       84.35
+{txt}        229 {c |}{res}        683        0.09       84.44
+{txt}        230 {c |}{res}        703        0.10       84.54
+{txt}        231 {c |}{res}        701        0.10       84.64
+{txt}        232 {c |}{res}        689        0.09       84.73
+{txt}        233 {c |}{res}        711        0.10       84.83
+{txt}        234 {c |}{res}        755        0.10       84.93
+{txt}        235 {c |}{res}        729        0.10       85.03
+{txt}        236 {c |}{res}        749        0.10       85.14
+{txt}        237 {c |}{res}        777        0.11       85.24
+{txt}        238 {c |}{res}        812        0.11       85.35
+{txt}        239 {c |}{res}        796        0.11       85.46
+{txt}240 or more {c |}{res}    105,670       14.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}    726,974      100.00
+
+{com}. generate tenure5 = tenure == 60
+
+. regress wage mjh1 pt1 atothrs noc17 prov6 age4 marstat6 gender1 educ6 cow1 cma2 tenure5 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 13,616417) ={res}14351.88
+    {txt}   Model {char |} {res} 23690565.5    13   1822351.2           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 78270446.1616417  126.976456           {txt}R-squared     = {res} 0.2323
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2323
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.268
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 2.686049{col 26}{space 2} .0641623{col 37}{space 1}   41.86{col 46}{space 3}0.000{col 54}{space 4} 2.560293{col 67}{space 3} 2.811805
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 4.077801{col 26}{space 2} .0425619{col 37}{space 1}   95.81{col 46}{space 3}0.000{col 54}{space 4} 3.994381{col 67}{space 3} 4.161221
+{txt}{space 5}atothrs {c |}{col 14}{res}{space 2} .0813175{col 26}{space 2} .0009333{col 37}{space 1}   87.13{col 46}{space 3}0.000{col 54}{space 4} .0794882{col 67}{space 3} .0831468
+{txt}{space 7}noc17 {c |}{col 14}{res}{space 2} 5.630497{col 26}{space 2} .0932223{col 37}{space 1}   60.40{col 46}{space 3}0.000{col 54}{space 4} 5.447784{col 67}{space 3}  5.81321
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5043773{col 26}{space 2} .0350783{col 37}{space 1}   14.38{col 46}{space 3}0.000{col 54}{space 4} .4356249{col 67}{space 3} .5731297
+{txt}{space 8}age4 {c |}{col 14}{res}{space 2} .6530018{col 26}{space 2} .0465986{col 37}{space 1}   14.01{col 46}{space 3}0.000{col 54}{space 4} .5616701{col 67}{space 3} .7443336
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-6.316736{col 26}{space 2} .0353286{col 37}{space 1} -178.80{col 46}{space 3}0.000{col 54}{space 4}-6.385979{col 67}{space 3}-6.247493
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.826024{col 26}{space 2} .0299253{col 37}{space 1}  161.27{col 46}{space 3}0.000{col 54}{space 4} 4.767371{col 67}{space 3} 4.884676
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 5.088764{col 26}{space 2} .0392039{col 37}{space 1}  129.80{col 46}{space 3}0.000{col 54}{space 4} 5.011925{col 67}{space 3} 5.165602
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.701665{col 26}{space 2} .0340768{col 37}{space 1}  226.01{col 46}{space 3}0.000{col 54}{space 4} 7.634876{col 67}{space 3} 7.768455
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.722165{col 26}{space 2} .0686892{col 37}{space 1}   25.07{col 46}{space 3}0.000{col 54}{space 4} 1.587537{col 67}{space 3} 1.856794
+{txt}{space 5}tenure5 {c |}{col 14}{res}{space 2} .2046038{col 26}{space 2}   .22749{col 37}{space 1}    0.90{col 46}{space 3}0.368{col 54}{space 4}-.2412692{col 67}{space 3} .6504769
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 2.111069{col 26}{space 2} .0429535{col 37}{space 1}   49.15{col 46}{space 3}0.000{col 54}{space 4} 2.026882{col 67}{space 3} 2.195257
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 11.71055{col 26}{space 2} .0825433{col 37}{space 1}  141.87{col 46}{space 3}0.000{col 54}{space 4} 11.54877{col 67}{space 3} 11.87234
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. matrix list e(b)
+{res}
+{txt}e(b)[1,14]
+          mjh1         pt1     atothrs       noc17       prov6        age4    marstat6     gender1       educ6        cow1
+y1 {res}  2.6860487   4.0778009    .0813175   5.6304971   .50437731   .65300181  -6.3167358   4.8260239   5.0887639   7.7016651
+
+{txt}          cma2     tenure5        fam1       _cons
+y1 {res}  1.7221655   .20460382   2.1110693   11.710554
+{reset}
+{com}. regress wage mjh1 pt1 atothrs noc11 prov6 age4 marstat6 gender1 educ6 cow1 cma2 tenure5 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 13,616417) ={res}15689.15
+    {txt}   Model {char |} {res} 25349178.3    13  1949936.79           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 76611833.4616417  124.285724           {txt}R-squared     = {res} 0.2486
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2486
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.148
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 2.549431{col 26}{space 2} .0634858{col 37}{space 1}   40.16{col 46}{space 3}0.000{col 54}{space 4} 2.425001{col 67}{space 3} 2.673862
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 3.948528{col 26}{space 2} .0421215{col 37}{space 1}   93.74{col 46}{space 3}0.000{col 54}{space 4} 3.865971{col 67}{space 3} 4.031085
+{txt}{space 5}atothrs {c |}{col 14}{res}{space 2} .0808673{col 26}{space 2} .0009234{col 37}{space 1}   87.58{col 46}{space 3}0.000{col 54}{space 4} .0790575{col 67}{space 3} .0826771
+{txt}{space 7}noc11 {c |}{col 14}{res}{space 2} 10.64224{col 26}{space 2} .0814497{col 37}{space 1}  130.66{col 46}{space 3}0.000{col 54}{space 4}  10.4826{col 67}{space 3} 10.80188
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .5078977{col 26}{space 2} .0347034{col 37}{space 1}   14.64{col 46}{space 3}0.000{col 54}{space 4} .4398802{col 67}{space 3} .5759153
+{txt}{space 8}age4 {c |}{col 14}{res}{space 2} .5935261{col 26}{space 2} .0461039{col 37}{space 1}   12.87{col 46}{space 3}0.000{col 54}{space 4} .5031639{col 67}{space 3} .6838883
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-6.227949{col 26}{space 2} .0349606{col 37}{space 1} -178.14{col 46}{space 3}0.000{col 54}{space 4} -6.29647{col 67}{space 3}-6.159427
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.404301{col 26}{space 2} .0297291{col 37}{space 1}  148.15{col 46}{space 3}0.000{col 54}{space 4} 4.346033{col 67}{space 3} 4.462569
+{txt}{space 7}educ6 {c |}{col 14}{res}{space 2} 4.582646{col 26}{space 2} .0390259{col 37}{space 1}  117.43{col 46}{space 3}0.000{col 54}{space 4} 4.506157{col 67}{space 3} 4.659136
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.898612{col 26}{space 2} .0335916{col 37}{space 1}  235.14{col 46}{space 3}0.000{col 54}{space 4} 7.832774{col 67}{space 3}  7.96445
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.518784{col 26}{space 2}  .067979{col 37}{space 1}   22.34{col 46}{space 3}0.000{col 54}{space 4} 1.385547{col 67}{space 3} 1.652021
+{txt}{space 5}tenure5 {c |}{col 14}{res}{space 2} .2180508{col 26}{space 2} .2250667{col 37}{space 1}    0.97{col 46}{space 3}0.333{col 54}{space 4}-.2230726{col 67}{space 3} .6591743
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 2.066817{col 26}{space 2}  .042496{col 37}{space 1}   48.64{col 46}{space 3}0.000{col 54}{space 4} 1.983526{col 67}{space 3} 2.150108
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 12.00259{col 26}{space 2} .0816765{col 37}{space 1}  146.95{col 46}{space 3}0.000{col 54}{space 4} 11.84251{col 67}{space 3} 12.16267
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. matrix list e(b)
+{res}
+{txt}e(b)[1,14]
+          mjh1         pt1     atothrs       noc11       prov6        age4    marstat6     gender1       educ6        cow1
+y1 {res}  2.5494315    3.948528    .0808673    10.64224   .50789775   .59352611  -6.2279487   4.4043014   4.5826461    7.898612
+
+{txt}          cma2     tenure5        fam1       _cons
+y1 {res}  1.5187841   .21805083    2.066817   12.002589
+{reset}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\metrics\metrics.git\labour\log_feb_4_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 5 Feb 2017, 03:38:32
+{txt}{.-}
+{smcl}
 {txt}{sf}{ul off}

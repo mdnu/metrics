@@ -1,0 +1,56 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\metrics\metrics.git\labour\log_feb_13_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}13 Feb 2017, 16:40:19
+
+{com}. regress wage mjh1 pt1 atothrs noc17 prov6 age4 marstat6 gender1 educ7 cow1 cma2 fam1
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}  616431
+{txt}{hline 13}{char +}{hline 30}           F( 12,616418) ={res}15829.08
+    {txt}   Model {char |} {res} 24018083.1    12  2001506.93           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 77942928.5616418  126.444926           {txt}R-squared     = {res} 0.2356
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2355
+    {txt}   Total {char |} {res}  101961012616430  165.405661           {txt}Root MSE      = {res} 11.245
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        wage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}mjh1 {c |}{col 14}{res}{space 2} 2.687579{col 26}{space 2} .0640272{col 37}{space 1}   41.98{col 46}{space 3}0.000{col 54}{space 4} 2.562088{col 67}{space 3}  2.81307
+{txt}{space 9}pt1 {c |}{col 14}{res}{space 2} 4.239682{col 26}{space 2} .0424715{col 37}{space 1}   99.82{col 46}{space 3}0.000{col 54}{space 4} 4.156439{col 67}{space 3} 4.322925
+{txt}{space 5}atothrs {c |}{col 14}{res}{space 2} .0802572{col 26}{space 2} .0009315{col 37}{space 1}   86.16{col 46}{space 3}0.000{col 54}{space 4} .0784315{col 67}{space 3} .0820829
+{txt}{space 7}noc17 {c |}{col 14}{res}{space 2} 4.665401{col 26}{space 2} .0937632{col 37}{space 1}   49.76{col 46}{space 3}0.000{col 54}{space 4} 4.481628{col 67}{space 3} 4.849174
+{txt}{space 7}prov6 {c |}{col 14}{res}{space 2} .4200794{col 26}{space 2} .0350038{col 37}{space 1}   12.00{col 46}{space 3}0.000{col 54}{space 4} .3514732{col 67}{space 3} .4886856
+{txt}{space 8}age4 {c |}{col 14}{res}{space 2} .8487581{col 26}{space 2} .0464314{col 37}{space 1}   18.28{col 46}{space 3}0.000{col 54}{space 4}  .757754{col 67}{space 3} .9397621
+{txt}{space 4}marstat6 {c |}{col 14}{res}{space 2}-6.209715{col 26}{space 2} .0352853{col 37}{space 1} -175.99{col 46}{space 3}0.000{col 54}{space 4}-6.278873{col 67}{space 3}-6.140557
+{txt}{space 5}gender1 {c |}{col 14}{res}{space 2} 4.608629{col 26}{space 2}  .029841{col 37}{space 1}  154.44{col 46}{space 3}0.000{col 54}{space 4} 4.550142{col 67}{space 3} 4.667117
+{txt}{space 7}educ7 {c |}{col 14}{res}{space 2} 8.102988{col 26}{space 2}   .05801{col 37}{space 1}  139.68{col 46}{space 3}0.000{col 54}{space 4} 7.989291{col 67}{space 3} 8.216686
+{txt}{space 8}cow1 {c |}{col 14}{res}{space 2} 7.647546{col 26}{space 2} .0340101{col 37}{space 1}  224.86{col 46}{space 3}0.000{col 54}{space 4} 7.580887{col 67}{space 3} 7.714204
+{txt}{space 8}cma2 {c |}{col 14}{res}{space 2} 1.858436{col 26}{space 2} .0684586{col 37}{space 1}   27.15{col 46}{space 3}0.000{col 54}{space 4} 1.724259{col 67}{space 3} 1.992613
+{txt}{space 8}fam1 {c |}{col 14}{res}{space 2} 2.105795{col 26}{space 2} .0428625{col 37}{space 1}   49.13{col 46}{space 3}0.000{col 54}{space 4} 2.021786{col 67}{space 3} 2.189804
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 12.01535{col 26}{space 2} .0822482{col 37}{space 1}  146.09{col 46}{space 3}0.000{col 54}{space 4} 11.85415{col 67}{space 3} 12.17655
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. scatter wage mjh1, ysize(5)
+{res}
+{com}. scatter wage noc17, ysize(5)
+{res}
+{com}. scatter wage noc17
+{res}
+{com}. scatter wage noc01_47
+{res}
+{com}. scatter wage educ90
+{res}
+{com}. scatter wage ahrsmain
+{res}
+{com}. scatter wage tenure
+{res}
+{com}. log off
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\m\Sync\NOTES\fin\2.Applied Econometrics\metrics\metrics.git\labour\log_feb_13_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}paused on:  {res}13 Feb 2017, 16:45:56
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
